@@ -13,6 +13,7 @@ Table of Contents:
       - [Natural language processing (NLP)](#natural-language-processing-nlp)
       - [Computer vision](#computer-vision)
       - [Information extraction](#information-extraction)
+    - [Azure Machine Learning](#azure-machine-learning)
 
 ## What is Artificial Intelligence (AI)?
 
@@ -73,3 +74,7 @@ Table of Contents:
 - **Azure AI Document Intelligence**: A service that provides information extraction capabilities from documents. This service can be used to extract structured data from unstructured documents, such as invoices, receipts, and forms, enabling automation and insights from document processing.
 - **Azure AI Content Understanding**: A service that provides information extraction capabilities from unstructured content, such as web pages, social media posts, and news articles. This service can be used to extract insights and knowledge from large volumes of unstructured data, enabling applications such as sentiment analysis, topic modeling, and entity recognition.
 - **Azure AI Search**: A service that provides information retrieval capabilities, allowing developers to create applications that can search and retrieve relevant information from large datasets. This service can be used to enhance search functionality in applications, enabling users to find the information they need quickly and efficiently.
+
+### Azure Machine Learning
+
+- **Azure Machine Learning**: A comprehensive service that provides tools and capabilities for building, training, and deploying machine learning models. This service allows developers and data scientists to create custom machine learning solutions tailored to their specific needs, leveraging the power of Azure's cloud infrastructure for scalability and performance.
