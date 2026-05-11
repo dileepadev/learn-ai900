@@ -16,8 +16,7 @@ Table of Contents:
 
 ## Content
 
-- [01 - Introduction to AI concepts](./01-introduction-to-AI-concepts.md)  
-- [02 - Introduction to Azure AI services](./02-introduction-to-azure-ai-services.md)
+- [01 - AI Overview](./01-ai-overview.md)  
 
 ## Skills measured as of May 2, 2025
 
