@@ -16,7 +16,8 @@ Table of Contents:
 
 ## Content
 
-- [01 - AI Overview](./01-ai-overview.md)  
+- [01 - AI Overview](./01-ai-overview.md)
+- [02 - Fundamentals of Machine Learning](./02-fundamentals-machine-learning.md)
 
 ## Skills measured as of May 2, 2025
 
