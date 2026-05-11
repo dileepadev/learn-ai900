@@ -1,8 +1,8 @@
-# Introduction to AI concepts
+# AI Overview
 
 Table of Contents:
 
-- [Introduction to AI concepts](#introduction-to-ai-concepts)
+- [AI Overview](#ai-overview)
   - [What is Artificial Intelligence (AI)?](#what-is-artificial-intelligence-ai)
   - [AI workloads](#ai-workloads)
   - [Principles of responsible AI](#principles-of-responsible-ai)
