@@ -10,6 +10,8 @@ Table of Contents:
     - [Model algorithms and evaluation metrics](#model-algorithms-and-evaluation-metrics)
     - [Deep learning](#deep-learning)
   - [Get started with machine learning in Azure](#get-started-with-machine-learning-in-azure)
+    - [What is Azure Machine Learning?](#what-is-azure-machine-learning)
+    - [What is Automated Machine Learning (AutoML)?](#what-is-automated-machine-learning-automl)
 
 ## Introduction to machine learning concepts
 
@@ -95,3 +97,16 @@ Table of Contents:
 - **Transformer architecture**: A type of deep learning model that has revolutionized natural language processing and other sequence modeling tasks. The Transformer architecture uses self-attention mechanisms to capture long-range dependencies in data, allowing it to process and generate sequences of data more effectively than traditional recurrent neural networks (RNNs). Transformers are the basis for many state-of-the-art models in NLP, such as BERT and GPT.
 
 ## Get started with machine learning in Azure
+
+### What is Azure Machine Learning?
+
+- Azure Machine Learning is a cloud-based service provided by Microsoft that enables data scientists and developers to build, train, and deploy machine learning models at scale.
+- It provides a comprehensive set of tools and services for the entire machine learning lifecycle, including data preparation, model training, model management, and deployment.
+- Azure Machine Learning offers capabilities such as automated machine learning, which allows users to quickly build and deploy machine learning models without needing extensive expertise in machine learning algorithms and techniques.
+- It also provides data and compute services for data science and machine learning, enabling users to leverage powerful resources for training and deploying their models efficiently.
+
+### What is Automated Machine Learning (AutoML)?
+
+- Automated Machine Learning (AutoML) is a feature of Azure Machine Learning that automates the process of building and deploying machine learning models. It allows users to quickly create machine learning models without needing extensive expertise in machine learning algorithms and techniques.
+- AutoML automates tasks such as data preprocessing, feature engineering, model selection, and hyperparameter tuning, making it easier for users to build high-quality machine learning models with minimal manual intervention.
+- AutoML is designed to help users achieve better model performance and faster time-to-market by automating the complex and time-consuming aspects of the machine learning process. It is particularly useful for users who may not have deep expertise in machine learning but want to leverage the power of machine learning for their applications.
