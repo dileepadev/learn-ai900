@@ -12,6 +12,7 @@ Table of Contents:
     - [Prompts](#prompts)
     - [What are agents?](#what-are-agents)
   - [Get started with generative AI in Azure](#get-started-with-generative-ai-in-azure)
+    - [What is Azure AI Foundry?](#what-is-azure-ai-foundry)
 
 ## Introduction to generative AI concepts
 
@@ -61,3 +62,15 @@ Table of Contents:
 - Agents can be designed to perform a wide range of tasks, from simple content generation to complex problem-solving and decision-making. They can be used in various applications, such as virtual assistants, chatbots, and even autonomous systems that can operate in dynamic environments. By leveraging the capabilities of language models and other AI technologies, agents can provide valuable assistance and support in a variety of contexts, helping users achieve their goals and solve problems more efficiently.
 
 ## Get started with generative AI in Azure
+
+### What is Azure AI Foundry?
+
+- Azure AI Foundry is a comprehensive platform that provides tools and services for building, deploying, and managing generative AI applications. It offers a range of features and capabilities that enable developers to create powerful AI solutions using Azure's infrastructure and services.
+- Azure AI Foundry provides a unified environment for developing and deploying generative AI models, allowing developers to easily access and utilize Azure's AI capabilities. It includes tools for data preparation, model training, and deployment, as well as integration with other Azure services for storage, compute, and monitoring.
+- With Azure AI Foundry, developers can leverage the power of generative AI to create innovative applications and solutions across various industries, from content creation and natural language processing to image generation and beyond. The platform provides a scalable and flexible environment for building and deploying generative AI models, making it easier for developers to bring their ideas to life and deliver value to their users.
+
+- **Azure Ai Foundry Projects**
+  - **Azure AI Foundry Resource**: A resource in Azure that serves as a container for all the components and assets related to a generative AI project. It provides a centralized location for managing and organizing the various elements of the project, such as data, models, and tools.
+    - **Azure AI Foundry Models**: The generative AI models that are used in the project. These models can be trained on specific datasets and can be used to generate content or make predictions based on input data.
+    - **Azure AI Foundry Agents**: The agents that are designed to interact with the generative AI models and perform specific tasks or actions based on user input or predefined objectives. These agents can leverage the capabilities of the models to generate content, make decisions, or solve problems in a variety of contexts.
+    - **Azure AI Services**: The various Azure services that can be integrated with the Azure AI Foundry project to enhance its capabilities and functionality. This can include services for storage, compute, monitoring, and more, allowing developers to create powerful and scalable generative AI applications using Azure's infrastructure and services.
