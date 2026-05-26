@@ -19,6 +19,7 @@ Table of Contents:
 - [01 - AI Overview](./01-ai-overview.md)
 - [02 - Fundamentals of Machine Learning](./02-fundamentals-machine-learning.md)
 - [03 - Fundamentals of Generative AI](./03-fundamentals-generative-ai.md)
+- [04 - Fundamentals of Natural Language Processing](./04-fundamentals-natural-language-processing.md)
 
 ## Skills measured as of May 2, 2025
 
