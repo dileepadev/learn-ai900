@@ -12,7 +12,10 @@ Table of Contents:
       - [Speech Synthesis (Text-to-Speech)](#speech-synthesis-text-to-speech)
       - [Speech Recognition (Speech-to-Text)](#speech-recognition-speech-to-text)
   - [Get started with natural language processing in Azure](#get-started-with-natural-language-processing-in-azure)
+    - [Azure AI Language](#azure-ai-language)
+    - [Azure AI Translator](#azure-ai-translator)
   - [Get started with speech in Azure](#get-started-with-speech-in-azure)
+    - [Azure AI Speech](#azure-ai-speech)
 
 ## Introduction to natural language processing concepts
 
@@ -51,4 +54,16 @@ Table of Contents:
 
 ## Get started with natural language processing in Azure
 
+### Azure AI Language
+
+- Azure AI Language is a suite of natural language processing services that enable developers to build intelligent applications that can understand and analyze human language. It includes features such as sentiment analysis, key phrase extraction, language detection, and entity recognition. Azure AI Language allows developers to easily integrate natural language processing capabilities into their applications, enabling them to provide more personalized and engaging user experiences.
+
+### Azure AI Translator
+
+- Azure AI Translator is a cloud-based translation service that enables developers to translate text and speech in real-time. It supports over 70 languages and provides features such as language detection, text translation, and speech translation. Azure AI Translator allows developers to easily integrate translation capabilities into their applications, enabling them to reach a global audience and provide localized experiences for users around the world.
+
 ## Get started with speech in Azure
+
+### Azure AI Speech
+
+- Azure AI Speech is a suite of speech processing services that enable developers to build intelligent applications that can understand and generate human speech. It includes features such as speech recognition, speech synthesis, and speaker recognition. Azure AI Speech allows developers to easily integrate speech processing capabilities into their applications, enabling them to provide more natural and engaging user experiences through voice interactions.
