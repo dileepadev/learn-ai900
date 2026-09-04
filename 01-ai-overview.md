@@ -1,80 +1,223 @@
-# AI Overview
+# 01 - AI Overview, Responsible AI & Microsoft Foundry
 
-Table of Contents:
+This module covers the core concepts, foundational techniques, responsible AI principles, and platform architecture required for **Exam AI-901: Microsoft Azure AI Fundamentals**.
 
-- [AI Overview](#ai-overview)
-  - [What is Artificial Intelligence (AI)?](#what-is-artificial-intelligence-ai)
-  - [AI workloads](#ai-workloads)
-  - [Principles of responsible AI](#principles-of-responsible-ai)
-  - [AI services in Azure](#ai-services-in-azure)
-    - [Azure AI Foundry](#azure-ai-foundry)
-      - [Generative AI](#generative-ai)
-      - [Agents and automation](#agents-and-automation)
-      - [Natural language processing (NLP)](#natural-language-processing-nlp)
-      - [Computer vision](#computer-vision)
-      - [Information extraction](#information-extraction)
-    - [Azure Machine Learning](#azure-machine-learning)
+---
 
-## What is Artificial Intelligence (AI)?
+## Table of Contents
 
-- Artificial Intelligence (AI) is the simulation of human intelligence processes by machines, especially computer systems. These processes include learning, reasoning, self-correction, and more.
-- AI is a software that imitates human capabilities such as:
-  - Predicting outcomes and recognizing patterns based on historical data.
-  - Recognizing abnormal events, making decisions, and taking appropriate actions.
-  - Interpreting visual input.
-  - Understanding language and engaging in conversations.
-  - Extracting information from sources to gain knowledge and insights.
-- AI is a broad field that encompasses various techniques and approaches, including machine learning, deep learning, natural language processing, computer vision, and more.
+- [01 - AI Overview, Responsible AI \& Microsoft Foundry](#01---ai-overview-responsible-ai--microsoft-foundry)
+  - [Table of Contents](#table-of-contents)
+  - [1. What is Artificial Intelligence (AI)?](#1-what-is-artificial-intelligence-ai)
+  - [2. Common AI Workloads](#2-common-ai-workloads)
+  - [3. Foundational Machine Learning \& Deep Learning Concepts](#3-foundational-machine-learning--deep-learning-concepts)
+    - [Features and Labels](#features-and-labels)
+    - [Training vs. Inferencing](#training-vs-inferencing)
+    - [Supervised vs. Unsupervised Learning](#supervised-vs-unsupervised-learning)
+    - [Deep Learning \& Neural Networks](#deep-learning--neural-networks)
+    - [The Transformer Architecture](#the-transformer-architecture)
+  - [4. Principles of Responsible AI](#4-principles-of-responsible-ai)
+    - [The Six Principles at a Glance](#the-six-principles-at-a-glance)
+    - [Deep Dive into Each Principle](#deep-dive-into-each-principle)
+  - [5. Microsoft Foundry Platform Architecture](#5-microsoft-foundry-platform-architecture)
+    - [What is Microsoft Foundry?](#what-is-microsoft-foundry)
+    - [Hierarchy: Subscriptions, Hubs, and Projects](#hierarchy-subscriptions-hubs-and-projects)
+    - [Key Foundry Components](#key-foundry-components)
+  - [6. Exam Essentials \& Review Points](#6-exam-essentials--review-points)
 
-## AI workloads
+---
 
-- AI workloads are specific tasks or applications that utilize AI techniques to achieve certain goals. Examples of AI workloads include:
-  - **Generative AI**: Creating new content, such as images, text, or music, based on learned patterns from existing data.
-  - **Agents and automation**: Performing tasks autonomously, such as scheduling meetings, managing emails, or controlling smart devices.
-  - **Natural language processing (NLP)**: Understanding and generating human language, including text and speech.
-  - **Computer vision**: Analyzing and interpreting visual data, such as images and videos.
-  - **Information extraction**: Extracting structured information from unstructured data sources, such as documents, web pages, or social media posts.
-  - **Machine learning**: Identifying patterns in data and making predictions or decisions based on those patterns.
+## 1. What is Artificial Intelligence (AI)?
 
-## Principles of responsible AI
+**Artificial Intelligence (AI)** refers to software systems that simulate human capabilities and cognitive functions, enabling machines to perceive their environment, learn from experience, make reasoned decisions, and perform tasks autonomously.
 
-- **Fairness**: AI systems should be designed and implemented in a way that avoids bias and discrimination, ensuring that they treat all individuals and groups fairly.
-- **Reliability and safety**: AI systems should be reliable and safe to use, minimizing the risk of harm to users and society.
-- **Privacy and security**: AI systems should respect user privacy and ensure the security of data and information.
-- **Inclusiveness**: AI systems should be inclusive and accessible to all individuals, regardless of their background, abilities, or circumstances.
-- **Transparency**: AI systems should be transparent in their design and operation, allowing users to understand how they work and make informed decisions about their use.
-- **Accountability**: Developers and organizations should be accountable for the design, deployment, and impact of AI systems, ensuring that they are used responsibly and ethically.
+Key human capabilities that AI emulates:
+- **Perceiving**: Interpreting visual input (images, video), acoustic signals (speech, audio), and sensory data.
+- **Understanding**: Processing natural language, extracting intent, recognizing semantic relationships, and comprehending nuances.
+- **Reasoning**: Evaluating options, formulating plans, identifying patterns, and solving problems.
+- **Learning**: Adapting behavior based on historical data, feedback loops, and newly observed examples.
+- **Generating**: Producing novel text, code, images, audio, and synthetic data that mirror human creativity.
 
-## AI services in Azure
+---
 
-### Azure AI Foundry
+## 2. Common AI Workloads
 
-#### Generative AI
+Exam AI-901 categorizes modern AI workloads into six primary domains:
 
-- *Azure AI Foundry Models*: A collection of pre-trained models that can be used for various AI workloads, including generative AI. These models are designed to be easily integrated into applications and services, allowing developers to leverage the power of AI without needing extensive expertise in machine learning.
-- *Azure OpenAI in Azure AI Foundry Models*: A specific offering within Azure AI Foundry that provides access to OpenAI's powerful language models, such as GPT-3. This service allows developers to create applications that can generate human-like text, understand natural language, and perform a wide range of language-related tasks.
+| Workload | Description | Example Real-World Scenarios |
+| :--- | :--- | :--- |
+| **Generative AI** | Creating original content (text, code, photorealistic images, synthetic audio/video) based on learned patterns from massive datasets. | Drafting emails, summarizing reports, generating creative artwork, creating marketing copy. |
+| **Agentic AI** | Goal-oriented systems that combine foundation models with instructions, memory, and external tools to accomplish multi-step workflows autonomously. | Customer service agents that look up orders, process refunds via APIs, and notify the warehouse. |
+| **Natural Language Processing (NLP)** | Analyzing, understanding, and extracting meaning from written human text. | Sentiment analysis on customer reviews, language translation, key phrase extraction, named entity recognition. |
+| **Speech Processing** | Converting spoken audio into written text (Speech-to-Text) and synthesizing natural-sounding spoken audio from text (Text-to-Speech). | Real-time call transcription, in-car voice assistants, screen-readers for visually impaired users. |
+| **Computer Vision** | Processing, analyzing, and extracting semantic understanding from visual inputs such as images and video streams. | Defect detection on manufacturing lines, autonomous vehicle lane detection, optical character recognition (OCR) on street signs. |
+| **Information Extraction** | Transforming unstructured content (scanned forms, receipts, video recordings, customer phone calls) into structured, queryable data schemas. | Automated invoice processing, medical records digitalization, extracting topics and speakers from meeting recordings. |
 
-#### Agents and automation
+---
 
-- *Azure AI Foundry Agents*: A service that enables developers to create intelligent agents that can perform tasks autonomously. These agents can be designed to interact with users, access data, and take actions based on predefined rules or learned behaviors.
+## 3. Foundational Machine Learning & Deep Learning Concepts
 
-#### Natural language processing (NLP)
+Machine learning (ML) is the computational backbone of modern AI. Understanding foundational ML mechanics is essential for understanding how foundation models and generative AI operate.
 
-- **Azure AI Language**: A suite of services that provide natural language processing capabilities, including text analysis, language understanding, and translation. These services can be used to extract insights from text, understand user intent, and enable multilingual communication in applications.
-- **Azure AI Translator**: A service that provides real-time translation of text and speech across multiple languages. This service can be used to facilitate communication and collaboration in a globalized world, allowing users to interact with content in their preferred language.
-- **Azure AI Speech**: A set of services that enable speech recognition, synthesis, and translation. These services allow developers to create applications that can understand spoken language, generate natural-sounding speech, and facilitate communication across different languages.
+### Features and Labels
 
-#### Computer vision
+Machine learning models learn mathematical relationships between **features** and **labels**:
+- **Features ($X$)**: The input variables or attributes describing the data (e.g., house square footage, number of bedrooms, location zip code).
+- **Label ($y$)**: The target variable the model attempts to predict (e.g., sale price of the house).
+- In unlabeled datasets (unsupervised learning), only features exist without assigned labels.
 
-- **Azure AI Vision**: A collection of services that provide computer vision capabilities, including image analysis, object detection, and facial recognition. These services can be used to extract insights from visual data, automate processes, and enhance user experiences in applications that rely on visual information.
-- **Azure AI Face API**: A specific service within Azure AI Vision that provides facial recognition capabilities. This service can be used to identify and verify individuals based on their facial features, enabling applications such as access control, identity verification, and personalized experiences.
+### Training vs. Inferencing
 
-#### Information extraction
+- **Training**: The iterative process where an algorithm analyzes training data, computes predictions, calculates error (loss), and adjusts internal weights/parameters until predictions closely align with ground truth labels.
+- **Validation & Testing**: Evaluating the trained model against held-out, unseen datasets to verify generalization and detect overfitting.
+- **Inferencing**: Deploying the trained model to production to make predictions or generate outputs on live, new inputs.
 
-- **Azure AI Document Intelligence**: A service that provides information extraction capabilities from documents. This service can be used to extract structured data from unstructured documents, such as invoices, receipts, and forms, enabling automation and insights from document processing.
-- **Azure AI Content Understanding**: A service that provides information extraction capabilities from unstructured content, such as web pages, social media posts, and news articles. This service can be used to extract insights and knowledge from large volumes of unstructured data, enabling applications such as sentiment analysis, topic modeling, and entity recognition.
-- **Azure AI Search**: A service that provides information retrieval capabilities, allowing developers to create applications that can search and retrieve relevant information from large datasets. This service can be used to enhance search functionality in applications, enabling users to find the information they need quickly and efficiently.
+### Supervised vs. Unsupervised Learning
 
-### Azure Machine Learning
+```mermaid
+flowchart TD
+    ML[Machine Learning]
+    ML --> Sup[Supervised Learning<br/>Labeled Data]
+    ML --> Unsup[Unsupervised Learning<br/>Unlabeled Data]
+    
+    Sup --> Reg[Regression<br/>Continuous numeric output<br/>e.g. Sales Forecast]
+    Sup --> Class[Classification<br/>Discrete categorical output<br/>e.g. Spam / Not Spam]
+    
+    Unsup --> Clust[Clustering<br/>Grouping by similarity<br/>e.g. Customer Segmentation]
+```
 
-- **Azure Machine Learning**: A comprehensive service that provides tools and capabilities for building, training, and deploying machine learning models. This service allows developers and data scientists to create custom machine learning solutions tailored to their specific needs, leveraging the power of Azure's cloud infrastructure for scalability and performance.
+- **Supervised Learning**:
+  - **Regression**: Predicts continuous numerical values (e.g., predicting temperature, stock prices, or delivery times).
+  - **Classification**: Predicts discrete categorical labels.
+    - *Binary Classification*: Two possible classes (e.g., Diabetic: Yes/No; Fraudulent: True/False).
+    - *Multiclass Classification*: More than two mutually exclusive classes (e.g., Animal: Cat, Dog, Bird).
+- **Unsupervised Learning**:
+  - **Clustering**: Discovers natural groupings and patterns without predefined labels (e.g., grouping e-commerce shoppers based on purchasing frequency and cart size).
+
+### Deep Learning & Neural Networks
+
+**Deep Learning** is a specialized subset of machine learning based on **Artificial Neural Networks (ANNs)** with multiple hidden layers (hence "deep").
+
+- **Neurons (Nodes)**: Receive inputs, multiply them by learned **weights**, add a **bias**, and apply an **activation function** to produce an output signal.
+- **Layers**:
+  - *Input Layer*: Receives raw features (e.g., pixel brightness or token IDs).
+  - *Hidden Layers*: Hierarchically extract increasingly abstract representations (e.g., edges $\rightarrow$ shapes $\rightarrow$ facial features).
+  - *Output Layer*: Produces final classification probabilities or continuous predictions.
+
+### The Transformer Architecture
+
+The **Transformer** (introduced in 2017) revolutionized modern AI and forms the architectural foundation for all modern Large Language Models (LLMs) and vision foundation models:
+
+- **Self-Attention Mechanism**: Computes mathematical correlation scores between all tokens in an input sequence simultaneously, enabling the model to capture long-range contextual relationships regardless of distance.
+- **Parallel Processing**: Unlike recurrent neural networks (RNNs) that process text sequentially word-by-word, transformers process entire sequences in parallel, dramatically accelerating training on massive GPU clusters.
+- **Encoder-Decoder Structure**:
+  - *Encoder*: Processes input sequences and builds rich semantic representations (e.g., BERT for classification and embeddings).
+  - *Decoder*: Auto-regressively generates output sequences one token at a time based on the encoder representations and previously generated tokens (e.g., GPT for text generation).
+
+---
+
+## 4. Principles of Responsible AI
+
+Microsoft has established six core principles for developing and deploying ethical, trustworthy AI systems. These principles are heavily tested in Exam AI-901 through scenario-based questions.
+
+### The Six Principles at a Glance
+
+```mermaid
+graph TD
+    RAI[Responsible AI Principles]
+    RAI --> F[Fairness]
+    RAI --> RS[Reliability & Safety]
+    RAI --> PS[Privacy & Security]
+    RAI --> I[Inclusiveness]
+    RAI --> T[Transparency]
+    RAI --> A[Accountability]
+```
+
+### Deep Dive into Each Principle
+
+#### 1. Fairness
+- **Core Requirement**: AI systems must treat all people fairly and equitably without discrimination based on gender, ethnicity, race, age, disability, or other protected characteristics.
+- **Risk Scenario**: A loan approval model approves loans for male applicants at a significantly higher rate than similarly qualified female applicants due to historical demographic bias in the training data.
+- **Mitigation**: Audit training data for demographic representation, evaluate error rates across sub-populations, and apply fairness metrics during model evaluation.
+
+#### 2. Reliability and Safety
+- **Core Requirement**: AI systems must perform reliably, safely, and consistently under both expected operational conditions and unexpected edge cases.
+- **Risk Scenario**: An autonomous vehicle software fails to detect pedestrians wearing dark clothing during heavy rainfall, or an AI medical diagnostics tool generates erratic diagnoses when sensor readings fluctuate slightly.
+- **Mitigation**: Conduct rigorous testing across adverse conditions, implement automated safety guardrails, define operational operational thresholds, and allow human intervention fallbacks.
+
+#### 3. Privacy and Security
+- **Core Requirement**: AI systems must safeguard user privacy, comply with data protection regulations (GDPR, HIPAA, etc.), and protect proprietary and sensitive data against adversarial attacks.
+- **Risk Scenario**: A customer support chatbot inadvertently reveals another customer's personally identifiable information (PII) or confidential payment details in its responses.
+- **Mitigation**: Implement role-based access control (RBAC), data masking/redaction of PII, end-to-end encryption in transit and at rest, and evaluate models against prompt injection or data exfiltration attacks.
+
+#### 4. Inclusiveness
+- **Core Requirement**: AI systems must empower and engage everyone, accommodating a wide spectrum of human capabilities, disabilities, languages, and cultural backgrounds.
+- **Risk Scenario**: A public service portal deploys a voice-only conversational agent that cannot be utilized by hearing-impaired citizens or individuals with non-standard speech patterns.
+- **Mitigation**: Follow accessibility standards (WCAG), provide multimodal input/output options (speech + captions + text), and support multiple languages and locales.
+
+#### 5. Transparency
+- **Core Requirement**: AI systems should be understandable. Users must be explicitly informed when they are interacting with an AI system, and stakeholders should understand the system's capabilities, limitations, and underlying data sources.
+- **Risk Scenario**: Users assume a medical advisory chatbot is a licensed human physician and take unverified medical action without realizing the advice was generated probabilistically by an LLM.
+- **Mitigation**: Display prominent disclosures (e.g., *"Generated by AI"*), publish system transparency notes, provide citation links for generated facts, and document model capabilities and limitations.
+
+#### 6. Accountability
+- **Core Requirement**: The people who design, develop, and deploy AI systems must be accountable for how their systems operate and the societal impact they produce.
+- **Risk Scenario**: An organization deploys an automated hiring system that unjustly screens out candidates, but management claims "the algorithm made the decision" with no human oversight or recourse.
+- **Mitigation**: Establish clear human-in-the-loop governance structures, designate executive ownership, establish appeals processes, and conduct ongoing algorithmic impact assessments.
+
+---
+
+## 5. Microsoft Foundry Platform Architecture
+
+In Exam AI-901, **Microsoft Foundry** (formerly Azure AI Foundry / Azure AI Studio) is the central platform for designing, customizing, evaluating, and deploying AI applications and agents.
+
+### What is Microsoft Foundry?
+
+Microsoft Foundry brings together foundation models from Microsoft, OpenAI, Meta, Mistral, and the open-source ecosystem, alongside managed developer tools, agent runtimes, and enterprise safety guardrails into a single unified portal (`https://ai.azure.com`).
+
+```mermaid
+graph TD
+    subgraph Azure Subscription
+        Hub[Foundry Hub / Resource<br/>Enterprise Security, Connections & Compute]
+        
+        Hub --> ProjectA[Foundry Project: Customer Support Agent]
+        Hub --> ProjectB[Foundry Project: Document Analysis]
+        
+        ProjectA --> MC[Model Catalog<br/>GPT-4o, Phi-4, Llama 3]
+        ProjectA --> AS[Foundry Agent Service<br/>Instructions, Tools, Threads]
+        ProjectA --> FT[Foundry Tools<br/>Speech, Language, Content Understanding]
+        ProjectA --> FIQ[Foundry IQ<br/>Knowledge Retrieval Layer]
+    end
+```
+
+### Hierarchy: Subscriptions, Hubs, and Projects
+
+1. **Azure Subscription**: The billing and high-level identity boundary in Azure.
+2. **Foundry Hub (Resource)**:
+   - Serves as the top-level container for governance, security, and compliance.
+   - Manages shared Azure resources: Azure Storage (for files/datasets), Azure Key Vault (for API keys/secrets), Azure Container Registry (for custom environments), and network isolation (VNet / Private Endpoints).
+   - Defines shared connections to data sources and external services.
+3. **Foundry Projects**:
+   - Lightweight workspaces created within a Hub for team collaboration on specific AI applications.
+   - Houses deployed models, prompt engineering experiments, agent definitions, evaluation runs, and code assets.
+   - Multiple projects can share the same parent Hub without duplicating enterprise security setup.
+
+### Key Foundry Components
+
+| Component | Description & Role in AI-901 |
+| :--- | :--- |
+| **Model Catalog** | A comprehensive directory of foundation models across publishers (OpenAI, Microsoft Research, Meta, Mistral, Cohere, Hugging Face). Supports 1-click deployment as Serverless APIs or Managed Compute. |
+| **Foundry Playgrounds** | Web-based interactive testing interfaces in the Foundry portal: Chat Playground, Completions Playground, Vision Playground, and Speech Playground. |
+| **Foundry Agent Service** | A managed runtime for building, testing, and running stateful AI agents with built-in tool support (Code Interpreter, File Search, custom functions). |
+| **Foundry IQ** | The managed knowledge retrieval layer (built on Azure AI Search) that powers Retrieval-Augmented Generation (RAG) for agents with citation-backed responses. |
+| **Foundry Tools** | Pre-integrated AI capabilities accessible from Foundry, including: Azure AI Language, Azure Speech in Foundry Tools, and Azure Content Understanding. |
+| **Azure AI Content Safety** | Built-in enterprise guardrails that detect and filter hate speech, violence, sexual content, self-harm, and prompt injection attacks in real time. |
+
+---
+
+## 6. Exam Essentials & Review Points
+
+- [ ] **AI Workload Identification**: Know which AI workload matches a given scenario (e.g., document extraction $\rightarrow$ Information Extraction; automated multi-step booking $\rightarrow$ Agentic AI; real-time audio translation $\rightarrow$ Speech Processing).
+- [ ] **Responsible AI Principles**: Be prepared to identify which principle is violated in a scenario (e.g., lack of user notice $\rightarrow$ Transparency; unequal error rates $\rightarrow$ Fairness; unencrypted customer chat logs $\rightarrow$ Privacy & Security).
+- [ ] **Transformer Architecture**: Understand that the self-attention mechanism enables simultaneous processing of context across an entire sequence.
+- [ ] **Foundry Hub vs. Project**: Understand that enterprise security, storage, and shared connections are configured at the **Hub** level, while individual experiments, model deployments, and agents live in the **Project**.
