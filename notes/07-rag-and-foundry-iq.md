@@ -1,3 +1,8 @@
+> [!WARNING]
+> **Archived.** These notes predate the current AI-901 content and contain a few things
+> Microsoft has since changed. The verified, up-to-date version is the interactive site in
+> this repository. See [notes/README.md](./README.md) for the specific corrections.
+
 # 07 - Retrieval-Augmented Generation (RAG) & Microsoft Foundry IQ
 
 This module covers the architecture and lifecycle of Retrieval-Augmented Generation (RAG), vector embeddings, search strategies (vector, hybrid, semantic reranking), Microsoft Foundry IQ enterprise knowledge grounding, agent integration, and hands-on Python SDK client implementations for **Exam AI-901: Microsoft Azure AI Fundamentals**.

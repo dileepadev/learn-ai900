@@ -1,3 +1,8 @@
+> [!WARNING]
+> **Archived.** These notes predate the current AI-901 content and contain a few things
+> Microsoft has since changed. The verified, up-to-date version is the interactive site in
+> this repository. See [notes/README.md](./README.md) for the specific corrections.
+
 # 03 - Natural Language Processing & Text Analysis
 
 This module covers natural language processing concepts, text analysis techniques, Azure AI Language integration, and hands-on Python client implementations in Microsoft Foundry for **Exam AI-901: Microsoft Azure AI Fundamentals**.

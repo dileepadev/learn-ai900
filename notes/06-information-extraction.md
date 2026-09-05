@@ -1,3 +1,8 @@
+> [!WARNING]
+> **Archived.** These notes predate the current AI-901 content and contain a few things
+> Microsoft has since changed. The verified, up-to-date version is the interactive site in
+> this repository. See [notes/README.md](./README.md) for the specific corrections.
+
 # 06 - Information Extraction & Azure Content Understanding
 
 This module covers information extraction principles, Azure AI Document Intelligence, Azure Content Understanding in Foundry Tools across documents, images, audio, and video, and hands-on Python SDK client implementations for **Exam AI-901: Microsoft Azure AI Fundamentals**.

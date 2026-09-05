@@ -1,3 +1,8 @@
+> [!WARNING]
+> **Archived.** These notes predate the current AI-901 content and contain a few things
+> Microsoft has since changed. The verified, up-to-date version is the interactive site in
+> this repository. See [notes/README.md](./README.md) for the specific corrections.
+
 # 05 - Computer Vision, Multimodal Vision & Image Generation
 
 This module covers core computer vision tasks, multimodal vision models, generative image and video models, and hands-on Python SDK client implementations in Microsoft Foundry for **Exam AI-901: Microsoft Azure AI Fundamentals**.
