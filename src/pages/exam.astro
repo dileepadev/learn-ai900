@@ -1,0 +1,16 @@
+---
+import Base from '../layouts/Base.astro';
+import ExamRunner from '../components/ExamRunner.svelte';
+
+const base = import.meta.env.BASE_URL;
+---
+
+<Base
+  title="Practice exam — AI-901 Exam Prep"
+  description="A timed AI-901 practice exam sampled across topics in proportion to the published exam weights, with a topic-by-topic report."
+  active="exam"
+>
+  <div class="wrap">
+    <ExamRunner client:only="svelte" base={base} variant="exam" />
+  </div>
+</Base>

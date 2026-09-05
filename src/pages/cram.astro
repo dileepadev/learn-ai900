@@ -1,0 +1,16 @@
+---
+import Base from '../layouts/Base.astro';
+import CramSheet from '../components/CramSheet.svelte';
+
+const base = import.meta.env.BASE_URL;
+---
+
+<Base
+  title="Cram sheet — AI-901 Exam Prep"
+  description="Final-day revision for Exam AI-901: every know-this fact, exam trap and changed-since-AI-900 note in one pass."
+  active="review"
+>
+  <div class="wrap">
+    <CramSheet client:only="svelte" base={base} />
+  </div>
+</Base>

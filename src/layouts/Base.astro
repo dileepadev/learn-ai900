@@ -1,0 +1,296 @@
+---
+import '../styles/global.css';
+import { ClientRouter } from 'astro:transitions';
+import ThemeToggle from '../components/ThemeToggle.svelte';
+import HeaderProgress from '../components/HeaderProgress.svelte';
+
+interface Props {
+  title: string;
+  description?: string;
+  /** Which nav item to highlight. */
+  active?: string;
+  /** Kept for API compatibility; header remains stable across all pages. */
+  bare?: boolean;
+}
+
+const {
+  title,
+  description = 'An interactive study app for Microsoft Exam AI-901: Microsoft Azure AI Fundamentals. 12 lessons, 200+ practice questions with explanations, spaced repetition, weak-area drilling and a timed exam simulator.',
+  active,
+} = Astro.props;
+
+const base = import.meta.env.BASE_URL;
+const href = (p: string) => `${base.replace(/\/$/, '')}${p}`;
+
+const nav = [
+  { id: 'home', label: 'Dashboard', path: '/' },
+  { id: 'plan', label: 'Plan', path: '/plan/' },
+  { id: 'learn', label: 'Learn', path: '/learn/' },
+  { id: 'practice', label: 'Practice', path: '/practice/' },
+  { id: 'exam', label: 'Exam', path: '/exam/' },
+  { id: 'review', label: 'Review', path: '/review/' },
+  { id: 'resources', label: 'Resources', path: '/resources/' },
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="sitemap" href={href('/sitemap-index.xml')} />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8E%93%3C/text%3E%3C/svg%3E"
+    />
+    <ClientRouter />
+    <script is:inline>
+      // Apply the stored theme before first paint to avoid a flash.
+      function applyTheme() {
+        try {
+          const t = localStorage.getItem('ai901:theme');
+          if (t === 'dark' || t === 'light') {
+            document.documentElement.dataset.theme = t;
+          } else {
+            delete document.documentElement.dataset.theme;
+          }
+        } catch (e) {
+          /* private mode: fall back to the system preference */
+        }
+      }
+      applyTheme();
+      document.addEventListener('astro:after-swap', applyTheme);
+    </script>
+    <script is:inline>
+      function scrollActiveNav() {
+        const activeLink = document.querySelector('.site-nav .nav-link.current');
+        if (activeLink) {
+          activeLink.scrollIntoView({ behavior: 'instant', inline: 'center', block: 'nearest' });
+        }
+      }
+      document.addEventListener('astro:page-load', scrollActiveNav);
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', scrollActiveNav);
+      } else {
+        scrollActiveNav();
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" transition:name="site-header">
+      <div class="wrap header-inner">
+        <a class="brand" href={href('/')}>
+          <span class="brand-mark" aria-hidden="true">AI</span>
+          <span class="brand-text">
+            <strong>AI-901</strong>
+            <span class="tiny subtle">Exam prep</span>
+          </span>
+        </a>
+
+        <nav class="site-nav" aria-label="Main">
+          {
+            nav.map((item) => (
+              <a
+                href={href(item.path)}
+                class:list={['nav-link', { current: active === item.id }]}
+                aria-current={active === item.id ? 'page' : undefined}
+              >
+                {item.label}
+              </a>
+            ))
+          }
+        </nav>
+
+        <div class="header-right" transition:persist="header-right">
+          <HeaderProgress client:only="svelte" base={base} active={active === 'progress'} />
+          <ThemeToggle client:only="svelte" />
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <slot />
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <p class="tiny subtle">
+          Built for the current <strong>Exam AI-901</strong> skills measured (April 15, 2026), verified
+          against Microsoft Learn. Progress is stored only in this browser.{' '}
+          <a href="https://learn.microsoft.com/credentials/certifications/resources/study-guides/ai-901"
+            >Official study guide</a
+          >{' '}&middot;{' '}
+          <a href={href('/resources/')}>Official resources &amp; links</a>{' '}&middot;{' '}
+          <a href={href('/progress/')}>Your progress &amp; data</a>
+        </p>
+      </div>
+    </footer>
+
+    <style>
+      .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 40;
+        background: color-mix(in srgb, var(--bg) 88%, transparent);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+        border-bottom: 1px solid var(--border);
+        box-shadow: 0 1px 3px rgb(20 22 31 / 0.03);
+      }
+
+      .header-inner {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        min-height: 56px;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        text-decoration: none;
+        color: var(--fg);
+        flex-shrink: 0;
+        transition: opacity 0.14s ease;
+      }
+      .brand:hover {
+        opacity: 0.9;
+      }
+
+      .brand-mark {
+        display: grid;
+        place-items: center;
+        width: 32px;
+        height: 32px;
+        border-radius: 9px;
+        background: linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 100%);
+        color: var(--accent-fg);
+        font-size: 0.76rem;
+        font-weight: 800;
+        letter-spacing: -0.02em;
+        box-shadow: 0 2px 8px color-mix(in srgb, var(--accent) 30%, transparent);
+      }
+
+      .brand-text {
+        display: flex;
+        flex-direction: column;
+        line-height: 1.15;
+      }
+      .brand-text strong {
+        font-size: 0.96rem;
+        letter-spacing: -0.015em;
+      }
+
+      .site-nav {
+        display: flex;
+        align-items: center;
+        gap: 0.2rem;
+        margin-left: auto;
+        padding: 3px;
+        background: var(--bg-sunken);
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        overflow-x: auto;
+        scrollbar-width: none;
+        -webkit-overflow-scrolling: touch;
+      }
+      .site-nav::-webkit-scrollbar {
+        display: none;
+      }
+
+      .nav-link {
+        padding: 0.32rem 0.72rem;
+        border-radius: 999px;
+        font-size: 0.85rem;
+        font-weight: 550;
+        color: var(--fg-muted);
+        text-decoration: none;
+        white-space: nowrap;
+        transition:
+          background 0.14s ease,
+          color 0.14s ease,
+          box-shadow 0.14s ease;
+      }
+      .nav-link:hover {
+        background: var(--bg-hover);
+        color: var(--fg);
+      }
+      .nav-link.current {
+        background: var(--bg-elevated);
+        color: var(--accent);
+        font-weight: 650;
+        box-shadow: var(--shadow-sm);
+      }
+
+      .header-right {
+        display: flex;
+        align-items: center;
+        gap: 0.55rem;
+        flex-shrink: 0;
+        min-width: 140px;
+        justify-content: flex-end;
+      }
+
+      main {
+        padding: 1.6rem 0 3.5rem;
+      }
+
+      .site-footer {
+        border-top: 1px solid var(--border);
+        padding: 1.2rem 0 2rem;
+      }
+      .site-footer p {
+        margin: 0;
+        max-width: 62ch;
+      }
+
+      @media (max-width: 768px) {
+        .header-inner {
+          display: grid;
+          grid-template-columns: auto 1fr;
+          grid-template-areas:
+            'brand actions'
+            'nav nav';
+          row-gap: 0.5rem;
+          column-gap: 0.75rem;
+          padding-top: 0.5rem;
+          padding-bottom: 0.55rem;
+          min-height: auto;
+        }
+
+        .brand {
+          grid-area: brand;
+        }
+
+        .brand-text {
+          display: flex;
+        }
+
+        .header-right {
+          grid-area: actions;
+          min-width: 0;
+        }
+
+        .site-nav {
+          grid-area: nav;
+          margin-left: 0;
+          width: 100%;
+          justify-content: flex-start;
+          padding: 2px;
+          gap: 0.15rem;
+        }
+
+        .nav-link {
+          padding: 0.28rem 0.58rem;
+          font-size: 0.81rem;
+        }
+      }
+    </style>
+  </body>
+</html>

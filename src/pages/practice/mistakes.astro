@@ -1,0 +1,12 @@
+---
+import Base from '../../layouts/Base.astro';
+import PracticeHub from '../../components/PracticeHub.svelte';
+
+const base = import.meta.env.BASE_URL;
+---
+
+<Base title="Questions you got wrong — AI-901" active="practice">
+  <div class="wrap">
+    <PracticeHub client:only="svelte" base={base} fixedMode="mistakes" />
+  </div>
+</Base>
