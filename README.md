@@ -1,158 +1,211 @@
-# Learn AI-901: Microsoft Azure AI Fundamentals
+# Learn AI-901
 
-This repository contains comprehensive study notes, conceptual deep-dives, architectural diagrams, and hands-on code examples for the **AI-901: Microsoft Azure AI Fundamentals** certification exam.
+An interactive exam-prep app for **Exam AI-901: Microsoft Azure AI Fundamentals**, built for a
+few-day study sprint rather than a leisurely course.
 
-Exam **AI-901** is Microsoft's updated foundational certification, replacing the retired AI-900 exam. AI-901 places a major emphasis on **Microsoft Foundry**, **Generative AI**, **AI Agents**, **Foundry IQ (RAG)**, **Azure Content Understanding**, and **hands-on Python SDK client implementations**.
+**→ [dileepadev.github.io/learn-ai901](https://dileepadev.github.io/learn-ai901/)**
 
----
+It is not a documentation site. It is a learning loop:
 
-## Table of Contents
+> Learn → Interact → Answer → Get feedback → Identify weakness → Practise → Review → Simulate the exam → Improve
 
-- [Learn AI-901: Microsoft Azure AI Fundamentals](#learn-ai-901-microsoft-azure-ai-fundamentals)
-  - [Table of Contents](#table-of-contents)
-  - [Exam Summary](#exam-summary)
-  - [What Changed: AI-900 vs. AI-901](#what-changed-ai-900-vs-ai-901)
-  - [Course Curriculum & Modules](#course-curriculum--modules)
-  - [Skills Measured (as of April 15, 2026)](#skills-measured-as-of-april-15-2026)
-    - [1. Identify AI concepts and capabilities (40–45%)](#1-identify-ai-concepts-and-capabilities-4045)
-    - [2. Implement AI solutions by using Microsoft Foundry (55–60%)](#2-implement-ai-solutions-by-using-microsoft-foundry-5560)
-  - [Official Microsoft Learn Resources](#official-microsoft-learn-resources)
+Everything is static. Progress lives in your browser. No backend, no account, no tracking.
 
 ---
 
-## Exam Summary
+## What's in it
 
-| Attribute | Details |
+| | |
 | :--- | :--- |
-| **Exam Code** | AI-901 |
-| **Exam Title** | Microsoft Azure AI Fundamentals |
-| **Credential Earned** | Microsoft Certified: Azure AI Fundamentals |
-| **Passing Score** | 700 / 1000 |
-| **Question Count** | 40–60 questions (Multiple choice, multi-select, drag-and-drop, case scenarios) |
-| **Target Audience** | Aspiring AI developers, engineers, and technology professionals beginning their career in AI solution development |
-| **Technical Prerequisites** | Foundational understanding of AI concepts, Azure cloud resources, and **Python coding syntax** (REST APIs, SDKs, CLIs) |
+| **12 lessons** | 3.8 hours total, in recommended study order, with 8 interactive demos and 79 inline knowledge checks |
+| **206 questions** | 176 exam-style plus 30 inline checks. Multiple choice, multi-select, matching and ordering — each with an explanation, and a reason why each wrong option is wrong |
+| **Spaced repetition** | A Leitner scheduler tuned for a sprint: intervals run from 8 minutes to 4 days, so the whole bank can resurface before exam day |
+| **Weak-area drilling** | Topics ranked by *weighted readiness left on the table*, so a shaky high-weight topic outranks a neglected small one |
+| **Mistakes mode** | Every question currently sitting on a wrong answer, in one place |
+| **Exam simulator** | Timed, no feedback until the end, question palette with flagging, and a topic-by-topic report scaled to Microsoft's 1000-point scale |
+| **Rapid review** | 69 flashcards with their own review schedule, 10 comparison drills with hidden cells, and 18 one-line facts |
+| **Cram mode** | 19 "know this" callouts, 14 exam traps and 12 changed-since-AI-900 notes in one linear pass, for the final day |
+| **Study plan** | A three-day sprint that ticks itself off as you work through it |
+
+### The dashboard answers one question
+
+> *"I have 30 minutes right now — what should I do?"*
+
+Pick a time budget and it ranks concrete actions: finish the lesson you started, clear your
+misses, drill your weakest weighted topic, work the review backlog, or sit a timed paper. The
+first card is always the single highest-value thing you could do with that much time.
 
 ---
 
-## What Changed: AI-900 vs. AI-901
+## Content accuracy
 
-| Dimension | AI-900 (Retired) | AI-901 (Current) |
-| :--- | :--- | :--- |
-| **Core Architecture** | Fragmented across individual Azure Cognitive Services & Azure Machine Learning Studio | Unified under **Microsoft Foundry** (portal, hub, project, tools, and agent service) |
-| **Machine Learning Focus** | Classical ML (Supervised/Unsupervised, Regression/Classification/Clustering algorithms, AutoML, Azure ML Designer) | Foundations of Generative AI, LLMs/SLMs, transformer architecture, tokenization, embeddings, and model configuration parameters |
-| **Agents & Automation** | Basic mention of Azure Bot Service / conversational AI | Deep focus on **AI Agents** (Model + Instructions + Tools), single-agent creation in Foundry, and agent client SDKs |
-| **Knowledge & RAG** | Azure AI Search standalone overview | **Retrieval-Augmented Generation (RAG)** & **Microsoft Foundry IQ** for permission-aware, grounded agent responses |
-| **Information Extraction** | Form Recognizer / Document Intelligence standalone | **Azure Content Understanding** in Foundry Tools across documents, images, audio, and video |
-| **Implementation / Code** | Conceptual only; no coding syntax tested | **55–60% practical Foundry implementation**, including lightweight Python client applications using Foundry SDK & REST APIs |
+Written against the **skills measured as of April 15, 2026**, verified against Microsoft Learn
+via the [official study guide](https://learn.microsoft.com/credentials/certifications/resources/study-guides/ai-901)
+and current product documentation.
 
----
+AI-901 replaced AI-900, and a lot of study material still in circulation is stale. Things this
+app treats as current, and older material usually gets wrong:
 
-## Course Curriculum & Modules
+- **Foundry resources and projects**, not AI hubs. Hub-based projects are the *classic* model;
+  a Foundry project is a child of a Foundry resource and needs no separate Storage or Key Vault.
+- **Prompt agents vs. hosted agents** — the two agent types in Foundry Agent Service — plus
+  calling the Responses API directly for an ephemeral agent, and **toolboxes** for shared tools.
+- **Two deployment options** (Serverless API, managed compute), with provisioned throughput as a
+  deployment *type* rather than a third option, and **instant access** removing the deployment
+  step for supported models.
+- **Foundry IQ**: multi-source knowledge bases, agentic retrieval, permission-aware answers with
+  citations.
+- **Azure Content Understanding** across documents, images, audio and video — analyzers, the
+  Extract / Classify / Generate field methods, and confidence-driven straight-through processing.
+- The **GPT-image** family and **Sora-2**, not DALL·E alone; and Image Analysis 4.0's deprecation.
+- Current naming: **Foundry Tools**, not Cognitive Services.
 
-This repository is organized into 7 modular learning guides that reflect the official Microsoft Learn curriculum for Course **AI-901T00**:
+There is a whole section in cram mode dedicated to these, because they are where stale practice
+questions will cost you marks.
 
-1. [**01 - AI Overview, Responsible AI & Microsoft Foundry**](./01-ai-overview.md)
-   - Core AI concepts and workloads (Generative AI, Agents, NLP, Speech, Vision, Information Extraction)
-   - Foundational machine learning principles (features, labels, training vs. inference)
-   - Deep learning & Transformer architecture (Self-Attention, Encoders/Decoders)
-   - Guiding principles of Responsible AI (Fairness, Reliability & Safety, Privacy & Security, Inclusiveness, Transparency, Accountability)
-   - Microsoft Foundry architecture: Hubs, Projects, Resources, Model Catalog, and Foundry Tools
+The original markdown notes this repo started as are archived in
+[`notes/`](./notes/README.md), with a table of exactly what in them is no longer true.
 
-2. [**02 - Generative AI Models, Prompt Engineering & AI Agents**](./02-generative-ai-and-agents.md)
-   - How generative AI models work (LLMs vs. SLMs, tokenization, embeddings, prediction)
-   - Model selection in the Foundry Model Catalog based on capabilities
-   - Deployment options (Serverless API vs. Managed Compute / PTU) and parameters (`temperature`, `top_p`, `max_tokens`, penalties)
-   - Prompt engineering best practices (System prompts, User prompts, Few-shot prompting)
-   - AI Agent architecture (Model, Instructions, Tools)
-   - Creating single-agent solutions in the Foundry Portal
-   - Lightweight Python client applications with the Foundry SDK (`azure-ai-projects` / Chat & Agent APIs)
-
-3. [**03 - Natural Language Processing & Text Analysis**](./03-natural-language-processing.md)
-   - NLP concepts and semantic modeling
-   - Common text analysis techniques: Key phrase extraction, Named Entity Recognition (NER), Sentiment analysis, Summarization
-   - Azure AI Language in Foundry Tools
-   - Building a lightweight Python text analysis client application
-
-4. [**04 - Speech Recognition, Speech Synthesis & Multimodal Voice**](./04-speech.md)
-   - Fundamentals of Speech Processing: Acoustic signals, phonemes, audio sampling
-   - Speech Recognition (Speech-to-Text / ASR) and Speech Synthesis (Text-to-Speech / TTS)
-   - Responding to spoken prompts using deployed multimodal models
-   - Azure Speech in Foundry Tools
-   - Building a lightweight Python speech application
-
-5. [**05 - Computer Vision, Multimodal Vision & Image/Video Generation**](./05-computer-vision.md)
-   - Computer vision core tasks: Image classification, Object detection, Segmentation, OCR, Face analysis
-   - Interpreting visual input in prompts with multimodal models
-   - Generative image and video models (Diffusion models, DALL-E)
-   - Building a lightweight Python vision application
-
-6. [**06 - Information Extraction & Azure Content Understanding**](./06-information-extraction.md)
-   - The information extraction lifecycle: Source identification, extraction, structuring, integration
-   - Azure AI Document Intelligence in Foundry Tools (prebuilt vs. custom models)
-   - Azure Content Understanding: Multimodal extraction across documents, forms, images, audio, and video
-   - Defining custom schemas and analyzers
-   - Building a lightweight Python information extraction application
-
-7. [**07 - Retrieval-Augmented Generation (RAG) & Microsoft Foundry IQ**](./07-rag-and-foundry-iq.md)
-   - RAG architecture: Ingestion, Chunking, Vector Embeddings, Indexing, Vector Search, Augmented Generation
-   - Microsoft Foundry IQ: Managed knowledge retrieval layer
-   - Grounding AI agents with enterprise data and citation-backed responses
-   - Connecting Foundry IQ knowledge bases to AI agents and Python client applications
+> These are practice questions written for this app, not real exam questions. Microsoft's own
+> [practice assessment](https://aiskillsnavigator.microsoft.com/credentials/cert-83587e0a0754cfee561ade3e27d9fa1cdaf15ae03be52d2413b2b858d1b4eda4)
+> is worth taking as well.
 
 ---
 
-## Skills Measured (as of April 15, 2026)
+## Local development
 
-### 1. Identify AI concepts and capabilities (40–45%)
+Requires **Node 22.12 or later** (24 recommended) — Astro 7 sets that floor.
 
-- **Describe principles of responsible AI**
-  - Describe considerations for fairness in an AI solution
-  - Describe considerations for reliability and safety in an AI solution
-  - Describe considerations for privacy and security in an AI solution
-  - Describe considerations for inclusiveness in an AI solution
-  - Describe considerations for transparency in an AI solution
-  - Describe considerations for accountability in an AI solution
-- **Identify AI model components and configurations**
-  - Describe how generative AI models work
-  - Identify an appropriate AI model, based on capabilities
-  - Identify appropriate model deployment options and configuration parameters
-- **Identify AI workloads**
-  - Identify scenarios for common AI workloads, including generative and agentic AI, text analysis, speech, computer vision, and information extraction
-  - Describe common text analysis techniques, including keyword extraction, entity detection, sentiment analysis, and summarization
-  - Identify features and capabilities of speech recognition and speech synthesis
-  - Identify features and capabilities of computer vision and image-generation models
-  - Identify techniques to extract information from text, images, audio, and videos
+```bash
+npm install
+npm run dev          # http://localhost:4321/learn-ai901/
+```
 
-### 2. Implement AI solutions by using Microsoft Foundry (55–60%)
+| Command | What it does |
+| :--- | :--- |
+| `npm run dev` | Dev server with hot reload |
+| `npm run build` | Type-check then build to `dist/` |
+| `npm run build:fast` | Build without type-checking |
+| `npm run preview` | Serve the production build locally |
+| `npm run check` | Type-check `.astro` and `.svelte` files |
+| `npm run test:smoke` | Drive the built site in a headless browser and verify the whole learning loop |
 
-- **Implement generative AI apps and agents by using Foundry**
-  - Create effective system and user prompts for generative AI models
-  - Deploy a model and interact with it in the Foundry portal
-  - Create a lightweight chat client application by using the Foundry SDK
-  - Create and test a single-agent solution in the Foundry portal
-  - Create a lightweight client application for an agent
-- **Implement AI solutions for text and speech by using Foundry**
-  - Build a lightweight application that includes text analysis
-  - Respond to spoken prompts by using a deployed multimodal model
-  - Build a lightweight application by using Azure Speech in Foundry Tools
-- **Implement AI solutions with computer vision and image-generation capabilities by using Foundry**
-  - Interpret visual input in prompts by using a deployed multimodal model
-  - Create new visual outputs by using generative models
-  - Build a lightweight application that includes vision capabilities
-- **Implement AI solutions for information extraction by using Foundry**
-  - Extract information from documents and forms by using Azure Content Understanding in Foundry Tools
-  - Extract information from images by using Content Understanding
-  - Extract information from audio and video by using Content Understanding
-  - Build a lightweight application with information extraction capabilities by using Content Understanding
+`test:smoke` needs the preview server running and a local Chrome or Chromium (set `CHROME_PATH`
+if it is not on a standard path). It walks the dashboard, a lesson, a quiz, practice, the exam
+simulator, rapid review, cram, the plan and the progress page — 56 assertions including
+persistence, theme switching and mobile overflow. Worth running after editing content.
+
+The dev server serves under `/learn-ai901/` because that is the GitHub Pages base path. To work
+at the root instead:
+
+```bash
+BASE_PATH=/ npm run dev
+```
 
 ---
 
-## Official Microsoft Learn Resources
+## Deploying to GitHub Pages
 
-- **Exam Page**: [Exam AI-901: Microsoft Azure AI Fundamentals](https://learn.microsoft.com/credentials/certifications/exams/ai-901/)
-- **Official Study Guide**: [Study guide for Exam AI-901](https://learn.microsoft.com/credentials/certifications/resources/study-guides/ai-901)
-- **Learning Path 1**: [AI concepts for developers and technology professionals](https://learn.microsoft.com/training/paths/ai-concepts/)
-- **Learning Path 2**: [Get started with AI applications and agents on Azure](https://learn.microsoft.com/training/paths/get-started-ai-apps-agents/)
-- **Course**: [AI-901T00: Introduction to AI in Azure](https://learn.microsoft.com/training/courses/ai-901t00)
-- **Practice Assessment**: [AI Skills Navigator Practice Assessment](https://aiskillsnavigator.microsoft.com/credentials/cert-83587e0a0754cfee561ade3e27d9fa1cdaf15ae03be52d2413b2b858d1b4eda4)
-- **Portal**: [Microsoft Foundry Portal](https://ai.azure.com)
+The workflow in [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) builds and
+deploys on every push to `main`.
+
+**One-time setup:** in the repository, go to **Settings → Pages** and set **Source** to
+**GitHub Actions**. Then push to `main`.
+
+The site publishes to `https://<user>.github.io/<repo>/`.
+
+### Base path
+
+`astro.config.mjs` reads two environment variables, both set by the workflow:
+
+```js
+const base = process.env.BASE_PATH ?? '/learn-ai901';
+const site = process.env.SITE_URL ?? 'https://dileepadev.github.io';
+```
+
+If you fork this, change `BASE_PATH` and `SITE_URL` in the workflow to match your repository.
+For a **custom domain** or a **user site** (`<user>.github.io`), set `BASE_PATH: /` and put your
+domain in `SITE_URL`.
+
+All internal links are built from `import.meta.env.BASE_URL`, so nothing else needs changing.
+
+---
+
+## How the app is put together
+
+```text
+src/
+├── data/                 # Content — plain data, no application logic
+│   ├── types.ts          #   Content model + progress schema
+│   ├── exam.ts           #   Exam metadata, topics, and weights
+│   ├── modules/          #   12 lessons, authored as typed block arrays
+│   ├── questions/        #   206 questions, one file per topic + two scenario banks
+│   ├── review.ts         #   Flashcards, comparisons, quick facts
+│   └── roadmap.ts        #   The three-day sprint plan
+├── lib/                  # Engine — no UI
+│   ├── store.ts          #   localStorage-backed observable, Svelte store contract
+│   ├── srs.ts            #   Leitner scheduling, tuned for a few-day sprint
+│   ├── scoring.ts        #   Readiness, per-topic mastery, streaks
+│   ├── queue.ts          #   Question selection per mode, exam-weighted sampling
+│   ├── recommend.ts      #   "What should I do next?"
+│   └── markdown.ts       #   Tiny escape-first inline markdown renderer
+├── components/           # Svelte islands, including demos/
+├── layouts/ pages/       # Astro shell and routes
+└── styles/global.css     # Design tokens, light and dark
+```
+
+Content and logic are kept apart on purpose. Adding a question means adding an object to a file
+in `data/questions/`; nothing in `lib/` or `components/` needs to change.
+
+### Adding content
+
+**A question** — add it to the right file in `src/data/questions/`, or to a scenario bank:
+
+```ts
+{
+  id: 'rai-023',                    // must be unique; the build fails on duplicates
+  topic: 'responsible-ai',          // drives weighting and weak-area routing
+  objective: 'Describe considerations for fairness in an AI solution',
+  difficulty: 'medium',
+  kind: 'exam',                     // 'exam' counts towards the practice exam; 'learn' does not
+  scenario: 'Optional case setup shown above the question.',
+  prompt: 'The question itself.',
+  options: [
+    { id: 'a', text: 'The right answer', correct: true },
+    { id: 'b', text: 'A plausible one', correct: false, why: 'Why it is wrong.' },
+  ],
+  explanation: 'Why the correct answer is correct.',
+  reference: { label: 'Microsoft Learn', url: 'https://learn.microsoft.com/...' },
+}
+```
+
+`type` may be omitted for ordinary single-answer questions. Use `type: 'multi'`, `'match'` or
+`'order'` for the others.
+
+**A lesson** — add a module in `src/data/modules/` and register it in that folder's `index.ts`.
+Lessons are arrays of typed blocks: `p`, `list`, `table`, `code`, `key`, `trap`, `changed`,
+`steps`, `demo` and `check`.
+
+The build **fails** on a duplicate question id, a single-answer question without exactly one
+correct option, or a lesson referencing a question id that does not exist — so broken content
+never ships.
+
+### Progress and privacy
+
+Everything is stored under one `localStorage` key in your browser. Clearing site data clears it.
+There is an export/import backup on the [progress page](https://dileepadev.github.io/learn-ai901/progress/)
+if you need to move between devices.
+
+---
+
+## Tech
+
+[Astro 7](https://astro.build) (static output) with [Svelte 5](https://svelte.dev) islands and
+TypeScript in strict mode. No CSS framework, no chart library, no runtime dependencies beyond
+Svelte. The whole site is prerendered HTML plus a shared, cacheable JS bundle.
+
+## Licence
+
+Study content and code in this repository are provided as-is for personal exam preparation.
+Microsoft, Azure, and AI-901 are trademarks of Microsoft Corporation; this is an independent
+study aid and is not affiliated with or endorsed by Microsoft.
