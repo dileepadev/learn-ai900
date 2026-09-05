@@ -1,0 +1,36 @@
+{
+  "name": "learn-ai901",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Interactive exam-prep app for Microsoft Exam AI-901: Microsoft Azure AI Fundamentals",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "npm run check && astro build",
+    "build:fast": "astro build",
+    "preview": "astro preview",
+    "check": "astro check && svelte-check --threshold error",
+    "test:smoke": "node tests/smoke.mjs",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.9.4",
+    "@astrojs/sitemap": "^3.7.0",
+    "@astrojs/svelte": "^9.0.1",
+    "astro": "^7.3.1",
+    "svelte": "^5.45.0",
+    "typescript": "^5.9.3"
+  },
+  "allowScripts": {
+    "sharp@0.34.5": true,
+    "esbuild@0.28.2": true
+  },
+  "devDependencies": {
+    "playwright-core": "^1.63.0",
+    "svelte-check": "^4.7.6"
+  }
+}
