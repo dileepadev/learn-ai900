@@ -54,7 +54,7 @@ export const promptsAndChat: Module = {
         {
           t: 'key',
           title: 'None of these change the model',
-          body: 'All three are **inference-time** techniques that cost prompt tokens and require no training. Fine-tuning is the one that changes weights. A question offering "fine-tune the model" as a fix for a formatting or tone problem is usually the wrong answer — try the system prompt first.',
+          body: 'All three are **inference-time** techniques that cost prompt tokens and require no training. Fine-tuning is the one that changes weights. A question offering "fine-tune the model" as a fix for a formatting or tone problem is usually the wrong answer - try the system prompt first.',
           priority: 'high',
         },
         { t: 'check', qid: 'fg-002' },
@@ -69,10 +69,10 @@ export const promptsAndChat: Module = {
           t: 'list',
           ordered: true,
           items: [
-            '**Role and scope** — who the assistant is, and explicitly what it will not discuss.',
-            '**Output format** — state it, and show an example of it.',
-            '**Failure behaviour** — "if the answer is not in the provided context, say you do not know". This single line prevents a great deal of hallucination in grounded apps.',
-            '**Tone** — one concrete sentence beats three adjectives.',
+            '**Role and scope** - who the assistant is, and explicitly what it will not discuss.',
+            '**Output format** - state it, and show an example of it.',
+            '**Failure behaviour** - "if the answer is not in the provided context, say you do not know". This single line prevents a great deal of hallucination in grounded apps.',
+            '**Tone** - one concrete sentence beats three adjectives.',
           ],
         },
         {
@@ -104,7 +104,7 @@ Reply in at most three sentences, plain language, no marketing tone.`,
             {
               label: 'Get a credential',
               detail:
-                'Microsoft Entra ID (keyless) is the recommendation — `DefaultAzureCredential` for development, a specific credential such as a managed identity in production. Keys work too, but never put them in source code.',
+                'Microsoft Entra ID (keyless) is the recommendation - `DefaultAzureCredential` for development, a specific credential such as a managed identity in production. Keys work too, but never put them in source code.',
             },
             {
               label: 'Point at the project endpoint',
@@ -125,7 +125,7 @@ Reply in at most three sentences, plain language, no marketing tone.`,
         {
           t: 'code',
           lang: 'python',
-          caption: 'The shape of it — endpoint, credential, deployment name, messages',
+          caption: 'The shape of it - endpoint, credential, deployment name, messages',
           code: `import os
 from azure.ai.projects import AIProjectClient
 from azure.identity import DefaultAzureCredential

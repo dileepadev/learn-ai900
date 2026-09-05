@@ -99,7 +99,7 @@
     <a class="urgent-banner card" href={link('/cram/')}>
       <strong>🔥 {daysLeft <= 0 ? 'Exam day.' : 'Exam tomorrow.'} Switch to cram mode.</strong>
       <span class="tiny muted">
-        No new material this close in — consolidate what you have and clear your outstanding
+        No new material this close in - consolidate what you have and clear your outstanding
         mistakes. →
       </span>
     </a>

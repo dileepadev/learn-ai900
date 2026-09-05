@@ -184,7 +184,7 @@
           {:else if scorePct >= 70}
             Above the pass mark. Tidy up the misses below.
           {:else if scorePct >= 50}
-            Getting there — the misses below are where the marks are.
+            Getting there - the misses below are where the marks are.
           {:else}
             Worth revisiting the lesson before drilling further.
           {/if}

@@ -9,7 +9,7 @@ const REF = {
  * Topic: Describe principles of responsible AI (~18% of the exam).
  *
  * The exam almost never asks "list the six principles". It gives you a
- * scenario and asks which principle it maps to — so most of these questions
+ * scenario and asks which principle it maps to - so most of these questions
  * are scenario-to-principle mappings, including the pairs people confuse.
  */
 export const responsibleAiQuestions: AuthoredQuestion[] = [
@@ -28,7 +28,7 @@ export const responsibleAiQuestions: AuthoredQuestion[] = [
         id: 'b',
         text: 'Reliability and safety',
         correct: false,
-        why: 'The model is behaving consistently — it is consistently biased. Reliability is about performing correctly and predictably, including in unexpected conditions.',
+        why: 'The model is behaving consistently - it is consistently biased. Reliability is about performing correctly and predictably, including in unexpected conditions.',
       },
       {
         id: 'c',
@@ -63,7 +63,7 @@ export const responsibleAiQuestions: AuthoredQuestion[] = [
         id: 'b',
         text: 'Inclusiveness',
         correct: false,
-        why: 'Inclusiveness is about whether everyone *can use* the system, regardless of ability or background — not about whether they know it is AI.',
+        why: 'Inclusiveness is about whether everyone *can use* the system, regardless of ability or background - not about whether they know it is AI.',
       },
       {
         id: 'c',
@@ -111,7 +111,7 @@ export const responsibleAiQuestions: AuthoredQuestion[] = [
         id: 'd',
         text: 'Reliability and safety',
         correct: false,
-        why: 'The system may work perfectly — for people who can speak to it. Exclusion is not the same as unreliability.',
+        why: 'The system may work perfectly - for people who can speak to it. Exclusion is not the same as unreliability.',
       },
     ],
     explanation:
@@ -151,7 +151,7 @@ export const responsibleAiQuestions: AuthoredQuestion[] = [
       },
     ],
     explanation:
-      'Reliability and safety means an AI system performs consistently and safely under both expected conditions and unexpected ones. Failing on an edge case that endangers people — glare, weather, sensor noise — is the canonical example. Mitigations: rigorous testing across adverse conditions, guardrails, and human fallback.',
+      'Reliability and safety means an AI system performs consistently and safely under both expected conditions and unexpected ones. Failing on an edge case that endangers people - glare, weather, sensor noise - is the canonical example. Mitigations: rigorous testing across adverse conditions, guardrails, and human fallback.',
     reference: REF,
     tags: ['reliability', 'scenario'],
   },
@@ -171,7 +171,7 @@ export const responsibleAiQuestions: AuthoredQuestion[] = [
         id: 'b',
         text: 'Transparency',
         correct: false,
-        why: 'Close, and often paired — but the customer clearly knows a system made the decision. What is missing is a human answerable for it and a route to appeal.',
+        why: 'Close, and often paired - but the customer clearly knows a system made the decision. What is missing is a human answerable for it and a route to appeal.',
       },
       {
         id: 'c',
@@ -212,7 +212,7 @@ export const responsibleAiQuestions: AuthoredQuestion[] = [
         id: 'c',
         text: 'Fairness',
         correct: false,
-        why: 'All customers are equally at risk — there is no differential treatment by group.',
+        why: 'All customers are equally at risk - there is no differential treatment by group.',
       },
       {
         id: 'd',
@@ -245,7 +245,7 @@ export const responsibleAiQuestions: AuthoredQuestion[] = [
       },
       {
         id: 'p2',
-        left: 'The app shows an "AI-generated — may be inaccurate" banner and cites its sources',
+        left: 'The app shows an "AI-generated - may be inaccurate" banner and cites its sources',
         right: 'Transparency',
       },
       {
@@ -294,7 +294,7 @@ export const responsibleAiQuestions: AuthoredQuestion[] = [
         id: 'b',
         text: 'The model will be unreliable; increase the size of the training set.',
         correct: false,
-        why: 'More of the same biased data amplifies the problem rather than fixing it. Volume is not the issue — representativeness is.',
+        why: 'More of the same biased data amplifies the problem rather than fixing it. Volume is not the issue - representativeness is.',
       },
       {
         id: 'c',
@@ -378,7 +378,7 @@ export const responsibleAiQuestions: AuthoredQuestion[] = [
         id: 'b',
         text: 'Vector search over embeddings, plus semantic reranking',
         correct: false,
-        why: 'Those improve retrieval relevance — an accuracy benefit, not a transparency one.',
+        why: 'Those improve retrieval relevance - an accuracy benefit, not a transparency one.',
       },
       {
         id: 'c',
@@ -394,7 +394,7 @@ export const responsibleAiQuestions: AuthoredQuestion[] = [
       },
     ],
     explanation:
-      'Transparency is about the user being able to understand what the system is and where its answers came from. Citations are the single most important transparency feature of a grounded assistant — and returning grounded answers with citations is a headline capability of Foundry IQ.',
+      'Transparency is about the user being able to understand what the system is and where its answers came from. Citations are the single most important transparency feature of a grounded assistant - and returning grounded answers with citations is a headline capability of Foundry IQ.',
     reference: REF,
     tags: ['transparency', 'rag', 'hard'],
   },
@@ -409,11 +409,11 @@ export const responsibleAiQuestions: AuthoredQuestion[] = [
     options: [
       { id: 'a', text: 'Six', correct: true },
       { id: 'b', text: 'Four', correct: false, why: 'Four leaves out two of the six.' },
-      { id: 'c', text: 'Five', correct: false, why: 'A common miscount — usually by folding privacy and security into reliability.' },
+      { id: 'c', text: 'Five', correct: false, why: 'A common miscount - usually by folding privacy and security into reliability.' },
       { id: 'd', text: 'Seven', correct: false, why: 'There is no seventh principle; "safety" is part of reliability and safety.' },
     ],
     explanation:
-      'Six: Fairness, Reliability and safety, Privacy and security, Inclusiveness, Transparency, and Accountability. A memory hook: **FRPITA** — or remember that Accountability and Transparency are the two "governance" principles that sit over the other four.',
+      'Six: Fairness, Reliability and safety, Privacy and security, Inclusiveness, Transparency, and Accountability. A memory hook: **FRPITA** - or remember that Accountability and Transparency are the two "governance" principles that sit over the other four.',
     reference: REF,
     tags: ['definition'],
   },
@@ -467,7 +467,7 @@ export const responsibleAiQuestions: AuthoredQuestion[] = [
     options: [
       {
         id: 'a',
-        text: 'Inclusiveness asks whether the system engages people across abilities, languages and cultures — limiting support to one region leaves whole populations unable to benefit.',
+        text: 'Inclusiveness asks whether the system engages people across abilities, languages and cultures - limiting support to one region leaves whole populations unable to benefit.',
         correct: true,
       },
       {
@@ -555,7 +555,7 @@ export const responsibleAiQuestions: AuthoredQuestion[] = [
         id: 'b',
         text: 'Accountability',
         correct: false,
-        why: 'Transparency notes support accountability indirectly, but all three measures are about disclosure and provenance — telling people what they are looking at.',
+        why: 'Transparency notes support accountability indirectly, but all three measures are about disclosure and provenance - telling people what they are looking at.',
       },
       {
         id: 'c',
@@ -571,7 +571,7 @@ export const responsibleAiQuestions: AuthoredQuestion[] = [
       },
     ],
     explanation:
-      'Transparency covers disclosure that AI is involved, communicating capabilities and limitations, and provenance. Content Credentials (C2PA) cryptographically mark an image as AI-generated, which is a provenance/transparency control — a favourite exam detail.',
+      'Transparency covers disclosure that AI is involved, communicating capabilities and limitations, and provenance. Content Credentials (C2PA) cryptographically mark an image as AI-generated, which is a provenance/transparency control - a favourite exam detail.',
     reference: REF,
     tags: ['transparency', 'c2pa', 'hard'],
   },
@@ -628,24 +628,24 @@ export const responsibleAiQuestions: AuthoredQuestion[] = [
     options: [
       {
         id: 'a',
-        text: 'Privacy and security — Foundry IQ enforces permissions at query time so agents return only content the caller is authorised to see',
+        text: 'Privacy and security - Foundry IQ enforces permissions at query time so agents return only content the caller is authorised to see',
         correct: true,
       },
       {
         id: 'b',
-        text: 'Transparency — citations show which document each answer came from',
+        text: 'Transparency - citations show which document each answer came from',
         correct: false,
         why: 'Citations tell the user where an answer came from, but they do not prevent unauthorised content being retrieved in the first place.',
       },
       {
         id: 'c',
-        text: 'Fairness — all employees get the same answers',
+        text: 'Fairness - all employees get the same answers',
         correct: false,
         why: 'The requirement is the opposite: different employees must legitimately get different answers based on their permissions.',
       },
       {
         id: 'd',
-        text: 'Reliability and safety — content filters block sensitive categories',
+        text: 'Reliability and safety - content filters block sensitive categories',
         correct: false,
         why: 'Content filters block harmful content categories such as hate or violence. They have no concept of who is allowed to see which document.',
       },
@@ -749,24 +749,24 @@ export const responsibleAiQuestions: AuthoredQuestion[] = [
     options: [
       {
         id: 'a',
-        text: 'Prompt injection — privacy and security',
+        text: 'Prompt injection - privacy and security',
         correct: true,
       },
       {
         id: 'b',
-        text: 'Hallucination — reliability and safety',
+        text: 'Hallucination - reliability and safety',
         correct: false,
         why: 'Hallucination is the model inventing content on its own. This is a deliberate attack by a third party.',
       },
       {
         id: 'c',
-        text: 'Overfitting — fairness',
+        text: 'Overfitting - fairness',
         correct: false,
         why: 'Overfitting is a training problem where a model memorises its training data instead of generalising.',
       },
       {
         id: 'd',
-        text: 'Data drift — accountability',
+        text: 'Data drift - accountability',
         correct: false,
         why: 'Data drift is production data diverging from training data over time.',
       },

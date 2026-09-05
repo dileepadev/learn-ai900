@@ -63,7 +63,7 @@
     <div>
       <h1>🔥 Cram sheet</h1>
       <p class="muted">
-        Everything marked <em>know this</em> across the whole app, in one pass. No new material —
+        Everything marked <em>know this</em> across the whole app, in one pass. No new material -
         this is for the day before and the morning of.
       </p>
     </div>
@@ -171,8 +171,8 @@
   {:else if section === 'changed'}
     <section class="pane">
       <p class="lead muted">
-        The things Microsoft renamed or replaced. Old study material — including most AI-900 notes
-        and many practice question sets — still uses the left-hand column.
+        The things Microsoft renamed or replaced. Old study material - including most AI-900 notes
+        and many practice question sets - still uses the left-hand column.
       </p>
       {#each allChanged as change (change.title)}
         <div class="callout callout-changed">
@@ -236,7 +236,7 @@
           <li>Read the <button type="button" class="linkish" onclick={() => (section = 'traps')}>traps</button> list once.</li>
           <li>
             Read the <button type="button" class="linkish" onclick={() => (section = 'changed')}>changed since AI-900</button>
-            list once — this is where stale practice material misleads people.
+            list once - this is where stale practice material misleads people.
           </li>
           <li>Run a <a href={link('/practice/mistakes/')}>mistakes</a> set if you have any outstanding.</li>
           <li>Stop. More cramming past this point costs more than it gains.</li>

@@ -30,7 +30,7 @@
     {
       label: 'Retrieve',
       when: 'At query time',
-      what: 'The question is embedded and matched semantically. Note that "annual leave" is found even though the user said "holiday" nowhere near it — that is what vectors buy you.',
+      what: 'The question is embedded and matched semantically. Note that "annual leave" is found even though the user said "holiday" nowhere near it - that is what vectors buy you.',
       detail:
         '1. §4.2 Annual leave (score 0.91)\n2. §4.5 Carry-over rules (score 0.78)\n3. §9.1 Long-service awards (score 0.64)',
       kind: 'query',
@@ -106,7 +106,7 @@
 
   <p class="tiny subtle note">
     The first three stages happen <strong>ahead of time</strong>. Only the last three run when a user
-    asks something — which is why a question about "what happens when the user asks" always starts at
+    asks something - which is why a question about "what happens when the user asks" always starts at
     retrieval.
   </p>
 </div>

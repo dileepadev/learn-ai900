@@ -40,7 +40,7 @@
   class="pill {tone}"
   class:current={isCurrent}
   {href}
-  title="Your exam readiness — click for details"
+  title="Your exam readiness - click for details"
   aria-current={isCurrent ? 'page' : undefined}
 >
   <span class="track" aria-hidden="true"><span class="fill" style:width={`${readiness}%`}></span></span>

@@ -5,7 +5,7 @@ export const mlAndTransformers: Module = {
   order: 2,
   title: 'How models actually work',
   summary:
-    'Tokens, embeddings, attention and next-token prediction — the minimum mental model that makes everything else on the exam make sense.',
+    'Tokens, embeddings, attention and next-token prediction - the minimum mental model that makes everything else on the exam make sense.',
   topic: 'model-components',
   alsoCovers: ['ai-workloads'],
   minutes: 15,
@@ -14,7 +14,7 @@ export const mlAndTransformers: Module = {
   outcomes: [
     'Explain what a token and an embedding are',
     'Say what self-attention buys you over older sequential models',
-    'Explain why models hallucinate — and why that motivates RAG',
+    'Explain why models hallucinate - and why that motivates RAG',
   ],
   quiz: ['mc-003', 'mc-004', 'mc-016'],
   sections: [
@@ -29,12 +29,12 @@ export const mlAndTransformers: Module = {
             {
               label: 'Tokenize',
               detail:
-                'Your text is split into tokens — roughly 4 characters or ¾ of a word in English. "Understanding" might become "Under" + "standing". Tokens are the unit models read, generate and bill in.',
+                'Your text is split into tokens - roughly 4 characters or ¾ of a word in English. "Understanding" might become "Under" + "standing". Tokens are the unit models read, generate and bill in.',
             },
             {
               label: 'Embed',
               detail:
-                'Each token becomes a dense vector of numbers. Position in that vector space encodes meaning, so semantically similar text lands close together — the property that makes vector search work.',
+                'Each token becomes a dense vector of numbers. Position in that vector space encodes meaning, so semantically similar text lands close together - the property that makes vector search work.',
             },
             {
               label: 'Attend',
@@ -44,7 +44,7 @@ export const mlAndTransformers: Module = {
             {
               label: 'Predict',
               detail:
-                'The model outputs a probability distribution over its entire vocabulary for the single next token. Not an answer — a distribution.',
+                'The model outputs a probability distribution over its entire vocabulary for the single next token. Not an answer - a distribution.',
             },
             {
               label: 'Sample and repeat',
@@ -67,7 +67,7 @@ export const mlAndTransformers: Module = {
       blocks: [
         {
           t: 'p',
-          md: 'An **embedding** is a numeric vector that represents meaning. "Annual leave" and "holiday allowance" share no words but sit close together in vector space — which is exactly why retrieval for RAG uses embeddings rather than keyword matching alone.',
+          md: 'An **embedding** is a numeric vector that represents meaning. "Annual leave" and "holiday allowance" share no words but sit close together in vector space - which is exactly why retrieval for RAG uses embeddings rather than keyword matching alone.',
         },
         {
           t: 'key',
@@ -94,7 +94,7 @@ export const mlAndTransformers: Module = {
         },
         {
           t: 'p',
-          md: 'Encoder-style transformers (BERT-like) are good at understanding and embeddings. Decoder-style transformers (GPT-like) generate text autoregressively. You do not need the internals — you need to know that **self-attention weighs all tokens against each other simultaneously**.',
+          md: 'Encoder-style transformers (BERT-like) are good at understanding and embeddings. Decoder-style transformers (GPT-like) generate text autoregressively. You do not need the internals - you need to know that **self-attention weighs all tokens against each other simultaneously**.',
         },
         { t: 'check', qid: 'mc-004' },
       ],
@@ -112,8 +112,8 @@ export const mlAndTransformers: Module = {
           items: [
             '**Features** are the inputs; the **label** is what you are predicting.',
             '**Training** fits the model to data; **inferencing** is using the trained model on new input.',
-            '**Supervised** learning uses labelled data — *regression* predicts a number, *classification* predicts a category.',
-            '**Unsupervised** learning finds structure in unlabelled data — *clustering* groups similar items.',
+            '**Supervised** learning uses labelled data - *regression* predicts a number, *classification* predicts a category.',
+            '**Unsupervised** learning finds structure in unlabelled data - *clustering* groups similar items.',
             '**Deep learning** uses neural networks with many layers; transformers are a deep learning architecture.',
           ],
         },
@@ -130,7 +130,7 @@ export const mlAndTransformers: Module = {
       blocks: [
         {
           t: 'p',
-          md: 'A language model predicts the **most plausible next token**, learned from patterns in training data. Plausible is not the same as true, and the model has no fact lookup. That is hallucination — and understanding its cause explains the entire rationale for retrieval.',
+          md: 'A language model predicts the **most plausible next token**, learned from patterns in training data. Plausible is not the same as true, and the model has no fact lookup. That is hallucination - and understanding its cause explains the entire rationale for retrieval.',
         },
         {
           t: 'key',

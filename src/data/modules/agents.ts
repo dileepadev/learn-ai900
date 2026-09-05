@@ -55,9 +55,9 @@ export const agents: Module = {
           rows: [
             ['What you provide', 'Configuration: instructions, model, tools', 'Your own code and framework', 'Your own code, running anywhere'],
             ['Authoring surface', 'Portal, SDK or REST', 'Agent Framework, LangGraph, OpenAI or Anthropic Agent SDKs, custom code', 'Any client'],
-            ['Runtime code to maintain', 'None', 'Yes — your agent logic', 'Yes'],
+            ['Runtime code to maintain', 'None', 'Yes - your agent logic', 'Yes'],
             ['Compute to manage', 'None, fully managed', 'Container compute, Foundry-managed', 'Yours'],
-            ['Agent resource in Foundry', 'Yes, named and versioned', 'Yes', '**No** — the agent is ephemeral'],
+            ['Agent resource in Foundry', 'Yes, named and versioned', 'Yes', '**No** - the agent is ephemeral'],
             ['Cost model', 'Inference + tool usage', 'Inference + tool usage + container compute', 'Inference + tool usage'],
             ['Best for', 'Fast start, production agents with no custom orchestration', 'Agents that call into your own code or custom orchestration', 'Code you already run elsewhere'],
           ],
@@ -93,7 +93,7 @@ export const agents: Module = {
         {
           t: 'changed',
           title: 'Toolboxes',
-          body: 'A **toolbox** curates a set of tools once — web search, file search, code interpreter, MCP servers, custom functions — and shares them across many agents through a single managed MCP endpoint with centralised authentication, governance and versioning. It is the governance answer to "every team configured their own tools differently".',
+          body: 'A **toolbox** curates a set of tools once - web search, file search, code interpreter, MCP servers, custom functions - and shares them across many agents through a single managed MCP endpoint with centralised authentication, governance and versioning. It is the governance answer to "every team configured their own tools differently".',
         },
         { t: 'check', qid: 'fg-023' },
         { t: 'check', qid: 'fg-026' },
@@ -107,7 +107,7 @@ export const agents: Module = {
           t: 'steps',
           title: 'In the Foundry portal',
           steps: [
-            { label: 'Name the agent', detail: 'Pick carefully — the name cannot be changed later, and code refers to the agent as `<name>:<version>`.' },
+            { label: 'Name the agent', detail: 'Pick carefully - the name cannot be changed later, and code refers to the agent as `<name>:<version>`.' },
             { label: 'Choose a model', detail: 'Any supported model from the catalog. You can swap models later without changing your client code.' },
             { label: 'Write the instructions', detail: 'This is the agent\'s system prompt: persona, scope, rules, and what to do when it is unsure.' },
             { label: 'Attach tools and knowledge', detail: 'Enable code interpreter, file search, web search, or connect a Foundry IQ knowledge base.' },

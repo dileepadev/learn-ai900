@@ -3,7 +3,7 @@
  * an overall readiness percentage, and streaks.
  *
  * Readiness deliberately blends *knowing* (lesson coverage) with *proving*
- * (question accuracy), and discounts accuracy that rests on a small sample —
+ * (question accuracy), and discounts accuracy that rests on a small sample -
  * three lucky guesses should not read as mastery.
  */
 import type { Module, Progress, Question, TopicId } from '../data/types';

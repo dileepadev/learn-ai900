@@ -151,7 +151,7 @@
         ><span class="tiny muted">bank covered</span>
       </div>
       <div class="card card-tight stat">
-        <strong>{overall.accuracy === null ? '—' : `${Math.round(overall.accuracy * 100)}%`}</strong
+        <strong>{overall.accuracy === null ? '-' : `${Math.round(overall.accuracy * 100)}%`}</strong
         ><span class="tiny muted">accuracy</span>
       </div>
       <div class="card card-tight stat">
@@ -171,7 +171,7 @@
     </section>
 
     <section class="card">
-      <h2 class="h-sm">Retention — where questions sit in the review schedule</h2>
+      <h2 class="h-sm">Retention - where questions sit in the review schedule</h2>
       <div class="boxes">
         {#each boxes as count, i (i)}
           <div class="box">
@@ -193,7 +193,7 @@
     </section>
 
     <section class="card">
-      <h2 class="h-sm">Milestones — {unlocked}/{ACHIEVEMENTS.length}</h2>
+      <h2 class="h-sm">Milestones - {unlocked}/{ACHIEVEMENTS.length}</h2>
       <ul class="achievements">
         {#each ACHIEVEMENTS as a (a.id)}
           <li class="ach" class:got={a.got}>
@@ -239,7 +239,7 @@
       <h2 class="h-sm">Your data</h2>
       <p>
         Everything is stored in this browser's local storage. Nothing is sent anywhere, there is no
-        account, and clearing your browser data will clear your progress — so export a backup if you
+        account, and clearing your browser data will clear your progress - so export a backup if you
         are switching devices.
       </p>
       <div class="row">

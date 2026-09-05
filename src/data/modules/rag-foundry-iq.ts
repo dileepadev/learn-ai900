@@ -23,12 +23,12 @@ export const ragFoundryIq: Module = {
       blocks: [
         {
           t: 'p',
-          md: 'A model knows only what was in its training data, up to its cutoff. It cannot know your policies, your contracts, or what changed last week — and it will confidently make something up rather than say so.',
+          md: 'A model knows only what was in its training data, up to its cutoff. It cannot know your policies, your contracts, or what changed last week - and it will confidently make something up rather than say so.',
         },
         {
           t: 'key',
           title: 'The fix in one line',
-          body: 'Retrieve the relevant passages from your own content at query time, put them in the prompt as **grounding data**, and have the model answer from them — with **citations** back to the source.',
+          body: 'Retrieve the relevant passages from your own content at query time, put them in the prompt as **grounding data**, and have the model answer from them - with **citations** back to the source.',
           priority: 'high',
         },
       ],
@@ -110,7 +110,7 @@ export const ragFoundryIq: Module = {
         {
           t: 'trap',
           title: 'The permission-aware angle',
-          body: 'Foundry IQ is the standard answer to "the agent must never show restricted content to an unauthorised user". That is a **privacy and security** requirement — content filters, which block harmful categories, have no concept of who may see which document.',
+          body: 'Foundry IQ is the standard answer to "the agent must never show restricted content to an unauthorised user". That is a **privacy and security** requirement - content filters, which block harmful categories, have no concept of who may see which document.',
         },
         { t: 'check', qid: 'fg-031' },
         { t: 'check', qid: 'fg-035' },
@@ -125,7 +125,7 @@ export const ragFoundryIq: Module = {
           headers: ['Service', 'Grounds agents in…'],
           rows: [
             ['**Foundry IQ**', 'Enterprise content you connect: Blob Storage, SharePoint, OneLake, public web'],
-            ['**Work IQ** (preview)', 'Microsoft 365 work data — emails, meetings, documents, Teams messages — queried live'],
+            ['**Work IQ** (preview)', 'Microsoft 365 work data - emails, meetings, documents, Teams messages - queried live'],
             ['**Fabric IQ** (preview)', 'Microsoft Fabric data and semantic models'],
           ],
         },
@@ -147,7 +147,7 @@ export const ragFoundryIq: Module = {
             ['Retrieved passages were irrelevant', 'Chunking, embedding or search configuration', 'Revisit chunk size, embedding model, and keyword vs. semantic vs. hybrid search'],
             ['Answers are slow', 'Large index, too many passages', 'Filtering, reranking, tighter retrieval'],
             ['Token budget exceeded', 'Too much retrieved content in the prompt', 'Filter, rank or summarise passages before augmenting'],
-            ['Sensitive content leaked', 'No permission enforcement on retrieval', 'Permission-aware retrieval (Foundry IQ) — not a content filter'],
+            ['Sensitive content leaked', 'No permission enforcement on retrieval', 'Permission-aware retrieval (Foundry IQ) - not a content filter'],
           ],
         },
         { t: 'check', qid: 'fg-034' },

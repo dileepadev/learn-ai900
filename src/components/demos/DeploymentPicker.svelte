@@ -8,7 +8,7 @@
     if (modelKind === 'oss') {
       return {
         option: 'Managed compute',
-        type: '—',
+        type: '-',
         billing: 'Hourly, per accelerator SKU',
         note: 'Open-source, partner and custom models that need dedicated GPU capacity use managed compute. Data processing is global, and content filtering is not available in public preview.',
         tone: 'warn',
@@ -44,7 +44,7 @@
       type: scope,
       billing: provisioned ? 'Reserved provisioned throughput units (PTUs)' : 'Pay per token',
       note: provisioned
-        ? 'Provisioned reserves capacity for predictable throughput and lower, more consistent latency than pay-per-token — at the cost of paying for the reservation whether you use it or not.'
+        ? 'Provisioned reserves capacity for predictable throughput and lower, more consistent latency than pay-per-token - at the cost of paying for the reservation whether you use it or not.'
         : 'Standard is pay-per-token. Global Standard gives the highest default quota and handles variable traffic well; very high consistent volume can see more latency variability.',
       tone: 'success',
     };
@@ -77,7 +77,7 @@
     <div class="opts">
       <label class:sel={traffic === 'variable'}>
         <input type="radio" bind:group={traffic} value="variable" />
-        <span>Variable or unpredictable — prototypes, spiky usage</span>
+        <span>Variable or unpredictable - prototypes, spiky usage</span>
       </label>
       <label class:sel={traffic === 'steady'}>
         <input type="radio" bind:group={traffic} value="steady" />
@@ -85,7 +85,7 @@
       </label>
       <label class:sel={traffic === 'offline'}>
         <input type="radio" bind:group={traffic} value="offline" />
-        <span>Offline bulk processing — nothing interactive</span>
+        <span>Offline bulk processing - nothing interactive</span>
       </label>
     </div>
   </fieldset>

@@ -4,7 +4,7 @@ import type { AuthoredQuestion } from '../types';
  * Topic: Identify AI model components and configurations (~9% of the exam).
  *
  * Small weight, but dense and very testable: tokenization/embeddings, LLM vs
- * SLM, picking a model by capability, and — the highest-yield part — deployment
+ * SLM, picking a model by capability, and - the highest-yield part - deployment
  * options and inference parameters.
  */
 export const modelComponentQuestions: AuthoredQuestion[] = [
@@ -18,11 +18,11 @@ export const modelComponentQuestions: AuthoredQuestion[] = [
     type: 'order',
     prompt: 'Put the stages of generating a response from a language model in order.',
     items: [
-      { id: 's1', text: 'Tokenization — the prompt is split into tokens' },
-      { id: 's2', text: 'Embedding — each token becomes a vector' },
-      { id: 's3', text: 'Attention — the transformer weighs every token against every other' },
-      { id: 's4', text: 'Prediction — a probability distribution over the next token' },
-      { id: 's5', text: 'Sampling — one token is selected and appended, then repeat' },
+      { id: 's1', text: 'Tokenization - the prompt is split into tokens' },
+      { id: 's2', text: 'Embedding - each token becomes a vector' },
+      { id: 's3', text: 'Attention - the transformer weighs every token against every other' },
+      { id: 's4', text: 'Prediction - a probability distribution over the next token' },
+      { id: 's5', text: 'Sampling - one token is selected and appended, then repeat' },
     ],
     explanation:
       'Text → tokens → vectors → attention → next-token probabilities → sample → repeat. The loop is what makes generation *autoregressive*: each new token is produced with all previous tokens in context.',
@@ -39,14 +39,14 @@ export const modelComponentQuestions: AuthoredQuestion[] = [
     options: [
       {
         id: 'a',
-        text: 'A chunk of text — often a word or part of a word — that the model treats as one unit',
+        text: 'A chunk of text - often a word or part of a word - that the model treats as one unit',
         correct: true,
       },
       {
         id: 'b',
         text: 'An authentication credential used to call the model endpoint',
         correct: false,
-        why: 'That is an API key or access token — a different meaning of the same word, and a deliberate distractor.',
+        why: 'That is an API key or access token - a different meaning of the same word, and a deliberate distractor.',
       },
       {
         id: 'c',
@@ -99,7 +99,7 @@ export const modelComponentQuestions: AuthoredQuestion[] = [
       },
     ],
     explanation:
-      'Embeddings turn text (or images) into dense vectors positioned by meaning. That property is what makes vector search work: "annual leave" and "holiday allowance" land near each other even with no words in common — which is why RAG uses embeddings rather than keyword matching alone.',
+      'Embeddings turn text (or images) into dense vectors positioned by meaning. That property is what makes vector search work: "annual leave" and "holiday allowance" land near each other even with no words in common - which is why RAG uses embeddings rather than keyword matching alone.',
     tags: ['generative', 'embeddings'],
   },
   {
@@ -121,7 +121,7 @@ export const modelComponentQuestions: AuthoredQuestion[] = [
         id: 'b',
         text: 'Processing words strictly one at a time in order, like earlier recurrent networks',
         correct: false,
-        why: 'That describes RNNs — exactly what transformers replaced. Parallel processing of the whole sequence is the transformer\'s advantage.',
+        why: 'That describes RNNs - exactly what transformers replaced. Parallel processing of the whole sequence is the transformer\'s advantage.',
       },
       {
         id: 'c',
@@ -137,7 +137,7 @@ export const modelComponentQuestions: AuthoredQuestion[] = [
       },
     ],
     explanation:
-      'Self-attention scores how much each token should attend to every other token, so context from far back in the sequence still influences the next prediction — and because it is computed in parallel rather than sequentially, it trains efficiently on large hardware.',
+      'Self-attention scores how much each token should attend to every other token, so context from far back in the sequence still influences the next prediction - and because it is computed in parallel rather than sequentially, it trains efficiently on large hardware.',
     tags: ['generative', 'transformer'],
   },
   {
@@ -155,7 +155,7 @@ export const modelComponentQuestions: AuthoredQuestion[] = [
         id: 'b',
         text: 'Raise the temperature towards 1',
         correct: false,
-        why: 'Higher temperature increases randomness and creativity — the opposite of what is wanted.',
+        why: 'Higher temperature increases randomness and creativity - the opposite of what is wanted.',
       },
       {
         id: 'c',
@@ -227,7 +227,7 @@ export const modelComponentQuestions: AuthoredQuestion[] = [
       { id: 'p6', left: 'presence_penalty', right: 'Discourages reusing any token that has appeared at all, encouraging new topics' },
     ],
     explanation:
-      'Two randomness knobs (temperature and top_p — tune one, not both), one length cap, one halt condition, and two repetition penalties that differ in whether they count *how often* a token appeared or merely *whether* it appeared.',
+      'Two randomness knobs (temperature and top_p - tune one, not both), one length cap, one halt condition, and two repetition penalties that differ in whether they count *how often* a token appeared or merely *whether* it appeared.',
     tags: ['parameters', 'matching', 'cram'],
   },
   {
@@ -241,7 +241,7 @@ export const modelComponentQuestions: AuthoredQuestion[] = [
     options: [
       {
         id: 'a',
-        text: 'They are alternative ways of controlling randomness — adjust one and leave the other at its default',
+        text: 'They are alternative ways of controlling randomness - adjust one and leave the other at its default',
         correct: true,
       },
       {
@@ -254,7 +254,7 @@ export const modelComponentQuestions: AuthoredQuestion[] = [
         id: 'c',
         text: 'top_p controls response length; temperature controls randomness',
         correct: false,
-        why: 'Length is max_tokens. top_p is nucleus sampling — it restricts candidates to the smallest set whose probabilities sum to p.',
+        why: 'Length is max_tokens. top_p is nucleus sampling - it restricts candidates to the smallest set whose probabilities sum to p.',
       },
       {
         id: 'd',
@@ -355,7 +355,7 @@ export const modelComponentQuestions: AuthoredQuestion[] = [
       },
     ],
     explanation:
-      'Foundry offers two deployment options: **Serverless API** (preferred — Microsoft hosts the model, you are billed per token, and it supports the full range of deployment types, content filtering and private networking) and **managed compute** (dedicated GPUs for open-source and custom models, billed by the hour).',
+      'Foundry offers two deployment options: **Serverless API** (preferred - Microsoft hosts the model, you are billed per token, and it supports the full range of deployment types, content filtering and private networking) and **managed compute** (dedicated GPUs for open-source and custom models, billed by the hour).',
     reference: {
       label: 'Deployment overview for Microsoft Foundry Models',
       url: 'https://learn.microsoft.com/azure/foundry/concepts/deployments-overview',
@@ -388,7 +388,7 @@ export const modelComponentQuestions: AuthoredQuestion[] = [
         id: 'c',
         text: 'Global Batch',
         correct: false,
-        why: 'Batch is discounted asynchronous processing for offline workloads — unsuitable for an interactive chat service.',
+        why: 'Batch is discounted asynchronous processing for offline workloads - unsuitable for an interactive chat service.',
       },
       {
         id: 'd',
@@ -420,7 +420,7 @@ export const modelComponentQuestions: AuthoredQuestion[] = [
         id: 'b',
         text: 'A Global deployment type',
         correct: false,
-        why: 'Global types may process inference data in any Azure region — the opposite of the requirement.',
+        why: 'Global types may process inference data in any Azure region - the opposite of the requirement.',
       },
       {
         id: 'c',
@@ -430,7 +430,7 @@ export const modelComponentQuestions: AuthoredQuestion[] = [
       },
       {
         id: 'd',
-        text: 'Any type — data residency is identical across all of them',
+        text: 'Any type - data residency is identical across all of them',
         correct: false,
         why: 'Data *at rest* stays in the chosen geography for all types, but *inference* processing differs sharply between global, data zone and standard.',
       },
@@ -534,7 +534,7 @@ export const modelComponentQuestions: AuthoredQuestion[] = [
     options: [
       {
         id: 'a',
-        text: 'It predicts the most plausible next token from patterns learned in training — plausibility is not the same as truth, and the model has no lookup of facts',
+        text: 'It predicts the most plausible next token from patterns learned in training - plausibility is not the same as truth, and the model has no lookup of facts',
         correct: true,
       },
       {
@@ -557,7 +557,7 @@ export const modelComponentQuestions: AuthoredQuestion[] = [
       },
     ],
     explanation:
-      'This is *hallucination*, and understanding its cause explains the whole rationale for RAG: give the model retrieved, authoritative content in the prompt so its next-token prediction is anchored to real source material — and cite it so a human can check.',
+      'This is *hallucination*, and understanding its cause explains the whole rationale for RAG: give the model retrieved, authoritative content in the prompt so its next-token prediction is anchored to real source material - and cite it so a human can check.',
     tags: ['generative', 'hallucination'],
   },
   {
@@ -597,7 +597,7 @@ export const modelComponentQuestions: AuthoredQuestion[] = [
         id: 'e',
         text: 'RAG removes the possibility of hallucination',
         correct: false,
-        why: 'It substantially reduces it, but a model can still misuse retrieved passages — which is why citations and clear system prompts still matter.',
+        why: 'It substantially reduces it, but a model can still misuse retrieved passages - which is why citations and clear system prompts still matter.',
       },
     ],
     explanation:
@@ -642,7 +642,7 @@ export const modelComponentQuestions: AuthoredQuestion[] = [
       },
     ],
     explanation:
-      'Stop sequences are useful when you want structured output to terminate cleanly — for example stopping at `\\n\\n` or at a marker like `END` so the model does not continue past the part you need.',
+      'Stop sequences are useful when you want structured output to terminate cleanly - for example stopping at `\\n\\n` or at a marker like `END` so the model does not continue past the part you need.',
     tags: ['parameters', 'stop'],
   },
 ];

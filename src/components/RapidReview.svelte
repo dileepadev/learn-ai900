@@ -1,6 +1,6 @@
 <script lang="ts">
   /**
-   * Rapid Review: the high-density revision area. Three interactive surfaces —
+   * Rapid Review: the high-density revision area. Three interactive surfaces -
    * flashcards with spaced repetition, comparison drills where the cells are
    * hidden until you commit, and one-line "know this" facts.
    */
@@ -120,7 +120,7 @@
       <h1>Rapid review</h1>
       <p class="muted">
         The things that are easy to forget: terminology, service comparisons, and the distinctions
-        the exam deliberately blurs. Nothing here teaches from scratch — it is for consolidation.
+        the exam deliberately blurs. Nothing here teaches from scratch - it is for consolidation.
       </p>
     </div>
     <a class="btn btn-sm" href={link('/cram/')}>🔥 Cram sheet</a>
@@ -239,7 +239,7 @@
                 <button type="button" class="btn btn-sm btn-ghost" onclick={() => hideAll(cmp.id)}>
                   Hide all
                 </button>
-                <span class="tiny subtle">Click a row to reveal it — try to answer first.</span>
+                <span class="tiny subtle">Click a row to reveal it - try to answer first.</span>
               </div>
 
               <div class="table-scroll">

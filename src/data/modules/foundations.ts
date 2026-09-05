@@ -5,7 +5,7 @@ export const foundations: Module = {
   order: 1,
   title: 'AI workloads: what to use when',
   summary:
-    'Learn the six AI workloads and how to route any scenario to the right one — the single most tested skill on this exam.',
+    'Learn the six AI workloads and how to route any scenario to the right one - the single most tested skill on this exam.',
   topic: 'ai-workloads',
   minutes: 18,
   priority: 'high',
@@ -23,7 +23,7 @@ export const foundations: Module = {
       blocks: [
         {
           t: 'p',
-          md: 'A large share of AI-901 questions are the same shape: *a company needs to do X — which capability should they use?* If you can classify the scenario, you have usually eliminated three of the four options before reading them properly.',
+          md: 'A large share of AI-901 questions are the same shape: *a company needs to do X - which capability should they use?* If you can classify the scenario, you have usually eliminated three of the four options before reading them properly.',
         },
         {
           t: 'key',
@@ -87,7 +87,7 @@ export const foundations: Module = {
         {
           t: 'trap',
           title: 'Generative AI vs. agentic AI',
-          body: 'A generative model **produces content**. An agent **pursues a goal and acts**. The deciding question: does the system have to *do* something in another system — call an API, place an order, update a record? If yes, it is agentic. An agent is a model **plus instructions plus tools**; remove the tools and it is just a chatbot.',
+          body: 'A generative model **produces content**. An agent **pursues a goal and acts**. The deciding question: does the system have to *do* something in another system - call an API, place an order, update a record? If yes, it is agentic. An agent is a model **plus instructions plus tools**; remove the tools and it is just a chatbot.',
         },
         {
           t: 'trap',
@@ -97,7 +97,7 @@ export const foundations: Module = {
         {
           t: 'trap',
           title: 'Computer vision vs. multimodal models',
-          body: 'Classic computer vision returns **structured findings** — labels, bounding boxes, masks, text, scores. A multimodal model **reasons in prose** about what it sees. "Return coordinates of every car" is vision. "Explain why this chart dips in Q3" needs a multimodal model.',
+          body: 'Classic computer vision returns **structured findings** - labels, bounding boxes, masks, text, scores. A multimodal model **reasons in prose** about what it sees. "Return coordinates of every car" is vision. "Explain why this chart dips in Q3" needs a multimodal model.',
         },
         { t: 'check', qid: 'wl-005' },
       ],

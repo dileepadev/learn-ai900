@@ -35,7 +35,7 @@ export const textAnalysis: Module = {
             ['**PII detection**', 'Sensitive identifiers located, and a redacted copy', '"Mask national IDs, cards, emails"'],
             ['**Sentiment analysis**', 'Positive / neutral / negative + confidence scores, per document and per sentence', '"Is this review good or bad?"'],
             ['**Opinion mining**', 'Target → assessment → sentiment triples', '"Which *aspect* did they dislike?"'],
-            ['**Summarization**', 'A shorter version — extractive or abstractive', '"Condense this"'],
+            ['**Summarization**', 'A shorter version - extractive or abstractive', '"Condense this"'],
             ['**Language detection**', 'ISO language code + confidence', '"What language is this?"'],
             ['**Entity linking**', 'Entity disambiguated and linked to a knowledge base entry', '"Which *Mars* is this?"'],
             ['**Text analytics for health**', 'Medical entities, relations and assertions', 'Clinical notes'],
@@ -69,7 +69,7 @@ export const textAnalysis: Module = {
         {
           t: 'key',
           title: 'The dividing line',
-          body: '**Prebuilt** features work immediately — send text, get a result, no training data. **Custom** features need you to label examples and train. If a scenario mentions categories or entities *specific to that business*, it is custom.',
+          body: '**Prebuilt** features work immediately - send text, get a result, no training data. **Custom** features need you to label examples and train. If a scenario mentions categories or entities *specific to that business*, it is custom.',
           priority: 'high',
         },
         {
@@ -81,7 +81,7 @@ export const textAnalysis: Module = {
             ['Named entity recognition, PII detection', 'Conversational language understanding (CLU)'],
             ['Language detection', 'Question answering'],
             ['Summarization (extractive & abstractive)', 'Orchestration workflow'],
-            ['Text analytics for health, entity linking', '—'],
+            ['Text analytics for health, entity linking', '-'],
           ],
         },
         { t: 'check', qid: 'wl-014' },
@@ -140,7 +140,7 @@ for e in entities.entities:
         },
         {
           t: 'p',
-          md: 'Azure Language is also reachable from Foundry as a tool, and via a Model Context Protocol (MCP) server — which is how an **agent** can use these capabilities as tools rather than your code calling them directly.',
+          md: 'Azure Language is also reachable from Foundry as a tool, and via a Model Context Protocol (MCP) server - which is how an **agent** can use these capabilities as tools rather than your code calling them directly.',
         },
         { t: 'check', qid: 'ts-001' },
       ],

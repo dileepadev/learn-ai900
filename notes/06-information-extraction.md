@@ -59,7 +59,7 @@ flowchart LR
 
 ### Prebuilt Document Models
 
-Pre-trained out of the box on millions of enterprise documents—no custom training required:
+Pre-trained out of the box on millions of enterprise documents - no custom training required:
 
 | Prebuilt Model | Target Document Type | Key Extracted Fields |
 | :--- | :--- | :--- |

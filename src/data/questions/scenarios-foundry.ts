@@ -3,7 +3,7 @@ import type { AuthoredQuestion } from '../types';
 /**
  * Scenario bank, part two: the Domain 2 implementation topics.
  *
- * These lean hard on the details that changed after AI-900 — Foundry resources
+ * These lean hard on the details that changed after AI-900 - Foundry resources
  * and projects, prompt vs. hosted agents, Foundry IQ, current model families,
  * and Content Understanding.
  */
@@ -30,7 +30,7 @@ export const foundryScenarioQuestions: AuthoredQuestion[] = [
         id: 'b',
         text: 'A hosted agent built with Agent Framework and shipped as a container',
         correct: false,
-        why: 'That gives control they do not need, and adds container compute plus runtime code to maintain — the opposite of the stated requirement.',
+        why: 'That gives control they do not need, and adds container compute plus runtime code to maintain - the opposite of the stated requirement.',
       },
       {
         id: 'c',
@@ -118,7 +118,7 @@ export const foundryScenarioQuestions: AuthoredQuestion[] = [
       },
     ],
     explanation:
-      'Format problems are prompt problems first. State the schema explicitly, show one example of it, and — if the model supports it — use structured output. Few-shot examples are the cheapest reliable way to pin down a format.',
+      'Format problems are prompt problems first. State the schema explicitly, show one example of it, and - if the model supports it - use structured output. Few-shot examples are the cheapest reliable way to pin down a format.',
     tags: ['prompts', 'format', 'trap'],
   },
   {
@@ -152,7 +152,7 @@ export const foundryScenarioQuestions: AuthoredQuestion[] = [
         id: 'd',
         text: 'The tutorial is describing Azure Machine Learning, not Foundry',
         correct: false,
-        why: 'Hubs are an implementation of Azure Machine Learning, so the confusion is understandable — but the tutorial genuinely is about Foundry, in its earlier form.',
+        why: 'Hubs are an implementation of Azure Machine Learning, so the confusion is understandable - but the tutorial genuinely is about Foundry, in its earlier form.',
       },
     ],
     explanation:
@@ -178,7 +178,7 @@ export const foundryScenarioQuestions: AuthoredQuestion[] = [
         id: 'b',
         text: 'Move the key into the source code so it is not in the environment',
         correct: false,
-        why: 'Strictly worse — the key ends up in version control.',
+        why: 'Strictly worse - the key ends up in version control.',
       },
       {
         id: 'c',
@@ -204,7 +204,7 @@ export const foundryScenarioQuestions: AuthoredQuestion[] = [
     difficulty: 'hard',
     kind: 'exam',
     scenario:
-      'Five teams have each configured their own copies of the same tools — a web search, an internal API and a code interpreter — with different credentials and versions. Security wants one governed set.',
+      'Five teams have each configured their own copies of the same tools - a web search, an internal API and a code interpreter - with different credentials and versions. Security wants one governed set.',
     prompt: 'What does Foundry provide for this?',
     options: [
       {
@@ -245,22 +245,22 @@ export const foundryScenarioQuestions: AuthoredQuestion[] = [
       'A grounded assistant answers correctly but users complain they cannot tell where the answers came from and do not trust it.',
     prompt: 'Which change addresses the complaint, and which principle does it serve?',
     options: [
-      { id: 'a', text: 'Return citations with each answer — transparency', correct: true },
+      { id: 'a', text: 'Return citations with each answer - transparency', correct: true },
       {
         id: 'b',
-        text: 'Lower the temperature — reliability and safety',
+        text: 'Lower the temperature - reliability and safety',
         correct: false,
         why: 'The answers are already correct. Consistency is not the issue; traceability is.',
       },
       {
         id: 'c',
-        text: 'Add a content filter — reliability and safety',
+        text: 'Add a content filter - reliability and safety',
         correct: false,
         why: 'Filters block harmful content. They do not show sources.',
       },
       {
         id: 'd',
-        text: 'Enable permission-aware retrieval — privacy and security',
+        text: 'Enable permission-aware retrieval - privacy and security',
         correct: false,
         why: 'Important for authorisation, but it does not tell the reader where an answer came from.',
       },
@@ -340,7 +340,7 @@ export const foundryScenarioQuestions: AuthoredQuestion[] = [
       },
     ],
     explanation:
-      'Chain-of-thought gives the model room to work rather than leaping to an answer. For exact computation, a code interpreter tool is better still — it does not estimate, it calculates.',
+      'Chain-of-thought gives the model room to work rather than leaping to an answer. For exact computation, a code interpreter tool is better still - it does not estimate, it calculates.',
     tags: ['prompts', 'chain-of-thought', 'agents', 'multi-select'],
   },
   {
@@ -398,7 +398,7 @@ export const foundryScenarioQuestions: AuthoredQuestion[] = [
       { id: 'a6', text: 'Take the code snippet into your application' },
     ],
     explanation:
-      'Note that the name is chosen early and cannot be changed afterwards — in code the agent is referenced as `<name>:<version>`.',
+      'Note that the name is chosen early and cannot be changed afterwards - in code the agent is referenced as `<name>:<version>`.',
     tags: ['agents', 'workflow', 'cram'],
   },
   {
@@ -572,7 +572,7 @@ export const foundryScenarioQuestions: AuthoredQuestion[] = [
         id: 'b',
         text: 'Speech to text, then a text model, then text to speech, because each stage can be tuned',
         correct: false,
-        why: 'Transcription discards exactly the signal the scenario depends on — how the caller sounds — and three sequential services will not hit a one-second budget comfortably.',
+        why: 'Transcription discards exactly the signal the scenario depends on - how the caller sounds - and three sequential services will not hit a one-second budget comfortably.',
       },
       {
         id: 'c',
@@ -622,7 +622,7 @@ export const foundryScenarioQuestions: AuthoredQuestion[] = [
         id: 'd',
         text: 'Batch transcription',
         correct: false,
-        why: 'Wrong direction — that is speech to text.',
+        why: 'Wrong direction - that is speech to text.',
       },
     ],
     explanation:
@@ -656,7 +656,7 @@ export const foundryScenarioQuestions: AuthoredQuestion[] = [
         id: 'd',
         text: 'Entity linking',
         correct: false,
-        why: 'It disambiguates mentions against a knowledge base — a different job entirely.',
+        why: 'It disambiguates mentions against a knowledge base - a different job entirely.',
       },
     ],
     explanation:
@@ -804,7 +804,7 @@ export const foundryScenarioQuestions: AuthoredQuestion[] = [
       },
     ],
     explanation:
-      'A useful counterweight to the usual answer: the cascade wins when you need stage-by-stage control — a specific licensed voice, and a transcript you can log and audit.',
+      'A useful counterweight to the usual answer: the cascade wins when you need stage-by-stage control - a specific licensed voice, and a transcript you can log and audit.',
     tags: ['speech', 'multimodal', 'architecture'],
   },
   {
@@ -923,7 +923,7 @@ export const foundryScenarioQuestions: AuthoredQuestion[] = [
       },
     ],
     explanation:
-      'Multimodal prompting is one request: a user message whose content is a list of items — text plus one or more images, supplied as a URL or base64 data.',
+      'Multimodal prompting is one request: a user message whose content is a list of items - text plus one or more images, supplied as a URL or base64 data.',
     tags: ['vision', 'multimodal', 'sdk'],
   },
   {
@@ -981,7 +981,7 @@ export const foundryScenarioQuestions: AuthoredQuestion[] = [
         id: 'c',
         text: 'An image generation model',
         correct: false,
-        why: 'Wrong direction — generation creates images.',
+        why: 'Wrong direction - generation creates images.',
       },
       {
         id: 'd',
@@ -1013,7 +1013,7 @@ export const foundryScenarioQuestions: AuthoredQuestion[] = [
         id: 'b',
         text: 'Face detection is Limited Access, so this cannot be built',
         correct: false,
-        why: 'Detection — finding faces — is broadly available. It is identification and verification that are gated.',
+        why: 'Detection - finding faces - is broadly available. It is identification and verification that are gated.',
       },
       {
         id: 'c',
@@ -1101,7 +1101,7 @@ export const foundryScenarioQuestions: AuthoredQuestion[] = [
         id: 'd',
         text: 'An image generation model',
         correct: false,
-        why: 'Wrong direction — the images already exist.',
+        why: 'Wrong direction - the images already exist.',
       },
     ],
     explanation:
@@ -1120,24 +1120,24 @@ export const foundryScenarioQuestions: AuthoredQuestion[] = [
     options: [
       {
         id: 'a',
-        text: 'A multimodal model generating a description, then text to speech — serving inclusiveness',
+        text: 'A multimodal model generating a description, then text to speech - serving inclusiveness',
         correct: true,
       },
       {
         id: 'b',
-        text: 'Object detection returning bounding boxes — serving inclusiveness',
+        text: 'Object detection returning bounding boxes - serving inclusiveness',
         correct: false,
         why: 'Coordinates are not a useful spoken description. The capability is wrong even though the principle is right.',
       },
       {
         id: 'c',
-        text: 'An image generation model — serving transparency',
+        text: 'An image generation model - serving transparency',
         correct: false,
         why: 'Both halves are wrong: nothing is being generated, and this is not about disclosure.',
       },
       {
         id: 'd',
-        text: 'OCR — serving privacy and security',
+        text: 'OCR - serving privacy and security',
         correct: false,
         why: 'OCR reads text in images and has no bearing on privacy here.',
       },
@@ -1296,7 +1296,7 @@ export const foundryScenarioQuestions: AuthoredQuestion[] = [
       },
     ],
     explanation:
-      'Video analyzers segment on topic shifts, scene changes and visual cues, then return transcripts plus per-segment descriptions covering people, places and actions — exactly the chapter structure described.',
+      'Video analyzers segment on topic shifts, scene changes and visual cues, then return transcripts plus per-segment descriptions covering people, places and actions - exactly the chapter structure described.',
     tags: ['content-understanding', 'video', 'segmentation'],
   },
   {
@@ -1324,7 +1324,7 @@ export const foundryScenarioQuestions: AuthoredQuestion[] = [
       },
       {
         id: 'd',
-        text: 'None — this requires a separate custom model',
+        text: 'None - this requires a separate custom model',
         correct: false,
         why: 'Classify handles it inside the same analyzer.',
       },
@@ -1434,7 +1434,7 @@ export const foundryScenarioQuestions: AuthoredQuestion[] = [
         id: 'c',
         text: 'Manual pre-sorting by a human before processing',
         correct: false,
-        why: 'It works, but classification and routing is a supported feature — and there is a composed prebuilt analyzer for exactly this domain.',
+        why: 'It works, but classification and routing is a supported feature - and there is a composed prebuilt analyzer for exactly this domain.',
       },
       {
         id: 'd',
@@ -1479,7 +1479,7 @@ export const foundryScenarioQuestions: AuthoredQuestion[] = [
       },
     ],
     explanation:
-      'Audio analyzers transcribe, label speakers, and can generate summaries and classify things like call sentiment — all in one analyze call, which is why they beat stitching Speech and Language together.',
+      'Audio analyzers transcribe, label speakers, and can generate summaries and classify things like call sentiment - all in one analyze call, which is why they beat stitching Speech and Language together.',
     tags: ['content-understanding', 'audio', 'multi-select'],
   },
   {
@@ -1494,18 +1494,18 @@ export const foundryScenarioQuestions: AuthoredQuestion[] = [
     options: [
       {
         id: 'a',
-        text: 'No — you define a field schema with descriptions and the analyzer applies it immediately',
+        text: 'No - you define a field schema with descriptions and the analyzer applies it immediately',
         correct: true,
       },
       {
         id: 'b',
-        text: 'Yes — at least 50 labelled examples per field',
+        text: 'Yes - at least 50 labelled examples per field',
         correct: false,
         why: 'That is the workflow for custom models in older document-processing services, not Content Understanding.',
       },
       {
         id: 'c',
-        text: 'Yes — you must fine-tune a model first',
+        text: 'Yes - you must fine-tune a model first',
         correct: false,
         why: 'No fine-tuning is involved.',
       },
@@ -1545,7 +1545,7 @@ export const foundryScenarioQuestions: AuthoredQuestion[] = [
       },
       {
         id: 'd',
-        text: 'No analyzer — index the raw PDFs directly',
+        text: 'No analyzer - index the raw PDFs directly',
         correct: false,
         why: 'Raw PDFs are not retrievable text. Extraction has to happen first.',
       },

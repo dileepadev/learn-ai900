@@ -1,7 +1,7 @@
 <script lang="ts">
   /**
    * Same user question, four different system messages. The replies are
-   * hand-written rather than generated — the point is to show how much of the
+   * hand-written rather than generated - the point is to show how much of the
    * output a system prompt controls, which is the examinable idea.
    */
   const USER = 'My order #4471 has not arrived. What do I do?';
@@ -12,7 +12,7 @@
       label: 'No system message',
       system: '(none)',
       reply:
-        "I'm sorry to hear that! Order delays can happen for lots of reasons — carrier backlogs, weather, an address issue, or the parcel being held at a depot. Have you checked your tracking link? Usually the carrier updates it within 24 hours. If it has been more than a week, most retailers will let you open a claim, and some will send a replacement while the investigation runs. You may also want to check with neighbours…",
+        "I'm sorry to hear that! Order delays can happen for lots of reasons - carrier backlogs, weather, an address issue, or the parcel being held at a depot. Have you checked your tracking link? Usually the carrier updates it within 24 hours. If it has been more than a week, most retailers will let you open a claim, and some will send a replacement while the investigation runs. You may also want to check with neighbours…",
       notes: 'Rambling, no format, no boundaries, and it invents policy the company may not have.',
       tone: 'bad',
     },
@@ -22,7 +22,7 @@
       system:
         'You are a Contoso support assistant. Only discuss Contoso orders, delivery and returns. Never discuss competitors or pricing.',
       reply:
-        "I can help with order #4471. Delivery issues are usually resolved by opening a delivery investigation. I'll need to check the tracking status on the order first — could you confirm the delivery address on file?",
+        "I can help with order #4471. Delivery issues are usually resolved by opening a delivery investigation. I'll need to check the tracking status on the order first - could you confirm the delivery address on file?",
       notes: 'On-brand and in scope, but the length and shape still vary between requests.',
       tone: 'ok',
     },

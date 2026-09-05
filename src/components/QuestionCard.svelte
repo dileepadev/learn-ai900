@@ -1,6 +1,6 @@
 <script lang="ts">
   /**
-   * Renders any question type, collects an answer, and — outside exam mode —
+   * Renders any question type, collects an answer, and - outside exam mode -
    * shows immediate feedback explaining both the correct answer and why the
    * chosen distractor was wrong.
    */

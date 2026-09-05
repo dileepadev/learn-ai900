@@ -2,23 +2,23 @@ import type { Comparison, Flashcard, QuickFact } from './types';
 
 /**
  * Rapid Review content: the high-density, easy-to-forget material.
- * Deliberately terse — this is revision, not teaching.
+ * Deliberately terse - this is revision, not teaching.
  */
 
 export const FLASHCARDS: Flashcard[] = [
   /* ---- Responsible AI ---- */
   { id: 'fc-rai-1', topic: 'responsible-ai', priority: 'high', front: 'The six responsible AI principles', back: 'Fairness · Reliability and safety · Privacy and security · Inclusiveness · Transparency · Accountability' },
-  { id: 'fc-rai-2', topic: 'responsible-ai', priority: 'high', front: 'Unequal quality of service between demographic groups', back: '**Fairness.** Mitigation: audit data representation, compare error rates *per group* — never trust aggregate accuracy.' },
+  { id: 'fc-rai-2', topic: 'responsible-ai', priority: 'high', front: 'Unequal quality of service between demographic groups', back: '**Fairness.** Mitigation: audit data representation, compare error rates *per group* - never trust aggregate accuracy.' },
   { id: 'fc-rai-3', topic: 'responsible-ai', priority: 'high', front: 'Users did not realise they were talking to AI', back: '**Transparency.** Disclose AI involvement, publish limitations, show citations.' },
-  { id: 'fc-rai-4', topic: 'responsible-ai', priority: 'high', front: '"The system decided" — no human owner, no appeal', back: '**Accountability.** Named owners, governance sign-off, a route to contest a decision.' },
-  { id: 'fc-rai-5', topic: 'responsible-ai', priority: 'high', front: 'A voice-only interface a deaf user cannot use', back: '**Inclusiveness.** Not fairness — the person cannot participate at all.' },
+  { id: 'fc-rai-4', topic: 'responsible-ai', priority: 'high', front: '"The system decided" - no human owner, no appeal', back: '**Accountability.** Named owners, governance sign-off, a route to contest a decision.' },
+  { id: 'fc-rai-5', topic: 'responsible-ai', priority: 'high', front: 'A voice-only interface a deaf user cannot use', back: '**Inclusiveness.** Not fairness - the person cannot participate at all.' },
   { id: 'fc-rai-6', topic: 'responsible-ai', priority: 'high', front: 'Model behaves erratically in rain, glare or sensor noise', back: '**Reliability and safety.** Test adverse conditions, add guardrails, fall back to a human.' },
   { id: 'fc-rai-7', topic: 'responsible-ai', priority: 'high', front: 'Chatbot leaks another customer\'s address', back: '**Privacy and security.** Pick the principle that names the *harm*, not the malfunction.' },
-  { id: 'fc-rai-8', topic: 'responsible-ai', priority: 'medium', front: 'Fairness vs. inclusiveness — one line', back: 'Fairness = equitable outcomes for users. Inclusiveness = everyone can be a user.' },
-  { id: 'fc-rai-9', topic: 'responsible-ai', priority: 'medium', front: 'Transparency vs. accountability — one line', back: 'Transparency = they *know*. Accountability = someone is *answerable* and there is recourse.' },
-  { id: 'fc-rai-10', topic: 'responsible-ai', priority: 'medium', front: 'Content Credentials (C2PA) support which principle?', back: '**Transparency** — cryptographic provenance marking an image as AI-generated.' },
+  { id: 'fc-rai-8', topic: 'responsible-ai', priority: 'medium', front: 'Fairness vs. inclusiveness - one line', back: 'Fairness = equitable outcomes for users. Inclusiveness = everyone can be a user.' },
+  { id: 'fc-rai-9', topic: 'responsible-ai', priority: 'medium', front: 'Transparency vs. accountability - one line', back: 'Transparency = they *know*. Accountability = someone is *answerable* and there is recourse.' },
+  { id: 'fc-rai-10', topic: 'responsible-ai', priority: 'medium', front: 'Content Credentials (C2PA) support which principle?', back: '**Transparency** - cryptographic provenance marking an image as AI-generated.' },
   { id: 'fc-rai-11', topic: 'responsible-ai', priority: 'medium', front: 'Prompt injection defence supports which principle?', back: '**Privacy and security.** Prompt shields are part of Foundry\'s content safety guardrails.' },
-  { id: 'fc-rai-12', topic: 'responsible-ai', priority: 'high', front: 'Agent must not show restricted docs to unauthorised users', back: '**Privacy and security**, implemented by **Foundry IQ** permission-aware retrieval — *not* content filters.' },
+  { id: 'fc-rai-12', topic: 'responsible-ai', priority: 'high', front: 'Agent must not show restricted docs to unauthorised users', back: '**Privacy and security**, implemented by **Foundry IQ** permission-aware retrieval - *not* content filters.' },
 
   /* ---- Workloads ---- */
   { id: 'fc-wl-1', topic: 'ai-workloads', priority: 'high', front: 'The six AI workloads', back: 'Generative AI · Agentic AI · Text analysis (NLP) · Speech · Computer vision · Information extraction' },
@@ -30,13 +30,13 @@ export const FLASHCARDS: Flashcard[] = [
   { id: 'fc-wl-7', topic: 'ai-workloads', priority: 'high', front: 'Sentiment vs. opinion mining', back: 'Sentiment = label for the document/sentence. Opinion mining = **target → assessment → sentiment**. "Which aspect?" ⇒ opinion mining.' },
   { id: 'fc-wl-8', topic: 'ai-workloads', priority: 'high', front: 'Real-time vs. batch transcription', back: 'Real-time = live captions, assistants, streaming. Batch = large volumes of **pre-recorded files in storage**, asynchronous.' },
   { id: 'fc-wl-9', topic: 'ai-workloads', priority: 'high', front: 'Classification vs. detection vs. segmentation', back: 'Classification = one label for the image. Detection = label **+ bounding box** per instance. Segmentation = **per-pixel mask**.' },
-  { id: 'fc-wl-10', topic: 'ai-workloads', priority: 'medium', front: 'Need to *count* items in a photo — which task?', back: '**Object detection.** Classification gives one label for the whole frame and cannot count.' },
+  { id: 'fc-wl-10', topic: 'ai-workloads', priority: 'medium', front: 'Need to *count* items in a photo - which task?', back: '**Object detection.** Classification gives one label for the whole frame and cannot count.' },
   { id: 'fc-wl-11', topic: 'ai-workloads', priority: 'medium', front: 'Phoneme', back: 'The smallest unit of sound that distinguishes words. "Cat" = /k/ /æ/ /t/.' },
   { id: 'fc-wl-12', topic: 'ai-workloads', priority: 'medium', front: 'SSML controls…', back: 'Synthesis only: `<voice>`, `<prosody>` (rate/pitch/volume), `<break>`, `<emphasis>`, `<phoneme>`. Never recognition.' },
 
   /* ---- Models & config ---- */
   { id: 'fc-mc-1', topic: 'model-components', priority: 'high', front: 'temperature', back: 'Randomness of token selection. ≈0 → focused and deterministic. ≈1+ → creative and varied.' },
-  { id: 'fc-mc-2', topic: 'model-components', priority: 'high', front: 'max_tokens limits…', back: 'The **generated response**. NOT the prompt — that is the **context window**. Classic trap.' },
+  { id: 'fc-mc-2', topic: 'model-components', priority: 'high', front: 'max_tokens limits…', back: 'The **generated response**. NOT the prompt - that is the **context window**. Classic trap.' },
   { id: 'fc-mc-3', topic: 'model-components', priority: 'high', front: 'temperature vs. top_p', back: 'Two ways to control the same thing. **Tune one, leave the other at its default.**' },
   { id: 'fc-mc-4', topic: 'model-components', priority: 'medium', front: 'frequency_penalty vs. presence_penalty', back: 'Frequency penalises by **how often** a token appeared. Presence penalises tokens that appeared **at all**, pushing to new topics.' },
   { id: 'fc-mc-5', topic: 'model-components', priority: 'high', front: 'Foundry deployment **options**', back: '**Serverless API** (preferred, token-billed) and **managed compute** (dedicated GPUs, hourly per accelerator). PTU is a *type*, not a third option.' },
@@ -51,24 +51,24 @@ export const FLASHCARDS: Flashcard[] = [
   /* ---- Foundry, agents, RAG ---- */
   { id: 'fc-fg-1', topic: 'foundry-genai-agents', priority: 'high', front: 'An agent is…', back: '**Model + instructions + tools.** Remove the tools and it is a chatbot.' },
   { id: 'fc-fg-2', topic: 'foundry-genai-agents', priority: 'high', front: 'Prompt agent vs. hosted agent', back: 'Prompt = **declarative config**, Foundry runs it, no code or compute to manage. Hosted = **your code** in a container, Foundry hosts it with an endpoint, scaling and identity.' },
-  { id: 'fc-fg-3', topic: 'foundry-genai-agents', priority: 'medium', front: 'Calling the Responses API directly gives you…', back: 'An **ephemeral agent** — the definition lives in your code, no agent resource in Foundry.' },
+  { id: 'fc-fg-3', topic: 'foundry-genai-agents', priority: 'medium', front: 'Calling the Responses API directly gives you…', back: 'An **ephemeral agent** - the definition lives in your code, no agent resource in Foundry.' },
   { id: 'fc-fg-4', topic: 'foundry-genai-agents', priority: 'high', front: 'Foundry resource vs. Foundry project', back: 'Project is a **child** of the resource. Security, networking and governance on the **resource**; deployments, agents and experiments in the **project**.' },
   { id: 'fc-fg-5', topic: 'foundry-genai-agents', priority: 'high', front: 'Are AI hubs still required?', back: '**No.** Hub-based projects are the *classic* model. Hubs are needed only for select cases such as open-source model hosting and Azure ML capabilities.' },
   { id: 'fc-fg-6', topic: 'foundry-genai-agents', priority: 'high', front: 'Foundry IQ knowledge base =', back: '**Knowledge sources** (Blob, SharePoint, OneLake, public web) **+ retrieval parameters**. Shareable across multiple agents.' },
   { id: 'fc-fg-7', topic: 'foundry-genai-agents', priority: 'high', front: 'What agentic retrieval adds over classic RAG', back: 'Decomposes a query into **parallel subqueries**, uses conversation context, semantic reranking, structured results **with citations**.' },
-  { id: 'fc-fg-8', topic: 'foundry-genai-agents', priority: 'medium', front: 'Toolbox', back: 'A curated tool set — web search, file search, code interpreter, MCP servers, custom functions — **shared across agents** through one managed endpoint with central auth and versioning.' },
+  { id: 'fc-fg-8', topic: 'foundry-genai-agents', priority: 'medium', front: 'Toolbox', back: 'A curated tool set - web search, file search, code interpreter, MCP servers, custom functions - **shared across agents** through one managed endpoint with central auth and versioning.' },
   { id: 'fc-fg-9', topic: 'foundry-genai-agents', priority: 'high', front: 'System vs. user vs. assistant message', back: 'System = developer\'s standing rules. User = the current question. Assistant = the model\'s previous replies (history).' },
-  { id: 'fc-fg-10', topic: 'foundry-genai-agents', priority: 'medium', front: 'Zero-shot / few-shot / chain-of-thought', back: 'No examples / several worked examples / "reason step by step". **All inference-time — none change the model.**' },
+  { id: 'fc-fg-10', topic: 'foundry-genai-agents', priority: 'medium', front: 'Zero-shot / few-shot / chain-of-thought', back: 'No examples / several worked examples / "reason step by step". **All inference-time - none change the model.**' },
   { id: 'fc-fg-11', topic: 'foundry-genai-agents', priority: 'medium', front: 'Why chunk documents for RAG?', back: 'Focused passages match precisely and fit the token budget. A whole handbook as one vector represents nothing.' },
   { id: 'fc-fg-12', topic: 'foundry-genai-agents', priority: 'medium', front: 'Foundry IQ / Work IQ / Fabric IQ', back: 'Foundry IQ = content you connect. Work IQ = Microsoft 365 work data (preview). Fabric IQ = Fabric data and semantic models (preview).' },
-  { id: 'fc-fg-13', topic: 'foundry-genai-agents', priority: 'medium', front: 'Recommended auth for a Foundry client', back: '**Microsoft Entra ID (keyless)** — `DefaultAzureCredential` in dev, a managed identity in production. Never keys in source.' },
+  { id: 'fc-fg-13', topic: 'foundry-genai-agents', priority: 'medium', front: 'Recommended auth for a Foundry client', back: '**Microsoft Entra ID (keyless)** - `DefaultAzureCredential` in dev, a managed identity in production. Never keys in source.' },
 
   /* ---- Text & speech ---- */
   { id: 'fc-ts-1', topic: 'foundry-text-speech', priority: 'high', front: 'Which Language features need training data?', back: 'Custom NER, custom text classification, CLU, question answering, orchestration workflow. **Everything else is prebuilt.**' },
-  { id: 'fc-ts-2', topic: 'foundry-text-speech', priority: 'medium', front: 'Clinical notes: medications, dosages, conditions', back: '**Text analytics for health** — a prebuilt Azure Language feature. General NER will not type medical entities.' },
+  { id: 'fc-ts-2', topic: 'foundry-text-speech', priority: 'medium', front: 'Clinical notes: medications, dosages, conditions', back: '**Text analytics for health** - a prebuilt Azure Language feature. General NER will not type medical entities.' },
   { id: 'fc-ts-3', topic: 'foundry-text-speech', priority: 'high', front: 'Native multimodal audio beats a cascade when…', back: '**Latency** matters and **tone / emotion** must survive. A cascade discards acoustic context at transcription and pays three hops.' },
   { id: 'fc-ts-4', topic: 'foundry-text-speech', priority: 'medium', front: 'Distinct branded voice not in the catalogue', back: '**Custom neural voice**, trained from studio recordings. SSML cannot create a new voice identity.' },
-  { id: 'fc-ts-5', topic: 'foundry-text-speech', priority: 'medium', front: 'Live English captions of a Spanish talk', back: '**Speech translation** — one step. Speech-to-text alone would give Spanish captions.' },
+  { id: 'fc-ts-5', topic: 'foundry-text-speech', priority: 'medium', front: 'Live English captions of a Spanish talk', back: '**Speech translation** - one step. Speech-to-text alone would give Spanish captions.' },
 
   /* ---- Vision ---- */
   { id: 'fc-fv-1', topic: 'foundry-vision', priority: 'high', front: 'Current image generation models in Foundry', back: '**GPT-image family**: `gpt-image-1`, `-mini`, `-1.5`, `-2`. DALL·E 3 still available. Video: **Sora-2** (preview).' },
@@ -79,12 +79,12 @@ export const FLASHCARDS: Flashcard[] = [
   { id: 'fc-fv-6', topic: 'foundry-vision', priority: 'medium', front: 'Inpainting', back: 'Edit part of an image using a **mask + prompt**, leaving the rest intact. Supported by the GPT-image models.' },
 
   /* ---- Extraction ---- */
-  { id: 'fc-fe-1', topic: 'foundry-extraction', priority: 'high', front: 'Content Understanding modalities', back: '**Documents · Images · Audio · Video** — one service, one analyze pattern.' },
+  { id: 'fc-fe-1', topic: 'foundry-extraction', priority: 'high', front: 'Content Understanding modalities', back: '**Documents · Images · Audio · Video** - one service, one analyze pattern.' },
   { id: 'fc-fe-2', topic: 'foundry-extraction', priority: 'high', front: 'Analyzer', back: 'A reusable configuration: what content to process, what to extract, how to structure output, which models to use.' },
   { id: 'fc-fe-3', topic: 'foundry-extraction', priority: 'high', front: 'The three field generation methods', back: '**Extract** (verbatim, documents only) · **Classify** (from a predefined set) · **Generate** (write something new).' },
   { id: 'fc-fe-4', topic: 'foundry-extraction', priority: 'high', front: 'Analyzer types', back: '**Base** · **RAG** (…Search variants) · **Domain-specific** (invoice, receipt, idDocument) · **Custom**.' },
   { id: 'fc-fe-5', topic: 'foundry-extraction', priority: 'high', front: 'What confidence scores unlock', back: '**Straight-through processing**: auto-accept above threshold, route only doubtful fields to a human.' },
-  { id: 'fc-fe-6', topic: 'foundry-extraction', priority: 'high', front: 'Segmentation in Content Understanding', back: 'Split content into **logical sections** — a PDF by document type, a video into scenes. NOT per-pixel masks.' },
+  { id: 'fc-fe-6', topic: 'foundry-extraction', priority: 'high', front: 'Segmentation in Content Understanding', back: 'Split content into **logical sections** - a PDF by document type, a video into scenes. NOT per-pixel masks.' },
   { id: 'fc-fe-7', topic: 'foundry-extraction', priority: 'medium', front: 'Content Understanding vs. Document Intelligence', back: 'CU = four modalities, schema you define. DI = documents only, specialist OCR / layout / tables / selection marks.' },
   { id: 'fc-fe-8', topic: 'foundry-extraction', priority: 'medium', front: 'Video analyzer output', back: 'Automatic **segments** on scene/topic change, **transcript**, and a **description per segment** (people, places, actions).' },
   { id: 'fc-fe-9', topic: 'foundry-extraction', priority: 'medium', front: 'Audio analyzer output', back: '**Transcript + speaker labels + summary**, in one call. Beats stitching Speech and Language together.' },
@@ -119,7 +119,7 @@ export const COMPARISONS: Comparison[] = [
       ['Billing', 'Per token, or reserved PTUs', 'Hourly, per accelerator SKU'],
       ['Data processing', 'Regional, data zone or global', 'Global'],
       ['Content filtering', 'Built-in and customisable', 'Not available in public preview'],
-      ['Verdict', 'Preferred — use whenever possible', 'Only when the model requires it'],
+      ['Verdict', 'Preferred - use whenever possible', 'Only when the model requires it'],
     ],
     bottomLine: 'Serverless API is the default. PTU is a deployment *type* within it, not a third option.',
   },
@@ -132,7 +132,7 @@ export const COMPARISONS: Comparison[] = [
     rows: [
       ['How', 'Selects the most important sentences unchanged', 'Generates new sentences capturing the meaning'],
       ['Wording', 'Verbatim from the source', 'New phrasing'],
-      ['Best for', 'Legal, medical, compliance — fidelity matters', 'Meeting notes, call recaps, readability'],
+      ['Best for', 'Legal, medical, compliance - fidelity matters', 'Meeting notes, call recaps, readability'],
     ],
     bottomLine: 'If the question says "verbatim", "evidentiary" or "must appear in the original", the answer is extractive.',
   },
@@ -161,7 +161,7 @@ export const COMPARISONS: Comparison[] = [
       ['Modalities', 'Documents, images, audio, video', 'Documents only'],
       ['Approach', 'Generative, schema you declare', 'Specialist document models'],
       ['Strength', 'Breadth; custom schemas with no training', 'OCR, layout, tables, selection marks'],
-      ['Exam emphasis', 'Primary — four objectives', 'Background knowledge'],
+      ['Exam emphasis', 'Primary - four objectives', 'Background knowledge'],
     ],
     bottomLine: 'Audio or video anywhere in the requirement ⇒ Content Understanding. Deep document OCR and layout ⇒ Document Intelligence.',
   },
@@ -174,7 +174,7 @@ export const COMPARISONS: Comparison[] = [
     rows: [
       ['Changes', 'What is in the prompt', 'The model weights'],
       ['Solves', 'Missing or changing knowledge', 'Wrong behaviour, style or task performance'],
-      ['Freshness', 'Immediate — reindex and it is current', 'Requires retraining'],
+      ['Freshness', 'Immediate - reindex and it is current', 'Requires retraining'],
       ['Citations', 'Yes', 'No'],
     ],
     bottomLine: 'Knowledge problem ⇒ RAG. Behaviour problem ⇒ fine-tuning.',
@@ -183,7 +183,7 @@ export const COMPARISONS: Comparison[] = [
     id: 'cmp-speech-arch',
     title: 'Cascade vs. native multimodal audio',
     topic: 'foundry-text-speech',
-    hook: 'A named exam objective — know why you would pick each.',
+    hook: 'A named exam objective - know why you would pick each.',
     headers: ['Dimension', 'STT → model → TTS', 'Native multimodal audio'],
     rows: [
       ['Latency', 'Sum of three services', 'Single hop'],
@@ -218,7 +218,7 @@ export const COMPARISONS: Comparison[] = [
       ['Status', 'Current default; where new investment goes', 'Classic; still supported for select cases'],
       ['Dependencies', 'No separate storage or key vault required', 'Requires Storage, Key Vault, sometimes ACR'],
       ['Azure resource type', '`Microsoft.CognitiveServices/account` (kind `AIServices`)', '`Microsoft.MachineLearningServices/workspace` (kind `hub`)'],
-      ['Still needed for', '—', 'Open-source model hosting, Azure ML capabilities'],
+      ['Still needed for', '-', 'Open-source model hosting, Azure ML capabilities'],
     ],
     bottomLine: 'If a resource says you must create a hub first, it predates the current model.',
   },
@@ -243,7 +243,7 @@ export const QUICK_FACTS: QuickFact[] = [
   { id: 'qf-3', topic: 'responsible-ai', priority: 'high', fact: 'Aggregate accuracy is **not** evidence of fairness. Compare error rates per group.' },
   { id: 'qf-4', topic: 'foundry-genai-agents', priority: 'high', fact: 'Agent = **model + instructions + tools**.' },
   { id: 'qf-5', topic: 'foundry-genai-agents', priority: 'high', fact: 'Foundry projects **do not require an AI hub**.' },
-  { id: 'qf-6', topic: 'foundry-extraction', priority: 'high', fact: 'Content Understanding covers **documents, images, audio and video** — one analyze pattern.' },
+  { id: 'qf-6', topic: 'foundry-extraction', priority: 'high', fact: 'Content Understanding covers **documents, images, audio and video** - one analyze pattern.' },
   { id: 'qf-7', topic: 'ai-workloads', priority: 'high', fact: 'Counting objects needs **detection**, not classification.' },
   { id: 'qf-8', topic: 'model-components', priority: 'high', fact: '**RAG for knowledge, fine-tuning for behaviour.**' },
   { id: 'qf-9', topic: 'foundry-vision', priority: 'high', fact: 'Face **identification** is Limited Access; face **detection** is not.' },

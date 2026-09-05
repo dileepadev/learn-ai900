@@ -1,5 +1,5 @@
 /**
- * "What should I do next?" — the scheduling brain behind the dashboard.
+ * "What should I do next?" - the scheduling brain behind the dashboard.
  *
  * Given how much time the learner has right now, it returns a ranked list of
  * concrete actions. The first item is always the single highest-value thing to
@@ -70,7 +70,7 @@ export function recommend(input: RecommendInput): Recommendation[] {
       kind: 'learn',
       title: resuming ? `Finish “${nextModule.title}”` : `Learn: ${nextModule.title}`,
       why: resuming
-        ? 'You already started this one — finishing it closes a gap in your coverage score.'
+        ? 'You already started this one - finishing it closes a gap in your coverage score.'
         : nextModule.summary,
       href: join(base, `/learn/${nextModule.id}/`),
       minutes: nextModule.minutes,
@@ -142,7 +142,7 @@ export function recommend(input: RecommendInput): Recommendation[] {
   out.push({
     kind: 'flashcards',
     title: 'Rapid review: flashcards and service comparisons',
-    why: 'High-density facts, comparisons and exam traps — ideal when you have a spare few minutes.',
+    why: 'High-density facts, comparisons and exam traps - ideal when you have a spare few minutes.',
     href: join(base, '/review/'),
     minutes: 10,
     cta: 'Review',
@@ -166,7 +166,7 @@ export function recommend(input: RecommendInput): Recommendation[] {
   if (daysLeft !== null && daysLeft <= 1) {
     out.unshift({
       kind: 'cram',
-      title: daysLeft <= 0 ? 'Exam day: run the final cram sheet' : 'Tomorrow is exam day — cram mode',
+      title: daysLeft <= 0 ? 'Exam day: run the final cram sheet' : 'Tomorrow is exam day - cram mode',
       why: 'Every "know this" fact, trap and comparison in one pass. No new material this close in.',
       href: join(base, '/cram/'),
       minutes: 25,

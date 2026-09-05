@@ -48,7 +48,7 @@ export function isDue(item: Schedulable | undefined, now = Date.now()): boolean 
 /**
  * Priority for the practice queue. Higher comes first.
  *
- * Unseen items rank above overdue ones so breadth builds before depth — with
+ * Unseen items rank above overdue ones so breadth builds before depth - with
  * only a few days available, seeing every question once matters more than
  * perfecting a subset.
  */

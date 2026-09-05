@@ -32,7 +32,7 @@ export const foundryTextSpeechQuestions: AuthoredQuestion[] = [
         id: 'd',
         text: 'Custom text classification only',
         correct: false,
-        why: 'It could work but requires labelling training data and training a model — unnecessary when prebuilt features already answer both questions.',
+        why: 'It could work but requires labelling training data and training a model - unnecessary when prebuilt features already answer both questions.',
       },
     ],
     explanation:
@@ -66,7 +66,7 @@ export const foundryTextSpeechQuestions: AuthoredQuestion[] = [
         id: 'd',
         text: 'Azure Machine Learning designer',
         correct: false,
-        why: 'A classical ML tool, not a prebuilt NLP service — and largely out of scope for AI-901.',
+        why: 'A classical ML tool, not a prebuilt NLP service - and largely out of scope for AI-901.',
       },
     ],
     explanation:
@@ -109,7 +109,7 @@ export const foundryTextSpeechQuestions: AuthoredQuestion[] = [
       },
     ],
     explanation:
-      'Prebuilt features return a fixed, well-typed result at a low per-document cost — ideal for high-volume classification. Reach for a generative model when the task needs flexible reasoning or free-form output.',
+      'Prebuilt features return a fixed, well-typed result at a low per-document cost - ideal for high-volume classification. Reach for a generative model when the task needs flexible reasoning or free-form output.',
     tags: ['language', 'prebuilt-vs-generative'],
   },
   {
@@ -170,13 +170,13 @@ export const foundryTextSpeechQuestions: AuthoredQuestion[] = [
         id: 'b',
         text: 'Speech to text, then a text model, then text to speech',
         correct: false,
-        why: 'This works, but transcription discards tone and urgency, and three sequential hops add latency — both of which the scenario explicitly cares about.',
+        why: 'This works, but transcription discards tone and urgency, and three sequential hops add latency - both of which the scenario explicitly cares about.',
       },
       {
         id: 'c',
         text: 'Batch transcription followed by summarization',
         correct: false,
-        why: 'Batch is asynchronous and offline — unusable for a live assistant.',
+        why: 'Batch is asynchronous and offline - unusable for a live assistant.',
       },
       {
         id: 'd',
@@ -255,7 +255,7 @@ export const foundryTextSpeechQuestions: AuthoredQuestion[] = [
       },
     ],
     explanation:
-      'Prebuilt neural voices cover hundreds of locales and are the default. Custom neural voice is the option when a distinct branded voice is required — and, being a sensitive capability, it is gated by responsible AI review.',
+      'Prebuilt neural voices cover hundreds of locales and are the default. Custom neural voice is the option when a distinct branded voice is required - and, being a sensitive capability, it is gated by responsible AI review.',
     tags: ['speech', 'custom-voice'],
   },
   {
@@ -274,7 +274,7 @@ export const foundryTextSpeechQuestions: AuthoredQuestion[] = [
         id: 'b',
         text: 'Prebuilt named entity recognition',
         correct: false,
-        why: 'General NER recognises people, places, organisations and dates — not medications, dosages, or clinical relations and assertions.',
+        why: 'General NER recognises people, places, organisations and dates - not medications, dosages, or clinical relations and assertions.',
       },
       {
         id: 'c',
@@ -314,7 +314,7 @@ export const foundryTextSpeechQuestions: AuthoredQuestion[] = [
         id: 'c',
         text: 'Text to speech',
         correct: false,
-        why: 'Wrong direction — no captions are produced.',
+        why: 'Wrong direction - no captions are produced.',
       },
       {
         id: 'd',
@@ -324,7 +324,7 @@ export const foundryTextSpeechQuestions: AuthoredQuestion[] = [
       },
     ],
     explanation:
-      'Speech translation takes audio in one language and returns text (or synthesized speech) in another, in real time — the standard answer for live multilingual captioning or interpretation.',
+      'Speech translation takes audio in one language and returns text (or synthesized speech) in another, in real time - the standard answer for live multilingual captioning or interpretation.',
     tags: ['speech', 'translation'],
   },
   {

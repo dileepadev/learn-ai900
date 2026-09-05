@@ -44,7 +44,7 @@ Computer vision enables software systems to extract meaningful information and a
 
 - A digital image is represented as a multidimensional numerical grid of **pixels**:
   - **Grayscale Images**: A single 2D grid where each pixel has a single intensity value from `0` (black) to `255` (white).
-  - **Color Images (RGB)**: A 3D array composed of three color channels—**Red**, **Green**, and **Blue**. Each pixel has three values ranging from `0` to `255` representing color intensity.
+  - **Color Images (RGB)**: A 3D array composed of three color channels - **Red**, **Green**, and **Blue**. Each pixel has three values ranging from `0` to `255` representing color intensity.
 
 ### Deep Learning & Convolutional Neural Networks (CNNs)
 

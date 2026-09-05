@@ -166,7 +166,7 @@ flowchart LR
 
 $$\text{RRF Score} = \sum_{m \in M} \frac{1}{k + r_m(d)}$$
 
-- *Benefit*: Offers the best of both worlds—exact keyword precision for codes/names and dense vector semantic matching for broad concepts.
+- *Benefit*: Offers the best of both worlds - exact keyword precision for codes/names and dense vector semantic matching for broad concepts.
 
 ### Semantic Ranking (L2 Reranking)
 

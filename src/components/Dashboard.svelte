@@ -178,7 +178,7 @@
         <span class="tiny muted">Questions tried</span>
       </div>
       <div class="card card-tight stat">
-        <span class="stat-value">{accuracyPct === null ? '—' : `${accuracyPct}%`}</span>
+        <span class="stat-value">{accuracyPct === null ? '-' : `${accuracyPct}%`}</span>
         <span class="tiny muted">Accuracy</span>
       </div>
       <div class="card card-tight stat">
@@ -190,7 +190,7 @@
         <span class="tiny muted">Streak</span>
       </div>
       <div class="card card-tight stat">
-        <span class="stat-value">{overall.bestExamScore === null ? '—' : `${overall.bestExamScore}%`}</span>
+        <span class="stat-value">{overall.bestExamScore === null ? '-' : `${overall.bestExamScore}%`}</span>
         <span class="tiny muted">Best exam</span>
       </div>
     </div>

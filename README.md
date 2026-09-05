@@ -18,7 +18,7 @@ Everything is static. Progress lives in your browser. No backend, no account, no
 | | |
 | :--- | :--- |
 | **12 lessons** | 3.8 hours total, in recommended study order, with 8 interactive demos and 79 inline knowledge checks |
-| **206 questions** | 176 exam-style plus 30 inline checks. Multiple choice, multi-select, matching and ordering — each with an explanation, and a reason why each wrong option is wrong |
+| **206 questions** | 176 exam-style plus 30 inline checks. Multiple choice, multi-select, matching and ordering - each with an explanation, and a reason why each wrong option is wrong |
 | **Spaced repetition** | A Leitner scheduler tuned for a sprint: intervals run from 8 minutes to 4 days, so the whole bank can resurface before exam day |
 | **Weak-area drilling** | Topics ranked by *weighted readiness left on the table*, so a shaky high-weight topic outranks a neglected small one |
 | **Mistakes mode** | Every question currently sitting on a wrong answer, in one place |
@@ -29,7 +29,7 @@ Everything is static. Progress lives in your browser. No backend, no account, no
 
 ### The dashboard answers one question
 
-> *"I have 30 minutes right now — what should I do?"*
+> *"I have 30 minutes right now - what should I do?"*
 
 Pick a time budget and it ranks concrete actions: finish the lesson you started, clear your
 misses, drill your weakest weighted topic, work the review backlog, or sit a timed paper. The
@@ -48,14 +48,14 @@ app treats as current, and older material usually gets wrong:
 
 - **Foundry resources and projects**, not AI hubs. Hub-based projects are the *classic* model;
   a Foundry project is a child of a Foundry resource and needs no separate Storage or Key Vault.
-- **Prompt agents vs. hosted agents** — the two agent types in Foundry Agent Service — plus
+- **Prompt agents vs. hosted agents** - the two agent types in Foundry Agent Service - plus
   calling the Responses API directly for an ephemeral agent, and **toolboxes** for shared tools.
 - **Two deployment options** (Serverless API, managed compute), with provisioned throughput as a
   deployment *type* rather than a third option, and **instant access** removing the deployment
   step for supported models.
 - **Foundry IQ**: multi-source knowledge bases, agentic retrieval, permission-aware answers with
   citations.
-- **Azure Content Understanding** across documents, images, audio and video — analyzers, the
+- **Azure Content Understanding** across documents, images, audio and video - analyzers, the
   Extract / Classify / Generate field methods, and confidence-driven straight-through processing.
 - The **GPT-image** family and **Sora-2**, not DALL·E alone; and Image Analysis 4.0's deprecation.
 - Current naming: **Foundry Tools**, not Cognitive Services.
@@ -74,7 +74,7 @@ The original markdown notes this repo started as are archived in
 
 ## Local development
 
-Requires **Node 22.12 or later** (24 recommended) — Astro 7 sets that floor.
+Requires **Node 22.12 or later** (24 recommended) - Astro 7 sets that floor.
 
 ```bash
 npm install
@@ -92,7 +92,7 @@ npm run dev          # http://localhost:4321/learn-ai-901/
 
 `test:smoke` needs the preview server running and a local Chrome or Chromium (set `CHROME_PATH`
 if it is not on a standard path). It walks the dashboard, a lesson, a quiz, practice, the exam
-simulator, rapid review, cram, the plan and the progress page — 56 assertions including
+simulator, rapid review, cram, the plan and the progress page - 56 assertions including
 persistence, theme switching and mobile overflow. Worth running after editing content.
 
 The dev server serves under `/learn-ai-901/` because that is the GitHub Pages base path. To work
@@ -135,14 +135,14 @@ All internal links are built from `import.meta.env.BASE_URL`, so nothing else ne
 
 ```text
 src/
-├── data/                 # Content — plain data, no application logic
+├── data/                 # Content - plain data, no application logic
 │   ├── types.ts          #   Content model + progress schema
 │   ├── exam.ts           #   Exam metadata, topics, and weights
 │   ├── modules/          #   12 lessons, authored as typed block arrays
 │   ├── questions/        #   206 questions, one file per topic + two scenario banks
 │   ├── review.ts         #   Flashcards, comparisons, quick facts
 │   └── roadmap.ts        #   The three-day sprint plan
-├── lib/                  # Engine — no UI
+├── lib/                  # Engine - no UI
 │   ├── store.ts          #   localStorage-backed observable, Svelte store contract
 │   ├── srs.ts            #   Leitner scheduling, tuned for a few-day sprint
 │   ├── scoring.ts        #   Readiness, per-topic mastery, streaks
@@ -159,7 +159,7 @@ in `data/questions/`; nothing in `lib/` or `components/` needs to change.
 
 ### Adding content
 
-**A question** — add it to the right file in `src/data/questions/`, or to a scenario bank:
+**A question** - add it to the right file in `src/data/questions/`, or to a scenario bank:
 
 ```ts
 {
@@ -182,12 +182,12 @@ in `data/questions/`; nothing in `lib/` or `components/` needs to change.
 `type` may be omitted for ordinary single-answer questions. Use `type: 'multi'`, `'match'` or
 `'order'` for the others.
 
-**A lesson** — add a module in `src/data/modules/` and register it in that folder's `index.ts`.
+**A lesson** - add a module in `src/data/modules/` and register it in that folder's `index.ts`.
 Lessons are arrays of typed blocks: `p`, `list`, `table`, `code`, `key`, `trap`, `changed`,
 `steps`, `demo` and `check`.
 
 The build **fails** on a duplicate question id, a single-answer question without exactly one
-correct option, or a lesson referencing a question id that does not exist — so broken content
+correct option, or a lesson referencing a question id that does not exist - so broken content
 never ships.
 
 ### Progress and privacy

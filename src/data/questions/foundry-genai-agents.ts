@@ -20,7 +20,7 @@ export const foundryGenAiQuestions: AuthoredQuestion[] = [
     options: [
       {
         id: 'a',
-        text: 'The assistant\'s persona, rules, tone and output format — set once by the developer',
+        text: 'The assistant\'s persona, rules, tone and output format - set once by the developer',
         correct: true,
       },
       {
@@ -61,7 +61,7 @@ export const foundryGenAiQuestions: AuthoredQuestion[] = [
         id: 'b',
         text: 'Zero-shot prompting',
         correct: false,
-        why: 'Zero-shot means no examples are provided — you simply state the task.',
+        why: 'Zero-shot means no examples are provided - you simply state the task.',
       },
       {
         id: 'c',
@@ -77,7 +77,7 @@ export const foundryGenAiQuestions: AuthoredQuestion[] = [
       },
     ],
     explanation:
-      'Few-shot prompting demonstrates the pattern you want — useful for enforcing an exact output format or a labelling scheme. It is an inference-time technique, so it costs prompt tokens but requires no training.',
+      'Few-shot prompting demonstrates the pattern you want - useful for enforcing an exact output format or a labelling scheme. It is an inference-time technique, so it costs prompt tokens but requires no training.',
     tags: ['prompts', 'few-shot'],
   },
   {
@@ -116,7 +116,7 @@ export const foundryGenAiQuestions: AuthoredQuestion[] = [
       },
     ],
     explanation:
-      'Behavioural boundaries — what the assistant will and will not discuss, and how it should sound — belong in the system message. It is the cheapest, fastest and most maintainable control surface.',
+      'Behavioural boundaries - what the assistant will and will not discuss, and how it should sound - belong in the system message. It is the cheapest, fastest and most maintainable control surface.',
     tags: ['prompts', 'system-message', 'trap'],
   },
   {
@@ -188,7 +188,7 @@ export const foundryGenAiQuestions: AuthoredQuestion[] = [
       },
       {
         id: 'c',
-        text: 'They are unrelated — you choose one or the other',
+        text: 'They are unrelated - you choose one or the other',
         correct: false,
         why: 'You work inside a project, and that project belongs to a resource.',
       },
@@ -232,7 +232,7 @@ export const foundryGenAiQuestions: AuthoredQuestion[] = [
         id: 'c',
         text: 'Hubs have been deleted from Azure entirely',
         correct: false,
-        why: 'They still exist and are still supported for specific scenarios — they are simply no longer the default.',
+        why: 'They still exist and are still supported for specific scenarios - they are simply no longer the default.',
       },
       {
         id: 'd',
@@ -280,7 +280,7 @@ export const foundryGenAiQuestions: AuthoredQuestion[] = [
     options: [
       {
         id: 'a',
-        text: 'The Azure AI capabilities available alongside models in Foundry — Language, Speech, Vision, Content Understanding and others',
+        text: 'The Azure AI capabilities available alongside models in Foundry - Language, Speech, Vision, Content Understanding and others',
         correct: true,
       },
       {
@@ -429,14 +429,14 @@ export const foundryGenAiQuestions: AuthoredQuestion[] = [
     options: [
       {
         id: 'a',
-        text: 'A declaratively defined agent — instructions, model and tools — that Foundry runs for you with no code or infrastructure to manage',
+        text: 'A declaratively defined agent - instructions, model and tools - that Foundry runs for you with no code or infrastructure to manage',
         correct: true,
       },
       {
         id: 'b',
         text: 'An agent you package as a container and Foundry runs with a managed endpoint',
         correct: false,
-        why: 'That is a *hosted* agent — the type you use when you bring your own code and framework.',
+        why: 'That is a *hosted* agent - the type you use when you bring your own code and framework.',
       },
       {
         id: 'c',
@@ -448,7 +448,7 @@ export const foundryGenAiQuestions: AuthoredQuestion[] = [
         id: 'd',
         text: 'A one-off agent whose definition lives only in your application code',
         correct: false,
-        why: 'That is the ephemeral pattern you get by calling the Responses API directly — no agent resource is created in Foundry at all.',
+        why: 'That is the ephemeral pattern you get by calling the Responses API directly - no agent resource is created in Foundry at all.',
       },
     ],
     explanation:
@@ -490,7 +490,7 @@ export const foundryGenAiQuestions: AuthoredQuestion[] = [
     explanation:
       'Three rungs on the same ladder: least to manage (prompt agent) → your code, Foundry-hosted (hosted agent) → your code, your host (Responses API). Prompt agents and hosted agents are the two *agent types*; the Responses API path creates an ephemeral agent with no persisted resource.',
     reference: {
-      label: 'Agents in Microsoft Foundry — choose how to build',
+      label: 'Agents in Microsoft Foundry - choose how to build',
       url: 'https://learn.microsoft.com/azure/foundry/agents/overview',
     },
     tags: ['agents', 'currency', 'matching', 'hard'],
@@ -625,7 +625,7 @@ export const foundryGenAiQuestions: AuthoredQuestion[] = [
     options: [
       {
         id: 'a',
-        text: 'A curated set of tools — web search, file search, code interpreter, MCP servers, custom functions — shared across agents through one managed endpoint with central authentication and versioning',
+        text: 'A curated set of tools - web search, file search, code interpreter, MCP servers, custom functions - shared across agents through one managed endpoint with central authentication and versioning',
         correct: true,
       },
       {
@@ -752,7 +752,7 @@ export const foundryGenAiQuestions: AuthoredQuestion[] = [
       },
     ],
     explanation:
-      'A Foundry IQ **knowledge base** is made of **knowledge sources** — Azure Blob Storage, SharePoint, OneLake, public web — plus retrieval parameters. It automates chunking, embedding and metadata extraction, enforces permissions at query time, and returns grounded answers with citations. Multiple agents can share one knowledge base.',
+      'A Foundry IQ **knowledge base** is made of **knowledge sources** - Azure Blob Storage, SharePoint, OneLake, public web - plus retrieval parameters. It automates chunking, embedding and metadata extraction, enforces permissions at query time, and returns grounded answers with citations. Multiple agents can share one knowledge base.',
     reference: {
       label: 'What is Foundry IQ?',
       url: 'https://learn.microsoft.com/azure/foundry/agents/concepts/what-is-foundry-iq',
@@ -784,7 +784,7 @@ export const foundryGenAiQuestions: AuthoredQuestion[] = [
         id: 'c',
         text: 'It replaces embeddings with keyword search only',
         correct: false,
-        why: 'It can issue keyword, vector or hybrid queries — it adds capability rather than removing it.',
+        why: 'It can issue keyword, vector or hybrid queries - it adds capability rather than removing it.',
       },
       {
         id: 'd',
@@ -794,7 +794,7 @@ export const foundryGenAiQuestions: AuthoredQuestion[] = [
       },
     ],
     explanation:
-      'Classic RAG usually issues one query per question. Agentic retrieval plans: it uses conversation history for context, splits the question into subqueries, executes them in parallel, applies semantic ranking, and returns structured results with citations — better for conversational, multi-part questions. Foundry IQ uses agentic retrieval.',
+      'Classic RAG usually issues one query per question. Agentic retrieval plans: it uses conversation history for context, splits the question into subqueries, executes them in parallel, applies semantic ranking, and returns structured results with citations - better for conversational, multi-part questions. Foundry IQ uses agentic retrieval.',
     reference: {
       label: 'Agentic RAG in Microsoft Foundry',
       url: 'https://learn.microsoft.com/azure/foundry/concepts/retrieval-augmented-generation',
@@ -881,7 +881,7 @@ export const foundryGenAiQuestions: AuthoredQuestion[] = [
       },
     ],
     explanation:
-      'Grounding failures come from two places: the model was not told to stay within the context, or retrieval did not supply the right context. Microsoft\'s own troubleshooting guidance names both — enable citations and use clear system messages, and revisit chunking, embedding quality and search configuration.',
+      'Grounding failures come from two places: the model was not told to stay within the context, or retrieval did not supply the right context. Microsoft\'s own troubleshooting guidance names both - enable citations and use clear system messages, and revisit chunking, embedding quality and search configuration.',
     tags: ['rag', 'hallucination', 'hard', 'multi-select'],
   },
   {
@@ -903,7 +903,7 @@ export const foundryGenAiQuestions: AuthoredQuestion[] = [
         id: 'b',
         text: 'Each agent must have its own dedicated knowledge base',
         correct: false,
-        why: 'Sharing one knowledge base across agents is an explicit capability — it is the point of a managed knowledge *layer*.',
+        why: 'Sharing one knowledge base across agents is an explicit capability - it is the point of a managed knowledge *layer*.',
       },
       {
         id: 'c',
@@ -950,7 +950,7 @@ export const foundryGenAiQuestions: AuthoredQuestion[] = [
         id: 'c',
         text: 'Caching previous answers',
         correct: false,
-        why: 'That would be a response cache — a different thing entirely.',
+        why: 'That would be a response cache - a different thing entirely.',
       },
       {
         id: 'd',
@@ -1022,7 +1022,7 @@ export const foundryGenAiQuestions: AuthoredQuestion[] = [
       },
       {
         id: 'b',
-        text: 'Nothing — a deployment is always required first',
+        text: 'Nothing - a deployment is always required first',
         correct: false,
         why: 'This used to be true and is a good example of stale study material.',
       },
@@ -1040,7 +1040,7 @@ export const foundryGenAiQuestions: AuthoredQuestion[] = [
       },
     ],
     explanation:
-      'Instant access (preview) removes the deployment step for trying supported models. Note it is a preview feature — the exam concentrates on GA behaviour but may include commonly used preview features.',
+      'Instant access (preview) removes the deployment step for trying supported models. Note it is a preview feature - the exam concentrates on GA behaviour but may include commonly used preview features.',
     reference: {
       label: 'Deployment overview for Microsoft Foundry Models',
       url: 'https://learn.microsoft.com/azure/foundry/concepts/deployments-overview',
@@ -1095,7 +1095,7 @@ export const foundryGenAiQuestions: AuthoredQuestion[] = [
     prompt:
       'Which prompting technique most improves a model\'s performance on a multi-step arithmetic or logic problem?',
     options: [
-      { id: 'a', text: 'Chain-of-thought — ask the model to reason step by step', correct: true },
+      { id: 'a', text: 'Chain-of-thought - ask the model to reason step by step', correct: true },
       {
         id: 'b',
         text: 'Raising temperature so it explores more possibilities',

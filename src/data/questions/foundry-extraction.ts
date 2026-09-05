@@ -60,37 +60,37 @@ export const foundryExtractionQuestions: AuthoredQuestion[] = [
     options: [
       {
         id: 'a',
-        text: 'Extract — take the value as it literally appears in the content',
+        text: 'Extract - take the value as it literally appears in the content',
         correct: true,
       },
       {
         id: 'b',
-        text: 'Generate — produce a value freely from the input, such as a summary',
+        text: 'Generate - produce a value freely from the input, such as a summary',
         correct: true,
       },
       {
         id: 'c',
-        text: 'Translate — return the value in another language',
+        text: 'Translate - return the value in another language',
         correct: false,
         why: 'Not one of the three field generation methods.',
       },
       {
         id: 'd',
-        text: 'Encrypt — return a hashed value',
+        text: 'Encrypt - return a hashed value',
         correct: false,
         why: 'Not a field generation method.',
       },
       {
         id: 'e',
-        text: 'Index — add the value to a search index',
+        text: 'Index - add the value to a search index',
         correct: false,
         why: 'Indexing is downstream of extraction, not a field method.',
       },
     ],
     explanation:
-      'The three methods are **Extract** (value appears verbatim — documents only), **Classify** (choose from a predefined set of categories, such as call sentiment or chart type), and **Generate** (freely produce a value, such as a summary or scene description). Knowing which method a requirement needs is a common exam question.',
+      'The three methods are **Extract** (value appears verbatim - documents only), **Classify** (choose from a predefined set of categories, such as call sentiment or chart type), and **Generate** (freely produce a value, such as a summary or scene description). Knowing which method a requirement needs is a common exam question.',
     reference: {
-      label: 'Content Understanding overview — field extraction',
+      label: 'Content Understanding overview - field extraction',
       url: 'https://learn.microsoft.com/azure/ai-services/content-understanding/overview',
     },
     tags: ['content-understanding', 'field-methods', 'multi-select'],
@@ -191,7 +191,7 @@ export const foundryExtractionQuestions: AuthoredQuestion[] = [
       },
     ],
     explanation:
-      'Audio analyzers transcribe conversations, label speakers, and generate summaries in one analyze call — with prebuilt options tuned for call-centre scenarios. That single-call breadth is why Content Understanding beats stitching Speech and Language together for this requirement.',
+      'Audio analyzers transcribe conversations, label speakers, and generate summaries in one analyze call - with prebuilt options tuned for call-centre scenarios. That single-call breadth is why Content Understanding beats stitching Speech and Language together for this requirement.',
     tags: ['content-understanding', 'audio'],
   },
   {
@@ -272,7 +272,7 @@ export const foundryExtractionQuestions: AuthoredQuestion[] = [
       },
     ],
     explanation:
-      'Content Understanding ships domain-specific analyzers for common industry documents — procurement (invoices, receipts, purchase orders), US tax forms, legal contracts, identity documents, financial statements and US mortgage documents. Always check for a prebuilt before building custom.',
+      'Content Understanding ships domain-specific analyzers for common industry documents - procurement (invoices, receipts, purchase orders), US tax forms, legal contracts, identity documents, financial statements and US mortgage documents. Always check for a prebuilt before building custom.',
     reference: {
       label: 'Prebuilt analyzers',
       url: 'https://learn.microsoft.com/azure/ai-services/content-understanding/concepts/prebuilt-analyzers',
@@ -364,11 +364,11 @@ export const foundryExtractionQuestions: AuthoredQuestion[] = [
         id: 'd',
         text: 'A video analyzer',
         correct: false,
-        why: 'Wrong modality — these are still images.',
+        why: 'Wrong modality - these are still images.',
       },
     ],
     explanation:
-      'The RAG-oriented prebuilt analyzers (document, image, audio and video "search" variants) are tuned to produce content suitable for retrieval — for images that means a descriptive paragraph that indexes well.',
+      'The RAG-oriented prebuilt analyzers (document, image, audio and video "search" variants) are tuned to produce content suitable for retrieval - for images that means a descriptive paragraph that indexes well.',
     tags: ['content-understanding', 'image'],
   },
   {
@@ -403,11 +403,11 @@ export const foundryExtractionQuestions: AuthoredQuestion[] = [
         id: 'd',
         text: 'Ask a human to sort the folder first',
         correct: false,
-        why: 'It works, but it defeats the automation the service exists to provide — and classification-then-routing is a supported feature.',
+        why: 'It works, but it defeats the automation the service exists to provide - and classification-then-routing is a supported feature.',
       },
     ],
     explanation:
-      'Content Understanding supports classifying content types and routing to the correct analyzer, now unified in the Analyze API. Composed analyzers do this for common cases — the mortgage document analyzer, for instance, classifies and routes a wide range of documents automatically.',
+      'Content Understanding supports classifying content types and routing to the correct analyzer, now unified in the Analyze API. Composed analyzers do this for common cases - the mortgage document analyzer, for instance, classifies and routes a wide range of documents automatically.',
     tags: ['content-understanding', 'classification', 'routing'],
   },
   {
@@ -435,7 +435,7 @@ export const foundryExtractionQuestions: AuthoredQuestion[] = [
         id: 'c',
         text: 'Train a model on your documents, wait for it to finish, then classify',
         correct: false,
-        why: 'No training step is needed — analyzers are configured, not trained.',
+        why: 'No training step is needed - analyzers are configured, not trained.',
       },
       {
         id: 'd',
@@ -467,7 +467,7 @@ export const foundryExtractionQuestions: AuthoredQuestion[] = [
         id: 'b',
         text: 'Produces pixel-level masks of objects in an image',
         correct: false,
-        why: 'That is image segmentation in computer vision — same word, different concept. A classic distractor.',
+        why: 'That is image segmentation in computer vision - same word, different concept. A classic distractor.',
       },
       {
         id: 'c',
@@ -483,7 +483,7 @@ export const foundryExtractionQuestions: AuthoredQuestion[] = [
       },
     ],
     explanation:
-      'In Content Understanding, segmentation means breaking content into meaningful chunks — splitting a multi-document PDF by document type, or a video into scenes — so each section gets its own targeted extraction.',
+      'In Content Understanding, segmentation means breaking content into meaningful chunks - splitting a multi-document PDF by document type, or a video into scenes - so each section gets its own targeted extraction.',
     tags: ['content-understanding', 'segmentation', 'hard', 'trap'],
   },
   {
@@ -538,7 +538,7 @@ export const foundryExtractionQuestions: AuthoredQuestion[] = [
       { id: 'd', text: 'Video', correct: true },
     ],
     explanation:
-      'All four. One service, one analyze pattern, four modalities — that unification is the reason AI-901 features it so heavily.',
+      'All four. One service, one analyze pattern, four modalities - that unification is the reason AI-901 features it so heavily.',
     tags: ['content-understanding', 'modalities', 'cram'],
   },
   {
@@ -591,7 +591,7 @@ export const foundryExtractionQuestions: AuthoredQuestion[] = [
     options: [
       {
         id: 'a',
-        text: 'Turns the raw input into normalised text and metadata — OCR, selection marks, barcodes, tables, layout; for audio and video, transcription and key visual elements',
+        text: 'Turns the raw input into normalised text and metadata - OCR, selection marks, barcodes, tables, layout; for audio and video, transcription and key visual elements',
         correct: true,
       },
       {

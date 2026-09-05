@@ -188,7 +188,7 @@
       <h1>{PRESETS[variant].label}</h1>
       <p class="muted">
         Exam-style questions only, sampled across topics in proportion to the published exam weights.
-        No feedback until you finish — just like the real thing.
+        No feedback until you finish - just like the real thing.
       </p>
     </header>
 
@@ -213,7 +213,7 @@
       </label>
       <label class="toggle">
         <input type="checkbox" bind:checked={timed} />
-        <span>Timed — recommended, so you practise under pressure</span>
+        <span>Timed - recommended, so you practise under pressure</span>
       </label>
     </div>
 
@@ -317,7 +317,7 @@
       <p class="score-emoji" aria-hidden="true">{results.passed ? '🎉' : '📊'}</p>
       <p class="scaled">{results.scaled}<span class="of">/{EXAM.scoreScale}</span></p>
       <p class="verdict-line">
-        {results.passed ? 'Above the pass mark' : 'Below the pass mark'} — {EXAM.passingScore} needed
+        {results.passed ? 'Above the pass mark' : 'Below the pass mark'} - {EXAM.passingScore} needed
       </p>
       <p class="muted raw">
         {results.correct} of {results.total} correct ({results.pct}%) in {formatTime(results.elapsed)}

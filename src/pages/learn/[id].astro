@@ -14,7 +14,7 @@ const { module } = Astro.props;
 const base = import.meta.env.BASE_URL;
 ---
 
-<Base title={`${module.title} — AI-901`} description={module.summary} active="learn">
+<Base title={`${module.title} - AI-901`} description={module.summary} active="learn">
   <div class="wrap">
     <Lesson client:only="svelte" module={module} base={base} />
   </div>

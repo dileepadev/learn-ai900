@@ -1,7 +1,7 @@
 <script lang="ts">
   /**
    * One scene, five vision tasks. Switching between them shows that the tasks
-   * differ entirely in the *shape of their output* — which is exactly how the
+   * differ entirely in the *shape of their output* - which is exactly how the
    * exam distinguishes them.
    */
   type Task = 'classify' | 'detect' | 'segment' | 'ocr' | 'face';

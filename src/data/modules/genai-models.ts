@@ -5,7 +5,7 @@ export const genaiModels: Module = {
   order: 4,
   title: 'Choosing and configuring models',
   summary:
-    'Model selection, deployment options and inference parameters — small in weight, dense in testable facts, and full of stale-material traps.',
+    'Model selection, deployment options and inference parameters - small in weight, dense in testable facts, and full of stale-material traps.',
   topic: 'model-components',
   minutes: 22,
   priority: 'high',
@@ -84,7 +84,7 @@ export const genaiModels: Module = {
             ['Billing', 'Token usage, or reserved provisioned throughput units (PTUs)', 'Hourly, per accelerator SKU'],
             ['Data processing', 'Regional, data zone, or global', 'Global'],
             ['Content filtering', 'Built-in and customisable', 'Not available in public preview'],
-            ['Verdict', '**The preferred option — use it whenever possible**', 'Only when the model requires it'],
+            ['Verdict', '**The preferred option - use it whenever possible**', 'Only when the model requires it'],
           ],
         },
         {
@@ -94,7 +94,7 @@ export const genaiModels: Module = {
         },
         {
           t: 'p',
-          md: 'Serverless API **deployment types** fall into three families — *standard* (pay per token), *provisioned* (reserved PTU capacity), and *batch* (discounted asynchronous). Each is offered with Global, Data Zone, or single-region processing. A *Developer* type exists for evaluating fine-tuned models.',
+          md: 'Serverless API **deployment types** fall into three families - *standard* (pay per token), *provisioned* (reserved PTU capacity), and *batch* (discounted asynchronous). Each is offered with Global, Data Zone, or single-region processing. A *Developer* type exists for evaluating fine-tuned models.',
         },
         {
           t: 'table',
@@ -131,7 +131,7 @@ export const genaiModels: Module = {
           headers: ['Parameter', 'Controls', 'Exam-critical detail'],
           rows: [
             ['`temperature`', 'Randomness of token selection', '≈0 → focused, deterministic. ≈1+ → creative, varied.'],
-            ['`top_p`', 'Probability mass of candidate tokens (nucleus sampling)', 'An **alternative** to temperature — tune one, not both.'],
+            ['`top_p`', 'Probability mass of candidate tokens (nucleus sampling)', 'An **alternative** to temperature - tune one, not both.'],
             ['`max_tokens`', 'Maximum length of the **generated response**', 'It does **not** limit prompt length. That is the context window.'],
             ['`stop`', 'Sequences that halt generation immediately', 'Useful for clean structured output.'],
             ['`frequency_penalty`', 'Discourages tokens by **how often** they appeared', 'Reduces verbatim repetition.'],

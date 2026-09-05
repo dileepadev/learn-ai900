@@ -81,12 +81,12 @@ export const responsibleAi: Module = {
         {
           t: 'trap',
           title: 'Reliability vs. fairness',
-          body: 'Consistent bad behaviour for one group is **fairness**, not reliability. Unpredictable behaviour in unanticipated conditions — glare, weather, sensor noise, adversarial input — is **reliability and safety**.',
+          body: 'Consistent bad behaviour for one group is **fairness**, not reliability. Unpredictable behaviour in unanticipated conditions - glare, weather, sensor noise, adversarial input - is **reliability and safety**.',
         },
         {
           t: 'trap',
           title: 'Privacy vs. reliability',
-          body: 'When a model leaks another customer\'s data, the model *is* misbehaving — but the harm is data exposure, so the answer is **privacy and security**. Pick the principle that names the *harm*, not the malfunction.',
+          body: 'When a model leaks another customer\'s data, the model *is* misbehaving - but the harm is data exposure, so the answer is **privacy and security**. Pick the principle that names the *harm*, not the malfunction.',
         },
         { t: 'check', qid: 'rai-013' },
       ],

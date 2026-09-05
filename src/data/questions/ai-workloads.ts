@@ -3,7 +3,7 @@ import type { AuthoredQuestion } from '../types';
 /**
  * Topic: Identify AI workloads (~15% of the exam).
  *
- * This section is dominated by "company needs X — which capability?" routing
+ * This section is dominated by "company needs X - which capability?" routing
  * questions, plus the text-analysis technique vocabulary (key phrases vs
  * entities vs sentiment vs summarization) and the speech / vision / extraction
  * capability lists.
@@ -18,7 +18,7 @@ export const aiWorkloadQuestions: AuthoredQuestion[] = [
     difficulty: 'easy',
     kind: 'learn',
     prompt:
-      'A logistics company wants to read scanned delivery notes — many of them photographed at an angle — and push the reference number, date and total into its ERP system. Which AI workload is this?',
+      'A logistics company wants to read scanned delivery notes - many of them photographed at an angle - and push the reference number, date and total into its ERP system. Which AI workload is this?',
     options: [
       { id: 'a', text: 'Information extraction', correct: true },
       {
@@ -60,7 +60,7 @@ export const aiWorkloadQuestions: AuthoredQuestion[] = [
         id: 'b',
         text: 'Generative AI',
         correct: false,
-        why: 'Generative AI produces content. Here the system must plan a sequence of actions and actually call external systems — that is what makes it agentic.',
+        why: 'Generative AI produces content. Here the system must plan a sequence of actions and actually call external systems - that is what makes it agentic.',
       },
       {
         id: 'c',
@@ -164,7 +164,7 @@ export const aiWorkloadQuestions: AuthoredQuestion[] = [
         id: 'b',
         text: 'Return the list of main topics mentioned in a support ticket',
         correct: false,
-        why: 'That is key phrase extraction — a prebuilt text-analysis feature, cheaper and more predictable than a generative call.',
+        why: 'That is key phrase extraction - a prebuilt text-analysis feature, cheaper and more predictable than a generative call.',
       },
       {
         id: 'c',
@@ -193,14 +193,14 @@ export const aiWorkloadQuestions: AuthoredQuestion[] = [
     difficulty: 'easy',
     kind: 'learn',
     prompt:
-      'Which technique returns "Seattle data center", "cloud latency" and "system reliability" from a paragraph — an unordered list of the main talking points?',
+      'Which technique returns "Seattle data center", "cloud latency" and "system reliability" from a paragraph - an unordered list of the main talking points?',
     options: [
       { id: 'a', text: 'Key phrase extraction', correct: true },
       {
         id: 'b',
         text: 'Named entity recognition',
         correct: false,
-        why: 'NER returns *typed* entities — Person, Location, Organization, DateTime, Quantity. "cloud latency" is a topic, not an entity of a known category.',
+        why: 'NER returns *typed* entities - Person, Location, Organization, DateTime, Quantity. "cloud latency" is a topic, not an entity of a known category.',
       },
       {
         id: 'c',
@@ -328,7 +328,7 @@ export const aiWorkloadQuestions: AuthoredQuestion[] = [
         id: 'c',
         text: 'Sentiment analysis',
         correct: false,
-        why: 'Prebuilt — call the API and get labels back with no training.',
+        why: 'Prebuilt - call the API and get labels back with no training.',
       },
       {
         id: 'd',
@@ -344,7 +344,7 @@ export const aiWorkloadQuestions: AuthoredQuestion[] = [
       },
     ],
     explanation:
-      'The customizable Language features are custom NER, custom text classification, conversational language understanding, question answering and orchestration workflow. Everything else — sentiment and opinion mining, key phrases, prebuilt NER and PII, language detection, summarization, text analytics for health — is prebuilt and needs no training data.',
+      'The customizable Language features are custom NER, custom text classification, conversational language understanding, question answering and orchestration workflow. Everything else - sentiment and opinion mining, key phrases, prebuilt NER and PII, language detection, summarization, text analytics for health - is prebuilt and needs no training data.',
     reference: {
       label: 'What is Azure Language in Foundry Tools?',
       url: 'https://learn.microsoft.com/azure/ai-services/language-service/overview',
@@ -440,7 +440,7 @@ export const aiWorkloadQuestions: AuthoredQuestion[] = [
         id: 'b',
         text: 'Real-time speech to text',
         correct: false,
-        why: 'Real-time is for streaming audio as it happens — live captions, voice assistants. Running 200,000 files through it one stream at a time is the wrong tool.',
+        why: 'Real-time is for streaming audio as it happens - live captions, voice assistants. Running 200,000 files through it one stream at a time is the wrong tool.',
       },
       {
         id: 'c',
@@ -494,7 +494,7 @@ export const aiWorkloadQuestions: AuthoredQuestion[] = [
       },
     ],
     explanation:
-      'A cascade throws away everything the waveform carried that is not words — tone, hesitation, emphasis — and pays the latency of three sequential services. A native multimodal model reasons over the audio itself, so it can respond to *how* something was said and reply fast enough for natural turn-taking.',
+      'A cascade throws away everything the waveform carried that is not words - tone, hesitation, emphasis - and pays the latency of three sequential services. A native multimodal model reasons over the audio itself, so it can respond to *how* something was said and reply fast enough for natural turn-taking.',
     tags: ['speech', 'multimodal', 'hard'],
   },
 
@@ -549,7 +549,7 @@ export const aiWorkloadQuestions: AuthoredQuestion[] = [
         id: 'd',
         text: 'Image segmentation',
         correct: false,
-        why: 'Segmentation would work but is overkill — you need instances and counts, not exact pixel boundaries.',
+        why: 'Segmentation would work but is overkill - you need instances and counts, not exact pixel boundaries.',
       },
     ],
     explanation:
@@ -586,7 +586,7 @@ export const aiWorkloadQuestions: AuthoredQuestion[] = [
         id: 'd',
         text: 'They apply filters to an uploaded reference photo',
         correct: false,
-        why: 'That describes image editing, which some models also support — but generation from a text prompt alone needs no input image.',
+        why: 'That describes image editing, which some models also support - but generation from a text prompt alone needs no input image.',
       },
     ],
     explanation:
@@ -628,7 +628,7 @@ export const aiWorkloadQuestions: AuthoredQuestion[] = [
       },
     ],
     explanation:
-      'Classic vision services return structured findings — labels, boxes, text, scores. A multimodal model *reasons* about what it sees and answers in natural language, which is what "interpret visual input in prompts" means on the exam.',
+      'Classic vision services return structured findings - labels, boxes, text, scores. A multimodal model *reasons* about what it sees and answers in natural language, which is what "interpret visual input in prompts" means on the exam.',
     tags: ['vision', 'multimodal', 'hard'],
   },
 
@@ -673,7 +673,7 @@ export const aiWorkloadQuestions: AuthoredQuestion[] = [
         id: 'b',
         text: 'Information extraction only works on PDFs; text analysis works on any text.',
         correct: false,
-        why: 'Extraction spans documents, images, audio and video — the modality breadth is one of its defining features.',
+        why: 'Extraction spans documents, images, audio and video - the modality breadth is one of its defining features.',
       },
       {
         id: 'c',
@@ -689,7 +689,7 @@ export const aiWorkloadQuestions: AuthoredQuestion[] = [
       },
     ],
     explanation:
-      'The defining question for extraction is "what schema do I want out?" — you declare fields and the service fills them. Text analysis answers fixed questions (sentiment, key phrases, entities) about text that is already text.',
+      'The defining question for extraction is "what schema do I want out?" - you declare fields and the service fills them. Text analysis answers fixed questions (sentiment, key phrases, entities) about text that is already text.',
     tags: ['extraction', 'routing'],
   },
   {
@@ -751,13 +751,13 @@ export const aiWorkloadQuestions: AuthoredQuestion[] = [
         id: 'c',
         text: 'Classifying support emails by urgency',
         correct: false,
-        why: 'Text in, text out — that is text analysis.',
+        why: 'Text in, text out - that is text analysis.',
       },
       {
         id: 'd',
         text: 'Generating live subtitles for a webinar',
         correct: false,
-        why: 'Audio in — that is speech recognition.',
+        why: 'Audio in - that is speech recognition.',
       },
       {
         id: 'e',
@@ -802,7 +802,7 @@ export const aiWorkloadQuestions: AuthoredQuestion[] = [
         id: 'd',
         text: 'Generative AI only',
         correct: false,
-        why: 'A generative model alone can produce a spoken-sounding answer but cannot take an action in an external system — that requires tools, which makes it an agent.',
+        why: 'A generative model alone can produce a spoken-sounding answer but cannot take an action in an external system - that requires tools, which makes it an agent.',
       },
     ],
     explanation:

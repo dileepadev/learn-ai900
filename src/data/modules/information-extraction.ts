@@ -5,7 +5,7 @@ export const informationExtraction: Module = {
   order: 12,
   title: 'Content Understanding',
   summary:
-    'Azure Content Understanding across documents, images, audio and video — analyzers, field methods, and confidence-driven automation.',
+    'Azure Content Understanding across documents, images, audio and video - analyzers, field methods, and confidence-driven automation.',
   topic: 'foundry-extraction',
   alsoCovers: ['ai-workloads'],
   minutes: 22,
@@ -24,7 +24,7 @@ export const informationExtraction: Module = {
       blocks: [
         {
           t: 'p',
-          md: 'Content Understanding is genuinely new since AI-900 — it has no predecessor to remember — and it carries roughly **15% of the exam**, with four dedicated skills-measured bullets. It uses generative AI to process documents, images, video and audio into an output format **you define**.',
+          md: 'Content Understanding is genuinely new since AI-900 - it has no predecessor to remember - and it carries roughly **15% of the exam**, with four dedicated skills-measured bullets. It uses generative AI to process documents, images, video and audio into an output format **you define**.',
         },
         {
           t: 'key',
@@ -54,7 +54,7 @@ export const informationExtraction: Module = {
         },
         {
           t: 'p',
-          md: 'Domain-specific analyzers cover procurement documents, US tax forms, legal contracts, identity documents, financial documents and US mortgage documents — the last including a composed analyzer that classifies and routes automatically.',
+          md: 'Domain-specific analyzers cover procurement documents, US tax forms, legal contracts, identity documents, financial documents and US mortgage documents - the last including a composed analyzer that classifies and routes automatically.',
         },
         {
           t: 'key',
@@ -76,7 +76,7 @@ export const informationExtraction: Module = {
           steps: [
             {
               label: 'Inputs',
-              detail: 'Documents, images, audio or video. One API, four modalities — this is the service\'s defining feature.',
+              detail: 'Documents, images, audio or video. One API, four modalities - this is the service\'s defining feature.',
             },
             {
               label: 'Content extraction',
@@ -86,7 +86,7 @@ export const informationExtraction: Module = {
             {
               label: 'Segmentation',
               detail:
-                'Optionally divide content into logical sections — split a multi-document PDF by type, or a video into scenes — so each section is processed on its own.',
+                'Optionally divide content into logical sections - split a multi-document PDF by type, or a video into scenes - so each section is processed on its own.',
             },
             {
               label: 'Field extraction',
@@ -103,7 +103,7 @@ export const informationExtraction: Module = {
         {
           t: 'trap',
           title: 'Two meanings of "segmentation"',
-          body: 'In **computer vision**, segmentation means per-pixel masks. In **Content Understanding**, segmentation means splitting content into logical sections. Same word, unrelated concepts — and a deliberate distractor.',
+          body: 'In **computer vision**, segmentation means per-pixel masks. In **Content Understanding**, segmentation means splitting content into logical sections. Same word, unrelated concepts - and a deliberate distractor.',
         },
         { t: 'check', qid: 'fe-017' },
         { t: 'check', qid: 'fe-013' },
@@ -141,7 +141,7 @@ export const informationExtraction: Module = {
           headers: ['Modality', 'Typical output'],
           rows: [
             ['**Documents**', 'Key–value fields, tables, layout, plus confidence scores'],
-            ['**Images**', 'Descriptions and your defined fields — damaged parts, chart type, visible text'],
+            ['**Images**', 'Descriptions and your defined fields - damaged parts, chart type, visible text'],
             ['**Audio**', 'Transcript, speaker labels, summary, sentiment classification'],
             ['**Video**', 'Automatic segments on scene or topic change, transcript, per-segment descriptions of people, places and actions'],
           ],
@@ -162,14 +162,14 @@ export const informationExtraction: Module = {
             { label: 'Pick a base', detail: 'Start from the base or prebuilt analyzer for your content type.' },
             { label: 'Define the field schema', detail: 'Name each field, give it a type, and describe it in natural language so the model knows what to look for.' },
             { label: 'Create the analyzer', detail: 'Register the schema as a named custom analyzer.' },
-            { label: 'Analyze', detail: 'Submit a file — often a blob URL with a SAS token — to the analyze operation.' },
+            { label: 'Analyze', detail: 'Submit a file - often a blob URL with a SAS token - to the analyze operation.' },
             { label: 'Consume the result', detail: 'Read the structured JSON and the per-field confidence scores.' },
           ],
         },
         {
           t: 'code',
           lang: 'json',
-          caption: 'A field schema — descriptions do the work that prompt engineering would otherwise do',
+          caption: 'A field schema - descriptions do the work that prompt engineering would otherwise do',
           code: `{
   "fieldSchema": {
     "fields": {
@@ -209,9 +209,9 @@ export const informationExtraction: Module = {
           headers: ['', 'Content Understanding', 'Document Intelligence'],
           rows: [
             ['Modalities', 'Documents, images, audio, video', 'Documents only'],
-            ['Approach', 'Generative, schema-driven — you declare the fields', 'Specialist document models: read, layout, prebuilt, custom'],
+            ['Approach', 'Generative, schema-driven - you declare the fields', 'Specialist document models: read, layout, prebuilt, custom'],
             ['Strength', 'Breadth across modalities, custom schemas with no training', 'OCR, tables, selection marks, reading order, high document fidelity'],
-            ['AI-901 emphasis', '**Primary** — four dedicated objectives', 'Background; know it exists and what it is best at'],
+            ['AI-901 emphasis', '**Primary** - four dedicated objectives', 'Background; know it exists and what it is best at'],
           ],
         },
         { t: 'check', qid: 'fe-009' },

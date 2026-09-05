@@ -1,7 +1,7 @@
 <script lang="ts">
   /**
-   * Practice hub. Either shows the mode picker, or — when a mode is fixed by
-   * the route or a query string — jumps straight into the session.
+   * Practice hub. Either shows the mode picker, or - when a mode is fixed by
+   * the route or a query string - jumps straight into the session.
    */
   import type { SessionMode, TopicId } from '../data/types';
   import { ALL_QUESTIONS } from '../data/questions';
@@ -52,7 +52,7 @@
         mode: 'mistakes',
         size: 40,
         title: 'Questions you got wrong',
-        empty: 'Nothing outstanding — you have no questions currently sitting on a wrong answer.',
+        empty: 'Nothing outstanding - you have no questions currently sitting on a wrong answer.',
       };
     } else if (fixedMode === 'weak-areas') {
       const topics = topicFromUrl
@@ -153,7 +153,7 @@
         <button type="button" class="card mode" onclick={() => startMixed(10)}>
           <span class="mode-icon" aria-hidden="true">✏️</span>
           <span class="mode-body">
-            <strong>Quick set — 10 questions</strong>
+            <strong>Quick set - 10 questions</strong>
             <span class="tiny muted">
               Mixed topics, weighted towards what you have not seen and what is due. About 6 minutes.
             </span>
@@ -163,7 +163,7 @@
         <button type="button" class="card mode" onclick={() => startMixed(25)}>
           <span class="mode-icon" aria-hidden="true">📗</span>
           <span class="mode-body">
-            <strong>Long set — 25 questions</strong>
+            <strong>Long set - 25 questions</strong>
             <span class="tiny muted">A proper session with immediate feedback. About 15 minutes.</span>
           </span>
         </button>
@@ -171,7 +171,7 @@
         <button type="button" class="card mode" onclick={startRapid}>
           <span class="mode-icon" aria-hidden="true">⚡</span>
           <span class="mode-body">
-            <strong>Rapid fire — 20 questions</strong>
+            <strong>Rapid fire - 20 questions</strong>
             <span class="tiny muted">
               Short, mostly easier recall questions. Good for a spare ten minutes.
             </span>

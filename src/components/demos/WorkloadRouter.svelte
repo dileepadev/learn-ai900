@@ -22,7 +22,7 @@
     {
       scenario: 'Score 50,000 app reviews as positive, neutral or negative.',
       answer: 'Text analysis',
-      why: 'Text in, a label out. Sentiment analysis — a prebuilt feature, no training needed.',
+      why: 'Text in, a label out. Sentiment analysis - a prebuilt feature, no training needed.',
     },
     {
       scenario: 'Pull vendor, date and total from a folder of scanned invoices into JSON.',
@@ -37,7 +37,7 @@
     {
       scenario: 'Resolve a support ticket: look up the order, issue a refund, email the customer.',
       answer: 'Agentic AI',
-      why: 'A goal, multiple steps, and calls into other systems. That needs tools — an agent.',
+      why: 'A goal, multiple steps, and calls into other systems. That needs tools - an agent.',
     },
     {
       scenario: 'Produce live captions during an all-hands meeting.',
@@ -52,7 +52,7 @@
     {
       scenario: 'Turn 4,000 hours of archived interviews into transcripts with chapters and summaries.',
       answer: 'Information extraction',
-      why: 'Audio to structured output with segments and summaries — a Content Understanding audio or video analyzer.',
+      why: 'Audio to structured output with segments and summaries - a Content Understanding audio or video analyzer.',
     },
     {
       scenario: 'Find and mask every credit card number in a chat transcript.',
@@ -62,7 +62,7 @@
     {
       scenario: 'Explain, in prose, why the chart in this screenshot dips in Q3.',
       answer: 'Computer vision',
-      why: 'Visual input — but reasoning about it needs a multimodal model, not a classic vision service.',
+      why: 'Visual input - but reasoning about it needs a multimodal model, not a classic vision service.',
     },
     {
       scenario: 'Summarise a 40-page report into an executive brief.',
@@ -111,7 +111,7 @@
           ? 'Perfect. Routing is the skill that carries the most questions on this exam.'
           : score >= ITEMS.length * 0.7
             ? 'Solid. Re-run it until the routing is automatic.'
-            : 'Worth another pass — read each scenario for what goes in and what must come out.'}
+            : 'Worth another pass - read each scenario for what goes in and what must come out.'}
       </p>
       <button type="button" class="btn btn-primary" onclick={restart}>Run it again</button>
     </div>

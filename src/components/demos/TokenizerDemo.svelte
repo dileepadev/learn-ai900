@@ -1,6 +1,6 @@
 <script lang="ts">
   /**
-   * Approximate tokenizer. It is not the real BPE vocabulary — it is a
+   * Approximate tokenizer. It is not the real BPE vocabulary - it is a
    * heuristic that produces the *shape* real tokenization has: whitespace and
    * punctuation split off, long words break into pieces, and a token averages
    * about four characters. That is all the exam requires you to internalise.

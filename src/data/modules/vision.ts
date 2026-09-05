@@ -54,7 +54,7 @@ export const vision: Module = {
         {
           t: 'trap',
           title: 'Detection is fine; identification is gated',
-          body: 'Finding **where** faces are is broadly available. Deciding **who** a face belongs to — identification and verification — falls under Microsoft\'s **Limited Access** policy and requires registration with an eligible use case. Microsoft also **retired emotion and gender inference** and limited several other attributes on responsible AI grounds.',
+          body: 'Finding **where** faces are is broadly available. Deciding **who** a face belongs to - identification and verification - falls under Microsoft\'s **Limited Access** policy and requires registration with an eligible use case. Microsoft also **retired emotion and gender inference** and limited several other attributes on responsible AI grounds.',
         },
         { t: 'check', qid: 'fv-005' },
       ],
@@ -79,7 +79,7 @@ export const vision: Module = {
         },
         {
           t: 'p',
-          md: 'Mechanically, you send a **user message containing both a text content item and an image content item** — the image as a URL or base64 data. No pre-upload step, no separate vision API.',
+          md: 'Mechanically, you send a **user message containing both a text content item and an image content item** - the image as a URL or base64 data. No pre-upload step, no separate vision API.',
         },
         { t: 'check', qid: 'fv-001' },
         { t: 'check', qid: 'wl-033' },
@@ -92,7 +92,7 @@ export const vision: Module = {
         {
           t: 'changed',
           title: 'DALL·E is no longer the headline answer',
-          body: 'Foundry\'s image generation now centres on the **GPT-image family** — `gpt-image-1`, `gpt-image-1-mini`, `gpt-image-1.5` and `gpt-image-2`. DALL·E 3 remains available. Video generation is **Sora-2**, in preview. Notes that name only DALL·E are AI-900-era.',
+          body: 'Foundry\'s image generation now centres on the **GPT-image family** - `gpt-image-1`, `gpt-image-1-mini`, `gpt-image-1.5` and `gpt-image-2`. DALL·E 3 remains available. Video generation is **Sora-2**, in preview. Notes that name only DALL·E are AI-900-era.',
         },
         {
           t: 'table',
@@ -100,7 +100,7 @@ export const vision: Module = {
           rows: [
             ['`gpt-image-2`', 'Realism-optimised, arbitrary resolutions up to 4K, improved editing; higher latency and cost'],
             ['`gpt-image-1.5` / `gpt-image-1`', 'High-fidelity with face preservation; fixed size options'],
-            ['`gpt-image-1-mini`', 'Cost-efficient and faster — good for high-volume, iterative, non-portrait work'],
+            ['`gpt-image-1-mini`', 'Cost-efficient and faster - good for high-volume, iterative, non-portrait work'],
             ['`sora-2`', 'Text-to-video, in preview'],
           ],
         },
@@ -110,7 +110,7 @@ export const vision: Module = {
             '**Diffusion**: generation starts from noise and iteratively denoises, conditioned on the prompt. Nothing is retrieved or looked up.',
             '**Editing (inpainting)**: supply a mask plus a prompt to change part of an image and leave the rest.',
             '**Variations**: produce alternatives of an existing image.',
-            '**Content Credentials (C2PA)**: cryptographic provenance metadata marking an image as AI-generated — a **transparency** control.',
+            '**Content Credentials (C2PA)**: cryptographic provenance metadata marking an image as AI-generated - a **transparency** control.',
           ],
         },
         { t: 'check', qid: 'wl-032' },

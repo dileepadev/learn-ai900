@@ -125,7 +125,7 @@
   </p>
 
   <p class="tiny subtle note">
-    Both knobs control the same thing — how adventurously the next token is chosen. Tune one and
+    Both knobs control the same thing - how adventurously the next token is chosen. Tune one and
     leave the other at its default.
   </p>
 </div>

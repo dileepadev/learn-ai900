@@ -62,7 +62,7 @@ export const QUESTION_BY_ID: Record<string, Question> = Object.fromEntries(
   ALL_QUESTIONS.map((q) => [q.id, q]),
 );
 
-/** Exam-style questions only — the ones that count towards a practice exam. */
+/** Exam-style questions only - the ones that count towards a practice exam. */
 export const EXAM_QUESTIONS: Question[] = ALL_QUESTIONS.filter((q) => q.kind === 'exam');
 
 /** Inline knowledge checks used inside lessons. */

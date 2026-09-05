@@ -2,7 +2,7 @@ import type { AuthoredQuestion } from '../types';
 
 /**
  * The scenario bank: exam-style questions framed the way the real paper frames
- * them — a company needs to do X, which capability, service or setting fits?
+ * them - a company needs to do X, which capability, service or setting fits?
  *
  * These are deliberately harder than the per-topic banks. They cross topics,
  * distinguish services that are easy to confuse, and several of them punish
@@ -87,7 +87,7 @@ export const scenarioQuestions: AuthoredQuestion[] = [
       },
     ],
     explanation:
-      'Fairness is a *disaggregated* measurement. A model can be 93% accurate overall while being 70% accurate for one group and 97% for another — and the aggregate will never show it.',
+      'Fairness is a *disaggregated* measurement. A model can be 93% accurate overall while being 70% accurate for one group and 97% for another - and the aggregate will never show it.',
     tags: ['fairness', 'evaluation', 'trap'],
   },
   {
@@ -115,7 +115,7 @@ export const scenarioQuestions: AuthoredQuestion[] = [
       },
       {
         id: 'd',
-        text: 'Nothing — the index is internal',
+        text: 'Nothing - the index is internal',
         correct: false,
         why: 'Internal is not the same as authorised. Anyone who can query the assistant could surface that content.',
       },
@@ -155,7 +155,7 @@ export const scenarioQuestions: AuthoredQuestion[] = [
         id: 'd',
         text: 'Add a disclaimer that the assistant is AI-generated',
         correct: false,
-        why: 'That is transparency — worth doing, but it does not widen access.',
+        why: 'That is transparency - worth doing, but it does not widen access.',
       },
     ],
     explanation:
@@ -174,24 +174,24 @@ export const scenarioQuestions: AuthoredQuestion[] = [
     options: [
       {
         id: 'a',
-        text: 'Content Credentials (C2PA) provenance metadata — transparency',
+        text: 'Content Credentials (C2PA) provenance metadata - transparency',
         correct: true,
       },
       {
         id: 'b',
-        text: 'A content filter on the deployment — reliability and safety',
+        text: 'A content filter on the deployment - reliability and safety',
         correct: false,
         why: 'Filters block harmful categories; they say nothing about provenance.',
       },
       {
         id: 'c',
-        text: 'Encrypting the images at rest — privacy and security',
+        text: 'Encrypting the images at rest - privacy and security',
         correct: false,
         why: 'Encryption protects the file, not the reader\'s understanding of where it came from.',
       },
       {
         id: 'd',
-        text: 'Lowering the temperature — reliability and safety',
+        text: 'Lowering the temperature - reliability and safety',
         correct: false,
         why: 'A sampling parameter, unrelated to disclosure.',
       },
@@ -231,7 +231,7 @@ export const scenarioQuestions: AuthoredQuestion[] = [
       },
     ],
     explanation:
-      'Content filters cover reliability and safety, citations cover transparency, permission-aware retrieval covers privacy, the named owner covers accountability, and accessible multilingual interfaces cover inclusiveness. Nothing in the list evaluates whether the system performs equally well across groups — that is fairness, and it is the one most often left out.',
+      'Content filters cover reliability and safety, citations cover transparency, permission-aware retrieval covers privacy, the named owner covers accountability, and accessible multilingual interfaces cover inclusiveness. Nothing in the list evaluates whether the system performs equally well across groups - that is fairness, and it is the one most often left out.',
     tags: ['all-principles', 'hard', 'governance'],
   },
   {
@@ -284,24 +284,24 @@ export const scenarioQuestions: AuthoredQuestion[] = [
     options: [
       {
         id: 'a',
-        text: 'Indirect prompt injection — untrusted retrieved content is being treated as instructions rather than data',
+        text: 'Indirect prompt injection - untrusted retrieved content is being treated as instructions rather than data',
         correct: true,
       },
       {
         id: 'b',
-        text: 'A hallucination — the model invented the instruction',
+        text: 'A hallucination - the model invented the instruction',
         correct: false,
         why: 'The text is genuinely present in the source. Nothing was invented.',
       },
       {
         id: 'c',
-        text: 'Data drift — the corpus has changed since indexing',
+        text: 'Data drift - the corpus has changed since indexing',
         correct: false,
         why: 'Drift is about distributions changing over time, not adversarial content.',
       },
       {
         id: 'd',
-        text: 'Overfitting — the model has memorised the document',
+        text: 'Overfitting - the model has memorised the document',
         correct: false,
         why: 'Overfitting is a training-time problem, and retrieval does not train anything.',
       },
@@ -329,7 +329,7 @@ export const scenarioQuestions: AuthoredQuestion[] = [
         id: 'b',
         text: 'A generative model prompted to list topics',
         correct: false,
-        why: 'It works, but it costs more per article, returns free-form text you must parse, and needs a prompt to maintain — for a task a prebuilt feature already does.',
+        why: 'It works, but it costs more per article, returns free-form text you must parse, and needs a prompt to maintain - for a task a prebuilt feature already does.',
       },
       {
         id: 'c',
@@ -381,7 +381,7 @@ export const scenarioQuestions: AuthoredQuestion[] = [
       },
     ],
     explanation:
-      'Detecting the defect is computer vision. Raising a ticket and notifying someone are actions in external systems, which requires tools — that is what makes the second half agentic.',
+      'Detecting the defect is computer vision. Raising a ticket and notifying someone are actions in external systems, which requires tools - that is what makes the second half agentic.',
     tags: ['routing', 'multi-workload', 'hard'],
   },
   {
@@ -411,7 +411,7 @@ export const scenarioQuestions: AuthoredQuestion[] = [
         id: 'd',
         text: 'Named entity recognition alone',
         correct: false,
-        why: 'NER finds people, places and organisations — not product aspects with sentiment attached.',
+        why: 'NER finds people, places and organisations - not product aspects with sentiment attached.',
       },
     ],
     explanation:
@@ -433,7 +433,7 @@ export const scenarioQuestions: AuthoredQuestion[] = [
         id: 'b',
         text: 'Speech to text with a custom vocabulary',
         correct: false,
-        why: 'Wrong direction — nothing needs transcribing.',
+        why: 'Wrong direction - nothing needs transcribing.',
       },
       {
         id: 'c',
@@ -493,7 +493,7 @@ export const scenarioQuestions: AuthoredQuestion[] = [
     difficulty: 'medium',
     kind: 'exam',
     scenario:
-      'A property firm receives listing photos and wants, for each one: the room type, whether it has been renovated, and any visible damage — as structured fields it can filter on.',
+      'A property firm receives listing photos and wants, for each one: the room type, whether it has been renovated, and any visible damage - as structured fields it can filter on.',
     prompt: 'What should it use?',
     options: [
       { id: 'a', text: 'Content Understanding with a custom image analyzer', correct: true },
@@ -607,7 +607,7 @@ export const scenarioQuestions: AuthoredQuestion[] = [
       },
     ],
     explanation:
-      'The third requirement — a yes/no compliance field — is what tips this from transcription to extraction. An audio analyzer transcribes, labels speakers, and produces the fields you defined, in one call.',
+      'The third requirement - a yes/no compliance field - is what tips this from transcription to extraction. An audio analyzer transcribes, labels speakers, and produces the fields you defined, in one call.',
     tags: ['speech', 'content-understanding', 'routing'],
   },
   {
@@ -751,7 +751,7 @@ export const scenarioQuestions: AuthoredQuestion[] = [
       },
     ],
     explanation:
-      'Multiple steps, a lookup in an external system, and a decision make this agentic. Note the human-in-the-loop approval — that is a reliability and accountability control, not a technical limitation.',
+      'Multiple steps, a lookup in an external system, and a decision make this agentic. Note the human-in-the-loop approval - that is a reliability and accountability control, not a technical limitation.',
     tags: ['routing', 'agents', 'hard'],
   },
   {
@@ -763,7 +763,7 @@ export const scenarioQuestions: AuthoredQuestion[] = [
     type: 'order',
     prompt: 'Put the stages of an information extraction pipeline in order.',
     items: [
-      { id: 'i1', text: 'Identify the source content — documents, images, audio or video' },
+      { id: 'i1', text: 'Identify the source content - documents, images, audio or video' },
       { id: 'i2', text: 'Extract the raw content: OCR, layout, transcription' },
       { id: 'i3', text: 'Map it into the structured schema you defined' },
       { id: 'i4', text: 'Check confidence scores and route doubtful values to a human' },
@@ -808,7 +808,7 @@ export const scenarioQuestions: AuthoredQuestion[] = [
       },
     ],
     explanation:
-      'Batch is discounted asynchronous processing — exactly right for large offline jobs where latency is irrelevant, and exactly wrong for anything interactive.',
+      'Batch is discounted asynchronous processing - exactly right for large offline jobs where latency is irrelevant, and exactly wrong for anything interactive.',
     tags: ['deployment', 'batch'],
   },
   {
@@ -914,7 +914,7 @@ export const scenarioQuestions: AuthoredQuestion[] = [
       },
     ],
     explanation:
-      'Prompt and completion share the context window. A 30-page prompt may fit on its own, but reserving 4000 tokens for the response on top of it can push the total past the limit. The fix is to shorten the prompt — chunk it, or retrieve only the relevant passages.',
+      'Prompt and completion share the context window. A 30-page prompt may fit on its own, but reserving 4000 tokens for the response on top of it can push the total past the limit. The fix is to shorten the prompt - chunk it, or retrieve only the relevant passages.',
     tags: ['parameters', 'context-window', 'trap'],
   },
   {
@@ -1055,7 +1055,7 @@ export const scenarioQuestions: AuthoredQuestion[] = [
         id: 'd',
         text: 'Regional Provisioned',
         correct: false,
-        why: 'It satisfies residency, but provisioned capacity is the wrong economics for spiky traffic — you pay for the reservation regardless.',
+        why: 'It satisfies residency, but provisioned capacity is the wrong economics for spiky traffic - you pay for the reservation regardless.',
       },
     ],
     explanation:

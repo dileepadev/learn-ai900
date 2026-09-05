@@ -17,7 +17,7 @@ export const foundryVisionQuestions: AuthoredQuestion[] = [
     options: [
       {
         id: 'a',
-        text: 'Include an image content item — a URL or base64 data — alongside a text content item in the same user message',
+        text: 'Include an image content item - a URL or base64 data - alongside a text content item in the same user message',
         correct: true,
       },
       {
@@ -68,7 +68,7 @@ export const foundryVisionQuestions: AuthoredQuestion[] = [
         id: 'c',
         text: 'text-embedding-3-large',
         correct: false,
-        why: 'That is an embedding model — it produces vectors, not images.',
+        why: 'That is an embedding model - it produces vectors, not images.',
       },
       {
         id: 'd',
@@ -80,7 +80,7 @@ export const foundryVisionQuestions: AuthoredQuestion[] = [
     explanation:
       'Image generation in Foundry now centres on the GPT-image models, which also support editing (inpainting) and variations. Sora-2 is the video generation model, in preview. Older AI-900 notes naming only DALL·E are a currency red flag.',
     reference: {
-      label: 'Foundry Models sold by Azure — image generation',
+      label: 'Foundry Models sold by Azure - image generation',
       url: 'https://learn.microsoft.com/azure/foundry/foundry-models/concepts/models-sold-directly-by-azure',
     },
     tags: ['vision', 'image-generation', 'currency'],
@@ -139,7 +139,7 @@ export const foundryVisionQuestions: AuthoredQuestion[] = [
         id: 'b',
         text: 'Azure Vision Image Analysis tags and captions',
         correct: false,
-        why: 'Generic tags and a caption do not produce your named fields — and Image Analysis 4.0 is deprecated, with a retirement date announced.',
+        why: 'Generic tags and a caption do not produce your named fields - and Image Analysis 4.0 is deprecated, with a retirement date announced.',
       },
       {
         id: 'c',
@@ -197,7 +197,7 @@ export const foundryVisionQuestions: AuthoredQuestion[] = [
       },
     ],
     explanation:
-      'Locating faces is routine. Deciding *who* a face belongs to is a Limited Access scenario requiring registration and an eligible use case — and emotion and gender inference were retired outright. This is a favourite responsible-AI-flavoured vision question.',
+      'Locating faces is routine. Deciding *who* a face belongs to is a Limited Access scenario requiring registration and an eligible use case - and emotion and gender inference were retired outright. This is a favourite responsible-AI-flavoured vision question.',
     tags: ['vision', 'face', 'responsible-ai'],
   },
   {
@@ -231,7 +231,7 @@ export const foundryVisionQuestions: AuthoredQuestion[] = [
         id: 'd',
         text: 'It was renamed to Content Understanding with no other change',
         correct: false,
-        why: 'Content Understanding is a separate, newer, generative multimodal service — not a rename.',
+        why: 'Content Understanding is a separate, newer, generative multimodal service - not a rename.',
       },
     ],
     explanation:
@@ -307,7 +307,7 @@ export const foundryVisionQuestions: AuthoredQuestion[] = [
       },
     ],
     explanation:
-      'Content Credentials cryptographically mark an asset as AI-generated so downstream viewers can verify its origin. Provenance is a transparency control — a reliable cross-topic exam question.',
+      'Content Credentials cryptographically mark an asset as AI-generated so downstream viewers can verify its origin. Provenance is a transparency control - a reliable cross-topic exam question.',
     tags: ['vision', 'c2pa', 'responsible-ai', 'cross-topic'],
   },
   {
@@ -333,7 +333,7 @@ export const foundryVisionQuestions: AuthoredQuestion[] = [
         id: 'd',
         text: 'Producing a guaranteed-format JSON record of invoice fields with confidence scores',
         correct: false,
-        why: 'That is Content Understanding\'s job — schema-driven extraction with confidence scores.',
+        why: 'That is Content Understanding\'s job - schema-driven extraction with confidence scores.',
       },
       {
         id: 'e',
@@ -376,7 +376,7 @@ export const foundryVisionQuestions: AuthoredQuestion[] = [
       },
     ],
     explanation:
-      'Classification answers "what is this a picture of?" — one label for the whole frame. If the question needs *where* or *how many*, classification is not enough.',
+      'Classification answers "what is this a picture of?" - one label for the whole frame. If the question needs *where* or *how many*, classification is not enough.',
     tags: ['vision', 'definition'],
   },
   {
@@ -399,7 +399,7 @@ export const foundryVisionQuestions: AuthoredQuestion[] = [
         id: 'b',
         text: 'gpt-image-2 at high quality for every draft',
         correct: false,
-        why: 'It is the realism-optimised model with higher latency and cost — sensible for final renders, wasteful for hundreds of drafts.',
+        why: 'It is the realism-optimised model with higher latency and cost - sensible for final renders, wasteful for hundreds of drafts.',
       },
       {
         id: 'c',

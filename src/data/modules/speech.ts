@@ -28,7 +28,7 @@ export const speech: Module = {
           rows: [
             ['**Speech recognition**', 'Audio → text', 'Speech to text, STT, ASR'],
             ['**Speech synthesis**', 'Text → audio', 'Text to speech, TTS'],
-            ['**Speech translation**', 'Audio in one language → text or audio in another', '—'],
+            ['**Speech translation**', 'Audio in one language → text or audio in another', '-'],
           ],
         },
         {
@@ -48,7 +48,7 @@ export const speech: Module = {
       blocks: [
         {
           t: 'p',
-          md: '**Speech Synthesis Markup Language** is an XML format for fine-grained control over synthesized speech. It applies to synthesis only — it has nothing to do with recognition.',
+          md: '**Speech Synthesis Markup Language** is an XML format for fine-grained control over synthesized speech. It applies to synthesis only - it has nothing to do with recognition.',
         },
         {
           t: 'code',
@@ -65,11 +65,11 @@ export const speech: Module = {
         {
           t: 'list',
           items: [
-            '`<voice>` — which neural voice and language',
-            '`<prosody>` — speaking rate, pitch, volume',
-            '`<break>` — pauses, to the millisecond',
-            '`<emphasis>` — stress on a phrase',
-            '`<phoneme>` — force a specific pronunciation',
+            '`<voice>` - which neural voice and language',
+            '`<prosody>` - speaking rate, pitch, volume',
+            '`<break>` - pauses, to the millisecond',
+            '`<emphasis>` - stress on a phrase',
+            '`<phoneme>` - force a specific pronunciation',
           ],
         },
         { t: 'check', qid: 'ts-006' },
@@ -83,7 +83,7 @@ export const speech: Module = {
           t: 'table',
           headers: ['Option', 'What it is', 'Choose it when'],
           rows: [
-            ['**Prebuilt neural voices**', 'Hundreds of expressive voices across many locales', 'Almost always — this is the default'],
+            ['**Prebuilt neural voices**', 'Hundreds of expressive voices across many locales', 'Almost always - this is the default'],
             ['**Custom neural voice**', 'A branded voice trained from studio recordings of a voice actor', 'You need a distinctive brand voice; note it is a gated, responsible-AI-reviewed capability'],
           ],
         },
@@ -102,9 +102,9 @@ export const speech: Module = {
           t: 'table',
           headers: ['', 'Cascade: STT → model → TTS', 'Native multimodal audio model'],
           rows: [
-            ['Latency', 'Sum of three services', 'Single hop — fast enough for natural turn-taking'],
-            ['Tone, emphasis, emotion', 'Lost at the transcription step', 'Preserved — the model hears the audio'],
-            ['Control over each stage', 'Full — swap the voice, tune the transcript', 'Less granular'],
+            ['Latency', 'Sum of three services', 'Single hop - fast enough for natural turn-taking'],
+            ['Tone, emphasis, emotion', 'Lost at the transcription step', 'Preserved - the model hears the audio'],
+            ['Control over each stage', 'Full - swap the voice, tune the transcript', 'Less granular'],
             ['Branded custom voice', 'Yes, via TTS', 'Constrained to the model\'s voices'],
           ],
         },
@@ -161,11 +161,11 @@ synthesizer.speak_text_async("Your deployment is ready.").get()`,
         {
           t: 'list',
           items: [
-            '**Phoneme** — the smallest unit of sound that distinguishes words. "Cat" = /k/ /æ/ /t/.',
-            '**Grapheme** — a written character. Synthesis converts graphemes to phonemes.',
-            '**Sampling / sample rate** — digitising a continuous waveform; 16 kHz is a common speech standard.',
-            '**Spectrogram** — audio frequencies plotted over time, often the input to acoustic models.',
-            '**Speaker diarization** — labelling who spoke when.',
+            '**Phoneme** - the smallest unit of sound that distinguishes words. "Cat" = /k/ /æ/ /t/.',
+            '**Grapheme** - a written character. Synthesis converts graphemes to phonemes.',
+            '**Sampling / sample rate** - digitising a continuous waveform; 16 kHz is a common speech standard.',
+            '**Spectrogram** - audio frequencies plotted over time, often the input to acoustic models.',
+            '**Speaker diarization** - labelling who spoke when.',
           ],
         },
         { t: 'check', qid: 'ts-011' },

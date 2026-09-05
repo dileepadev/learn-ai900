@@ -17,7 +17,7 @@ let failures = 0;
 function check(name, ok, detail = '') {
   results.push({ name, ok, detail });
   if (!ok) failures++;
-  console.log(`${ok ? '  PASS' : '  FAIL'}  ${name}${detail ? ` — ${detail}` : ''}`);
+  console.log(`${ok ? '  PASS' : '  FAIL'}  ${name}${detail ? ` - ${detail}` : ''}`);
 }
 
 const CHROME =

@@ -1,5 +1,5 @@
 <script lang="ts">
-  /** Big animated readiness dial. Pure SVG — no chart library. */
+  /** Big animated readiness dial. Pure SVG - no chart library. */
   interface Props {
     value: number;
     label: string;
@@ -18,7 +18,7 @@
 </script>
 
 <figure class="ring {tone}" style:--size={`${size}px`}>
-  <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`} role="img" aria-label={`Exam readiness ${clamped} percent — ${label}`}>
+  <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`} role="img" aria-label={`Exam readiness ${clamped} percent - ${label}`}>
     <circle
       class="track"
       cx={size / 2}

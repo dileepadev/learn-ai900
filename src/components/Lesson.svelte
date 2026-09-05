@@ -307,7 +307,7 @@
         questions={mod.quiz.map((id) => QUESTION_BY_ID[id]).filter(Boolean) as never}
         mode="module-quiz"
         moduleId={mod.id}
-        title={`${mod.title} — quiz`}
+        title={`${mod.title} - quiz`}
         {base}
         doneHref={next ? link(`/learn/${next.id}/`) : link('/learn/')}
         doneLabel={next ? `Next: ${next.title}` : 'All lessons'}
