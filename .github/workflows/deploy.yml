@@ -42,7 +42,7 @@ jobs:
         run: npm run build
         env:
           # Project pages are served from /<repo>; override for a custom domain.
-          BASE_PATH: /learn-ai901
+          BASE_PATH: /learn-ai-901
           SITE_URL: https://dileepadev.github.io
 
       - name: Disable Jekyll

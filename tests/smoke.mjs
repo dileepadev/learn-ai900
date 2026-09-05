@@ -10,7 +10,7 @@
 import { chromium } from 'playwright-core';
 import { existsSync } from 'node:fs';
 
-const BASE = process.env.E2E_BASE ?? 'http://localhost:4321/learn-ai901';
+const BASE = process.env.E2E_BASE ?? 'http://localhost:4321/learn-ai-901';
 const results = [];
 let failures = 0;
 

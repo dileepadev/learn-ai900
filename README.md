@@ -3,7 +3,7 @@
 An interactive exam-prep app for **Exam AI-901: Microsoft Azure AI Fundamentals**, built for a
 few-day study sprint rather than a leisurely course.
 
-**→ [dileepadev.github.io/learn-ai901](https://dileepadev.github.io/learn-ai901/)**
+**→ [dileepadev.github.io/learn-ai-901](https://dileepadev.github.io/learn-ai-901/)**
 
 It is not a documentation site. It is a learning loop:
 
@@ -78,7 +78,7 @@ Requires **Node 22.12 or later** (24 recommended) — Astro 7 sets that floor.
 
 ```bash
 npm install
-npm run dev          # http://localhost:4321/learn-ai901/
+npm run dev          # http://localhost:4321/learn-ai-901/
 ```
 
 | Command | What it does |
@@ -95,7 +95,7 @@ if it is not on a standard path). It walks the dashboard, a lesson, a quiz, prac
 simulator, rapid review, cram, the plan and the progress page — 56 assertions including
 persistence, theme switching and mobile overflow. Worth running after editing content.
 
-The dev server serves under `/learn-ai901/` because that is the GitHub Pages base path. To work
+The dev server serves under `/learn-ai-901/` because that is the GitHub Pages base path. To work
 at the root instead:
 
 ```bash
@@ -119,7 +119,7 @@ The site publishes to `https://<user>.github.io/<repo>/`.
 `astro.config.mjs` reads two environment variables, both set by the workflow:
 
 ```js
-const base = process.env.BASE_PATH ?? '/learn-ai901';
+const base = process.env.BASE_PATH ?? '/learn-ai-901';
 const site = process.env.SITE_URL ?? 'https://dileepadev.github.io';
 ```
 
@@ -193,7 +193,7 @@ never ships.
 ### Progress and privacy
 
 Everything is stored under one `localStorage` key in your browser. Clearing site data clears it.
-There is an export/import backup on the [progress page](https://dileepadev.github.io/learn-ai901/progress/)
+There is an export/import backup on the [progress page](https://dileepadev.github.io/learn-ai-901/progress/)
 if you need to move between devices.
 
 ---

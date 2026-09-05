@@ -3,10 +3,10 @@ import { defineConfig } from 'astro/config';
 import svelte from '@astrojs/svelte';
 import sitemap from '@astrojs/sitemap';
 
-// GitHub Pages project site: https://dileepadev.github.io/learn-ai901
+// GitHub Pages project site: https://dileepadev.github.io/learn-ai-901
 // `base` must match the repository name. Set BASE_PATH="/" (or use a custom
 // domain) to build for a root-hosted deployment instead.
-const base = process.env.BASE_PATH ?? '/learn-ai901';
+const base = process.env.BASE_PATH ?? '/learn-ai-901';
 const site = process.env.SITE_URL ?? 'https://dileepadev.github.io';
 
 export default defineConfig({
