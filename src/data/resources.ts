@@ -171,7 +171,7 @@ export const OFFICIAL_RESOURCES: OfficialResource[] = [
     title: 'Microsoft Foundry Documentation',
     description:
       'Official guide to Microsoft Foundry: projects, hubs, compute connections, model fine-tuning, and deployment options.',
-    url: 'https://learn.microsoft.com/azure/ai-studio/',
+    url: 'https://learn.microsoft.com/azure/foundry/',
     category: 'portals',
     badge: 'Documentation',
     featured: true,
@@ -180,10 +180,10 @@ export const OFFICIAL_RESOURCES: OfficialResource[] = [
   },
   {
     id: 'model-catalog',
-    title: 'Azure AI Model Catalog Guide',
+    title: 'Foundry Models Catalog Guide',
     description:
       'Official documentation on browsing, benchmarking, and deploying foundation models (OpenAI, Meta Llama, Mistral, Microsoft Phi).',
-    url: 'https://learn.microsoft.com/azure/ai-studio/how-to/model-catalog-overview',
+    url: 'https://learn.microsoft.com/azure/foundry/concepts/foundry-models-overview',
     category: 'portals',
     badge: 'Model Catalog',
     relatedTopicId: 'model-components',
@@ -251,10 +251,10 @@ export const OFFICIAL_RESOURCES: OfficialResource[] = [
   },
   {
     id: 'doc-openai',
-    title: 'Azure OpenAI Service Documentation',
+    title: 'Models Sold Directly by Azure',
     description:
-      'Official documentation on deploying and prompting OpenAI models (GPT-4o, embeddings, DALL-E 3) with enterprise security and private networking.',
-    url: 'https://learn.microsoft.com/azure/ai-services/openai/',
+      'The Azure OpenAI documentation now lives inside Foundry. Covers deploying and prompting OpenAI models, which models carry Azure SLAs and support, and how they are billed.',
+    url: 'https://learn.microsoft.com/azure/foundry/foundry-models/concepts/models-sold-directly-by-azure',
     category: 'services',
     badge: 'Generative AI',
     relatedTopicId: 'genai-agents',
