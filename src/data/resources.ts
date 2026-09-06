@@ -359,7 +359,7 @@ export const OFFICIAL_RESOURCES: OfficialResource[] = [
     title: 'Azure AI Official Code Samples',
     description:
       'Comprehensive GitHub repository containing quickstarts, end-to-end RAG implementations, agent samples, and multimodal app code.',
-    url: 'https://github.com/Azure-Samples/azure-ai-samples',
+    url: 'https://github.com/Azure-Samples/azureai-samples',
     category: 'labs',
     badge: 'Code Samples',
     tags: ['sample apps', 'agent templates', 'rag code', 'github samples'],
@@ -371,7 +371,7 @@ export const OFFICIAL_RESOURCES: OfficialResource[] = [
     title: 'Microsoft Q&A: Artificial Intelligence & Machine Learning',
     description:
       'Official technical discussion forum where Microsoft engineers, MVPs, and developers answer questions about Azure AI and exams.',
-    url: 'https://learn.microsoft.com/answers/topics/azure-cognitive-services.html',
+    url: 'https://learn.microsoft.com/answers/tags/222/azure-ai-services',
     category: 'community',
     badge: 'Official Forum',
     tags: ['questions', 'support', 'q&a', 'troubleshooting'],
