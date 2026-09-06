@@ -217,7 +217,7 @@
         </div>
         <h3 class="res-spotlight-title">Study Guides, Portals &amp; Official Practice Tests</h3>
         <p class="tiny muted res-spotlight-desc">
-          Access verified Microsoft Learn guides, Azure AI Foundry portals, official free practice tests, and GitHub code labs.
+          Access verified Microsoft Learn guides, Microsoft Foundry portals, official free practice tests, and GitHub code labs.
         </p>
       </div>
       <a class="btn btn-secondary res-spotlight-btn" href={link('/resources/')}>

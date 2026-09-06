@@ -57,7 +57,7 @@
       <span class="chip chip-accent">Microsoft Learn Verified</span>
       <h1>Official Resources &amp; Links</h1>
       <p class="lead muted">
-        Every official Microsoft study guide, practice test, Azure AI Foundry portal, SDK reference,
+        Every official Microsoft study guide, practice test, Microsoft Foundry portal, SDK reference,
         and Responsible AI framework for <strong>Exam AI-901: Microsoft Azure AI Fundamentals</strong>.
       </p>
     </div>

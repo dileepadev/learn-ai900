@@ -143,10 +143,10 @@ export const OFFICIAL_RESOURCES: OfficialResource[] = [
     tags: ['renewal', 'expiry', 'verification', 'badge'],
   },
 
-  // --- 2. Azure AI Foundry & Cloud Portals ---
+  // --- 2. Microsoft Foundry & Cloud Portals ---
   {
     id: 'foundry-portal',
-    title: 'Azure AI Foundry Portal',
+    title: 'Microsoft Foundry Portal',
     description:
       'The central portal (ai.azure.com) to discover models, test prompts in chat/completions playgrounds, configure agents, and evaluate outputs.',
     url: 'https://ai.azure.com',
@@ -168,7 +168,7 @@ export const OFFICIAL_RESOURCES: OfficialResource[] = [
   },
   {
     id: 'foundry-docs',
-    title: 'Azure AI Foundry Documentation',
+    title: 'Microsoft Foundry Documentation',
     description:
       'Official guide to Microsoft Foundry: projects, hubs, compute connections, model fine-tuning, and deployment options.',
     url: 'https://learn.microsoft.com/azure/ai-studio/',
