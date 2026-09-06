@@ -42,6 +42,11 @@ export const textAnalysis: Module = {
           ],
         },
         { t: 'check', qid: 'wl-010' },
+        {
+          t: 'changed',
+          title: 'Eight of these features retire on 31 March 2029',
+          body: 'Microsoft has announced end of support for **key phrase extraction**, **sentiment analysis and opinion mining**, **summarization** (extractive and abstractive), **entity linking**, **custom text classification**, **conversational language understanding (CLU)**, **custom question answering (CQA)** and **orchestration workflow**. New projects are directed to **Foundry models** instead. Still fully supported: **language detection**, **PII detection**, **text analytics for health**, **prebuilt NER** and **custom NER**. The techniques themselves are still examinable - the skills-measured list names keyword extraction, entity detection, sentiment analysis and summarization - but a scenario that asks what to *build on today* increasingly answers "a generative model in Foundry".',
+        },
       ],
     },
     {

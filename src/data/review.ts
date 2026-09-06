@@ -69,6 +69,7 @@ export const FLASHCARDS: Flashcard[] = [
   { id: 'fc-ts-3', topic: 'foundry-text-speech', priority: 'high', front: 'Native multimodal audio beats a cascade when…', back: '**Latency** matters and **tone / emotion** must survive. A cascade discards acoustic context at transcription and pays three hops.' },
   { id: 'fc-ts-4', topic: 'foundry-text-speech', priority: 'medium', front: 'Distinct branded voice not in the catalogue', back: '**Custom neural voice**, trained from studio recordings. SSML cannot create a new voice identity.' },
   { id: 'fc-ts-5', topic: 'foundry-text-speech', priority: 'medium', front: 'Live English captions of a Spanish talk', back: '**Speech translation** - one step. Speech-to-text alone would give Spanish captions.' },
+  { id: 'fc-ts-6', topic: 'foundry-text-speech', priority: 'medium', front: 'Which Azure Language features are retiring, and when?', back: '**31 March 2029:** key phrase extraction, sentiment analysis and opinion mining, summarization, entity linking, custom text classification, CLU, CQA, orchestration workflow. Microsoft directs new projects to **Foundry models**. **Not retiring:** language detection, PII detection, text analytics for health, prebuilt NER, custom NER.' },
 
   /* ---- Vision ---- */
   { id: 'fc-fv-1', topic: 'foundry-vision', priority: 'high', front: 'Current image generation models in Foundry', back: '**GPT-image family**: `gpt-image-1`, `-mini`, `-1.5`, `-2`. DALL·E 3 still available. Video: **Sora-2** (preview).' },
@@ -256,6 +257,7 @@ export const QUICK_FACTS: QuickFact[] = [
   { id: 'qf-16', topic: 'foundry-genai-agents', priority: 'medium', fact: 'Prompt agents have **no compute to manage**; hosted agents pay for container compute.' },
   { id: 'qf-17', topic: 'ai-workloads', priority: 'medium', fact: 'Archived files in storage ⇒ **batch** transcription. Live ⇒ **real-time**.' },
   { id: 'qf-18', topic: 'responsible-ai', priority: 'medium', fact: '"Nobody can overturn the decision" ⇒ **accountability**, not transparency.' },
+  { id: 'qf-19', topic: 'foundry-text-speech', priority: 'medium', fact: 'Retiring from Azure Language on **31 March 2029**: key phrases, sentiment / opinion mining, summarization, entity linking, CLU, CQA, custom text classification, orchestration. **Staying:** language detection, PII, health, prebuilt and custom NER.' },
 ];
 
 export const FLASHCARD_BY_ID: Record<string, Flashcard> = Object.fromEntries(
